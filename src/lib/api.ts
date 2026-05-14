@@ -8,7 +8,8 @@
  * the backend directly from a component.
  */
 
-export const API_BASE_URL = "/api"; // proxied via TanStack server route → Hugging Face Space
+export const API_BASE_URL =
+  "https://noor-fatima-01-portfolio-noor.hf.space";
 
 const MAX_ATTEMPTS = 3;
 const BASE_BACKOFF_MS = 1000; // 1s → 2s → 4s
