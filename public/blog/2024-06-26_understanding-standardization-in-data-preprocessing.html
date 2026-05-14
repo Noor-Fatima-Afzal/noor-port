@@ -1,0 +1,72 @@
+<!DOCTYPE html><html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><title>Understanding Standardization in Data Preprocessing</title><style>
+      * {
+        font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+      }
+      html, body {
+        margin: 0;
+        padding: 0;
+      }
+      h1 {
+        font-size: 50px;
+        margin-bottom: 17px;
+        color: #333;
+      }
+      h2 {
+        font-size: 24px;
+        line-height: 1.6;
+        margin: 30px 0 0 0;
+        margin-bottom: 18px;
+        margin-top: 33px;
+        color: #333;
+      }
+      h3 {
+        font-size: 30px;
+        margin: 10px 0 20px 0;
+        color: #333;
+      }
+      header {
+        width: 640px;
+        margin: auto;
+      }
+      section {
+        width: 640px;
+        margin: auto;
+      }
+      section p {
+        margin-bottom: 27px;
+        font-size: 20px;
+        line-height: 1.6;
+        color: #333;
+      }
+      section img {
+        max-width: 640px;
+      }
+      footer {
+        padding: 0 20px;
+        margin: 50px 0;
+        text-align: center;
+        font-size: 12px;
+      }
+      .aspectRatioPlaceholder {
+        max-width: auto !important;
+        max-height: auto !important;
+      }
+      .aspectRatioPlaceholder-fill {
+        padding-bottom: 0 !important;
+      }
+      header,
+      section[data-field=subtitle],
+      section[data-field=description] {
+        display: none;
+      }
+      </style></head><body><article class="h-entry">
+<header>
+<h1 class="p-name">Understanding Standardization in Data Preprocessing</h1>
+</header>
+<section data-field="subtitle" class="p-summary">
+Data preprocessing is a crucial step in any machine learning pipeline, and standardization, also known as z-score normalization, is one of…
+</section>
+<section data-field="body" class="e-content">
+<section name="624b" class="section section--body section--first section--last"><div class="section-divider"><hr class="section-divider"></div><div class="section-content"><div class="section-inner sectionLayout--insetColumn"><h3 name="dd49" id="dd49" class="graf graf--h3 graf--leading graf--title">Understanding Standardization in Data Preprocessing</h3><figure name="f6a4" id="f6a4" class="graf graf--figure graf-after--h3"><img class="graf-image" data-image-id="1*n-gRnV4SGjb4dlV4d91uWg.jpeg" data-width="1024" data-height="646" data-is-featured="true" src="https://cdn-images-1.medium.com/max/800/1*n-gRnV4SGjb4dlV4d91uWg.jpeg"></figure><p name="da94" id="da94" class="graf graf--p graf-after--figure">Data preprocessing is a crucial step in any machine learning pipeline, and standardization, also known as z-score normalization, is one of the most important techniques in this process. This article will delve into what standardization is, its importance, and when to use it. We will also discuss the effect of outliers and how to handle them.</p><h3 name="44bf" id="44bf" class="graf graf--h3 graf-after--p">What is Standardization?</h3><p name="b66f" id="b66f" class="graf graf--p graf-after--h3">Standardization transforms data to have a mean of zero and a standard deviation of one. The formula for standardization is:</p><figure name="82e6" id="82e6" class="graf graf--figure graf-after--p"><img class="graf-image" data-image-id="1*xf17tGsfSrSApqMHKPcMKg.png" data-width="300" data-height="169" src="https://cdn-images-1.medium.com/max/800/1*xf17tGsfSrSApqMHKPcMKg.png"></figure><p name="30e4" id="30e4" class="graf graf--p graf-after--figure">where:</p><ul class="postList"><li name="6afa" id="6afa" class="graf graf--li graf-after--p">Xi is the original data point.</li><li name="1215" id="1215" class="graf graf--li graf-after--li">μ is the mean of the dataset.</li><li name="d2ca" id="d2ca" class="graf graf--li graf-after--li">σ is the standard deviation of the dataset.</li></ul><h3 name="de73" id="de73" class="graf graf--h3 graf-after--li">Steps Involved in Standardization</h3><ol class="postList"><li name="6dc9" id="6dc9" class="graf graf--li graf-after--h3"><strong class="markup--strong markup--li-strong">Mean Centering</strong>: Subtract the mean from each data point.</li><li name="2ab0" id="2ab0" class="graf graf--li graf-after--li"><strong class="markup--strong markup--li-strong">Scaling</strong>: Divide by the standard deviation of the dataset.</li></ol><figure name="02bb" id="02bb" class="graf graf--figure graf-after--li"><img class="graf-image" data-image-id="1*yQ-0sQqVth2xewYmET3LFg.jpeg" data-width="1024" data-height="507" src="https://cdn-images-1.medium.com/max/800/1*yQ-0sQqVth2xewYmET3LFg.jpeg"></figure><h3 name="cf81" id="cf81" class="graf graf--h3 graf-after--figure">Before and after Standardization</h3><p name="a5e9" id="a5e9" class="graf graf--p graf-after--h3"><strong class="markup--strong markup--p-strong">Before Scaling</strong>:</p><ul class="postList"><li name="9c39" id="9c39" class="graf graf--li graf-after--p">Scatter plot: The scatter plot of the data points remains the same.</li></ul><p name="e829" id="e829" class="graf graf--p graf-after--li"><strong class="markup--strong markup--p-strong">After Scaling</strong>:</p><ul class="postList"><li name="83d6" id="83d6" class="graf graf--li graf-after--p">Scatter plot: The scatter plot remains unchanged, preserving the relationships between data points.</li></ul><figure name="9b84" id="9b84" class="graf graf--figure graf-after--li"><img class="graf-image" data-image-id="1*n25jxnOpRmKCC8mcZOhQ3Q.jpeg" data-width="844" data-height="363" src="https://cdn-images-1.medium.com/max/800/1*n25jxnOpRmKCC8mcZOhQ3Q.jpeg"></figure><p name="535d" id="535d" class="graf graf--p graf-after--figure"><strong class="markup--strong markup--p-strong">Before Scaling</strong>:</p><ul class="postList"><li name="92f2" id="92f2" class="graf graf--li graf-after--p">PDFs (Probability Density Functions): The distributions of data points might not align correctly without standardization.</li></ul><p name="681a" id="681a" class="graf graf--p graf-after--li"><strong class="markup--strong markup--p-strong">After Scaling</strong>:</p><ul class="postList"><li name="df57" id="df57" class="graf graf--li graf-after--p">PDFs: The distributions align correctly, as the data is now centered around the mean with unit variance.</li></ul><figure name="e464" id="e464" class="graf graf--figure graf-after--li"><img class="graf-image" data-image-id="1*EUcvGOM9U66VEXRYl_4GZw.jpeg" data-width="840" data-height="349" src="https://cdn-images-1.medium.com/max/800/1*EUcvGOM9U66VEXRYl_4GZw.jpeg"></figure><h3 name="a162" id="a162" class="graf graf--h3 graf-after--figure">Key Points:</h3><ul class="postList"><li name="9b53" id="9b53" class="graf graf--li graf-after--h3">The distribution of data points remains the same before and after scaling.</li><li name="703b" id="703b" class="graf graf--li graf-after--li">Standardization adjusts the scales but does not change the shape of the data distribution.</li></ul><figure name="4913" id="4913" class="graf graf--figure graf-after--li"><img class="graf-image" data-image-id="1*8lzMZsYFHdALJIVCXyrJTA.jpeg" data-width="839" data-height="372" src="https://cdn-images-1.medium.com/max/800/1*8lzMZsYFHdALJIVCXyrJTA.jpeg"></figure><figure name="baa1" id="baa1" class="graf graf--figure graf-after--figure"><img class="graf-image" data-image-id="1*LtEUi5AJXGbeW7E3ZzqAdg.jpeg" data-width="854" data-height="359" src="https://cdn-images-1.medium.com/max/800/1*LtEUi5AJXGbeW7E3ZzqAdg.jpeg"></figure><h3 name="ccc4" id="ccc4" class="graf graf--h3 graf-after--figure">Why is Standardization Important?</h3><p name="f9c5" id="f9c5" class="graf graf--p graf-after--h3">Standardization plays a crucial role in increasing the accuracy and efficiency of various machine learning algorithms. Here are some key reasons:</p><ol class="postList"><li name="5669" id="5669" class="graf graf--li graf-after--p"><strong class="markup--strong markup--li-strong">Improves Convergence</strong>: Algorithms like Gradient Descent converge faster when features are standardized because it ensures that all features contribute equally to the result.</li><li name="914f" id="914f" class="graf graf--li graf-after--li"><strong class="markup--strong markup--li-strong">Enhances Performance</strong>: Algorithms like K-Nearest Neighbors (KNN) and K-Means Clustering perform better because they rely on distance metrics which are affected by feature scales.</li><li name="61be" id="61be" class="graf graf--li graf-after--li"><strong class="markup--strong markup--li-strong">Boosts Accuracy</strong>: Principal Component Analysis (PCA) benefits from standardization as it maximizes the variance and identifies principal components more effectively.</li><li name="2c29" id="2c29" class="graf graf--li graf-after--li"><strong class="markup--strong markup--li-strong">Balances Weight Updates</strong>: In Artificial Neural Networks (ANN), standardization ensures that the weights are updated uniformly, improving the training process.</li></ol><h3 name="3712" id="3712" class="graf graf--h3 graf-after--li">Effect of Outliers</h3><p name="1023" id="1023" class="graf graf--p graf-after--h3">One important consideration is the effect of outliers on standardized data. Outliers can significantly impact the mean and standard deviation, leading to skewed results.</p><figure name="4d1c" id="4d1c" class="graf graf--figure graf-after--p"><img class="graf-image" data-image-id="1*FkYMp7fLnh1eo9iLAt-jmw.jpeg" data-width="847" data-height="348" src="https://cdn-images-1.medium.com/max/800/1*FkYMp7fLnh1eo9iLAt-jmw.jpeg"></figure><h3 name="4185" id="4185" class="graf graf--h3 graf-after--figure">Handling Outliers</h3><ul class="postList"><li name="9594" id="9594" class="graf graf--li graf-after--h3"><strong class="markup--strong markup--li-strong">Detect and Remove</strong>: Identify and remove outliers before standardizing the data.</li><li name="c530" id="c530" class="graf graf--li graf-after--li"><strong class="markup--strong markup--li-strong">Transformations</strong>: Apply transformations such as log or square root to reduce the effect of outliers.</li><li name="f90a" id="f90a" class="graf graf--li graf-after--li"><strong class="markup--strong markup--li-strong">Robust Scaling</strong>: Use robust scalers that use the median and interquartile range instead of the mean and standard deviation.</li></ul><h3 name="4c5a" id="4c5a" class="graf graf--h3 graf-after--li">When to Use Standardization?</h3><p name="3419" id="3419" class="graf graf--p graf-after--h3">Standardization is particularly beneficial for algorithms sensitive to the scale of data. Here are some examples:</p><ol class="postList"><li name="f1f5" id="f1f5" class="graf graf--li graf-after--p"><strong class="markup--strong markup--li-strong">K-Means Clustering</strong>: Ensures that each feature contributes equally to the distance calculation.</li><li name="0c70" id="0c70" class="graf graf--li graf-after--li"><strong class="markup--strong markup--li-strong">K-Nearest Neighbors (KNN)</strong>: Improves the accuracy by ensuring that no single feature dominates the distance metric.</li><li name="3a8a" id="3a8a" class="graf graf--li graf-after--li"><strong class="markup--strong markup--li-strong">Principal Component Analysis (PCA)</strong>: Ensures that each feature is equally weighted when determining the principal components.</li><li name="0bd0" id="0bd0" class="graf graf--li graf-after--li"><strong class="markup--strong markup--li-strong">Artificial Neural Networks (ANN)</strong>: Helps in balancing the weight updates during backpropagation.</li><li name="1f8f" id="1f8f" class="graf graf--li graf-after--li"><strong class="markup--strong markup--li-strong">Gradient Descent</strong>: Enhances the convergence rate by ensuring that the gradient steps are taken uniformly.</li></ol><h3 name="107e" id="107e" class="graf graf--h3 graf-after--li">Conclusion</h3><p name="1700" id="1700" class="graf graf--p graf-after--h3 graf--trailing">Standardization is a vital preprocessing step in machine learning that ensures features contribute equally to the model. By mean centering and scaling by the standard deviation, we transform our data to have a mean of zero and a standard deviation of one. This not only improves the accuracy and efficiency of various algorithms but also ensures faster convergence and balanced updates. However, it is essential to handle outliers carefully, as they can significantly impact the results. Understanding when and how to apply standardization can greatly enhance the performance of your machine learning models.</p></div></div></section>
+</section>
+<footer><p>By <a href="https://medium.com/@noorfatimaafzalbutt" class="p-author h-card">Noor Fatima</a> on <a href="https://medium.com/p/6c7760b5790a"><time class="dt-published" datetime="2024-06-26T05:14:22.440Z">June 26, 2024</time></a>.</p><p><a href="https://medium.com/@noorfatimaafzalbutt/understanding-standardization-in-data-preprocessing-6c7760b5790a" class="p-canonical">Canonical link</a></p><p>Exported from <a href="https://medium.com">Medium</a> on April 20, 2026.</p></footer></article></body></html>

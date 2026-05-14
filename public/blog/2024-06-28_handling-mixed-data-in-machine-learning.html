@@ -1,0 +1,72 @@
+<!DOCTYPE html><html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><title>Handling Mixed Data in Machine Learning</title><style>
+      * {
+        font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+      }
+      html, body {
+        margin: 0;
+        padding: 0;
+      }
+      h1 {
+        font-size: 50px;
+        margin-bottom: 17px;
+        color: #333;
+      }
+      h2 {
+        font-size: 24px;
+        line-height: 1.6;
+        margin: 30px 0 0 0;
+        margin-bottom: 18px;
+        margin-top: 33px;
+        color: #333;
+      }
+      h3 {
+        font-size: 30px;
+        margin: 10px 0 20px 0;
+        color: #333;
+      }
+      header {
+        width: 640px;
+        margin: auto;
+      }
+      section {
+        width: 640px;
+        margin: auto;
+      }
+      section p {
+        margin-bottom: 27px;
+        font-size: 20px;
+        line-height: 1.6;
+        color: #333;
+      }
+      section img {
+        max-width: 640px;
+      }
+      footer {
+        padding: 0 20px;
+        margin: 50px 0;
+        text-align: center;
+        font-size: 12px;
+      }
+      .aspectRatioPlaceholder {
+        max-width: auto !important;
+        max-height: auto !important;
+      }
+      .aspectRatioPlaceholder-fill {
+        padding-bottom: 0 !important;
+      }
+      header,
+      section[data-field=subtitle],
+      section[data-field=description] {
+        display: none;
+      }
+      </style></head><body><article class="h-entry">
+<header>
+<h1 class="p-name">Handling Mixed Data in Machine Learning</h1>
+</header>
+<section data-field="subtitle" class="p-summary">
+Introduction
+</section>
+<section data-field="body" class="e-content">
+<section name="36dd" class="section section--body section--first section--last"><div class="section-divider"><hr class="section-divider"></div><div class="section-content"><div class="section-inner sectionLayout--insetColumn"><h3 name="3dbf" id="3dbf" class="graf graf--h3 graf--leading graf--title">Handling Mixed Data in Machine Learning</h3><figure name="79f4" id="79f4" class="graf graf--figure graf-after--h3"><img class="graf-image" data-image-id="1*OwOk9pYU9HquZbIK2AJqPA.jpeg" data-width="1920" data-height="1080" data-is-featured="true" src="https://cdn-images-1.medium.com/max/800/1*OwOk9pYU9HquZbIK2AJqPA.jpeg"></figure><h3 name="15bc" id="15bc" class="graf graf--h3 graf-after--figure">Introduction</h3><p name="3a04" id="3a04" class="graf graf--p graf-after--h3">In machine learning, data often comes in various forms and structures, necessitating specialized techniques for effective preprocessing. Mixed data, comprising both numerical and categorical components within the same columns, presents unique challenges. This article will explore how to categorize mixed data into numerical and categorical types and demonstrate preprocessing techniques using a sample dataset.</p><h3 name="ab09" id="ab09" class="graf graf--h3 graf-after--p">Understanding Mixed Data</h3><p name="b4b4" id="b4b4" class="graf graf--p graf-after--h3">Mixed data contains both numerical and categorical values in the same columns. This mixture can complicate data preprocessing, as numerical and categorical values often require different handling techniques.</p><p name="abb6" id="abb6" class="graf graf--p graf-after--p">Consider the following dataset:</p><figure name="bf88" id="bf88" class="graf graf--figure graf-after--p"><img class="graf-image" data-image-id="1*zamSHFmhJUfWTQDPk04FXQ.png" data-width="386" data-height="214" src="https://cdn-images-1.medium.com/max/800/1*zamSHFmhJUfWTQDPk04FXQ.png"></figure><p name="02bf" id="02bf" class="graf graf--p graf-after--figure">Here, the <code class="markup--code markup--p-code">Cabin</code> and <code class="markup--code markup--p-code">Ticket</code> columns exhibit mixed data types, while <code class="markup--code markup--p-code">Number</code> contains both numerical and non-numerical values.</p><h3 name="3919" id="3919" class="graf graf--h3 graf-after--p">Categorizing Mixed Data</h3><p name="360b" id="360b" class="graf graf--p graf-after--h3">The first step in handling mixed data is categorizing the columns into numerical and categorical types.</p><h3 name="ad8f" id="ad8f" class="graf graf--h3 graf-after--p">Numerical Columns</h3><p name="4242" id="4242" class="graf graf--p graf-after--h3">Numerical columns contain only numerical values. For example, the <code class="markup--code markup--p-code">Number</code> column is predominantly numerical but contains a non-numerical value &#39;A&#39;.</p><pre data-code-block-mode="2" spellcheck="false" data-code-block-lang="python" name="7649" id="7649" class="graf graf--pre graf-after--p graf--preV2"><span class="pre--content"><span class="hljs-comment"># extract numerical part</span><br />df[<span class="hljs-string">&#x27;number_numerical&#x27;</span>] = pd.to_numeric(df[<span class="hljs-string">&quot;number&quot;</span>],errors=<span class="hljs-string">&#x27;coerce&#x27;</span>,downcast=<span class="hljs-string">&#x27;integer&#x27;</span>)<br /><span class="hljs-comment"># extract categorical part</span><br />df[<span class="hljs-string">&#x27;number_categorical&#x27;</span>] = np.where(df[<span class="hljs-string">&#x27;number_numerical&#x27;</span>].isnull(),df[<span class="hljs-string">&#x27;number&#x27;</span>],np.nan)<br /><br />df.head()</span></pre><figure name="d3b8" id="d3b8" class="graf graf--figure graf-after--pre"><img class="graf-image" data-image-id="1*7XElFO5-dw7cbsRPTc406g.png" data-width="671" data-height="217" src="https://cdn-images-1.medium.com/max/800/1*7XElFO5-dw7cbsRPTc406g.png"></figure><h3 name="e4ee" id="e4ee" class="graf graf--h3 graf-after--figure">Categorical Columns</h3><p name="2185" id="2185" class="graf graf--p graf-after--h3">Categorical columns contain non-numerical values. The <code class="markup--code markup--p-code">Cabin</code> and <code class="markup--code markup--p-code">Ticket</code> columns fall into this category as they primarily contain text and alphanumeric combinations.</p><pre data-code-block-mode="2" spellcheck="false" data-code-block-lang="python" name="ada5" id="ada5" class="graf graf--pre graf-after--p graf--preV2"><span class="pre--content">df[<span class="hljs-string">&#x27;cabin_num&#x27;</span>] = df[<span class="hljs-string">&#x27;Cabin&#x27;</span>].<span class="hljs-built_in">str</span>.extract(<span class="hljs-string">&#x27;(\d+)&#x27;</span>) <span class="hljs-comment"># captures numerical part</span><br />df[<span class="hljs-string">&#x27;cabin_cat&#x27;</span>] = df[<span class="hljs-string">&#x27;Cabin&#x27;</span>].<span class="hljs-built_in">str</span>[<span class="hljs-number">0</span>] <span class="hljs-comment"># captures the first letter</span><br /><br />df.head()</span></pre><figure name="fa9a" id="fa9a" class="graf graf--figure graf-after--pre"><img class="graf-image" data-image-id="1*abX8kRMojcSx6Fz74QxFlg.png" data-width="816" data-height="247" src="https://cdn-images-1.medium.com/max/800/1*abX8kRMojcSx6Fz74QxFlg.png"></figure><pre data-code-block-mode="2" spellcheck="false" data-code-block-lang="python" name="74a8" id="74a8" class="graf graf--pre graf-after--figure graf--preV2"><span class="pre--content"><span class="hljs-comment"># extract the last bit of ticket as number</span><br />df[<span class="hljs-string">&#x27;ticket_num&#x27;</span>] = df[<span class="hljs-string">&#x27;Ticket&#x27;</span>].apply(<span class="hljs-keyword">lambda</span> s: s.split()[-<span class="hljs-number">1</span>])<br />df[<span class="hljs-string">&#x27;ticket_num&#x27;</span>] = pd.to_numeric(df[<span class="hljs-string">&#x27;ticket_num&#x27;</span>],<br />                                   errors=<span class="hljs-string">&#x27;coerce&#x27;</span>,<br />                                   downcast=<span class="hljs-string">&#x27;integer&#x27;</span>)<br /><br /><span class="hljs-comment"># extract the first part of ticket as category</span><br />df[<span class="hljs-string">&#x27;ticket_cat&#x27;</span>] = df[<span class="hljs-string">&#x27;Ticket&#x27;</span>].apply(<span class="hljs-keyword">lambda</span> s: s.split()[<span class="hljs-number">0</span>])<br />df[<span class="hljs-string">&#x27;ticket_cat&#x27;</span>] = np.where(df[<span class="hljs-string">&#x27;ticket_cat&#x27;</span>].<span class="hljs-built_in">str</span>.isdigit(), np.nan,<br />                              df[<span class="hljs-string">&#x27;ticket_cat&#x27;</span>])<br /><br />df.head(<span class="hljs-number">20</span>)</span></pre><figure name="59de" id="59de" class="graf graf--figure graf-after--pre"><img class="graf-image" data-image-id="1*QVsPJy8Mbk-UvgUzooeuJg.png" data-width="802" data-height="349" src="https://cdn-images-1.medium.com/max/800/1*QVsPJy8Mbk-UvgUzooeuJg.png"></figure><h3 name="04f3" id="04f3" class="graf graf--h3 graf-after--figure">Preprocessing Mixed Data</h3><p name="01c6" id="01c6" class="graf graf--p graf-after--h3">To preprocess mixed data, we’ll use Python with pandas and scikit-learn. The key steps include:</p><ol class="postList"><li name="0f15" id="0f15" class="graf graf--li graf-after--p"><strong class="markup--strong markup--li-strong">Identifying and Separating Mixed Data</strong>: Extract numerical and categorical components from mixed columns.</li><li name="7a93" id="7a93" class="graf graf--li graf-after--li"><strong class="markup--strong markup--li-strong">Handling Missing Values</strong>: Impute or remove missing values as appropriate.</li><li name="278c" id="278c" class="graf graf--li graf-after--li"><strong class="markup--strong markup--li-strong">Encoding Categorical Data</strong>: Convert categorical values into numerical representations.</li><li name="0f8b" id="0f8b" class="graf graf--li graf-after--li"><strong class="markup--strong markup--li-strong">Scaling Numerical Data</strong>: Standardize or normalize numerical values for better model performance.</li></ol><h3 name="5bd2" id="5bd2" class="graf graf--h3 graf-after--li">Conclusion</h3><p name="2856" id="2856" class="graf graf--p graf-after--h3 graf--trailing">Handling mixed data in machine learning involves several preprocessing steps to ensure that both numerical and categorical components are appropriately managed. By categorizing mixed data and applying suitable transformations, we can prepare the dataset for effective modeling. This approach helps maintain the integrity and predictive power of machine learning models.</p></div></div></section>
+</section>
+<footer><p>By <a href="https://medium.com/@noorfatimaafzalbutt" class="p-author h-card">Noor Fatima</a> on <a href="https://medium.com/p/fbb4f5e77810"><time class="dt-published" datetime="2024-06-28T18:40:12.493Z">June 28, 2024</time></a>.</p><p><a href="https://medium.com/@noorfatimaafzalbutt/handling-mixed-data-in-machine-learning-fbb4f5e77810" class="p-canonical">Canonical link</a></p><p>Exported from <a href="https://medium.com">Medium</a> on April 20, 2026.</p></footer></article></body></html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html><html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><title>Scraping Tabular Data from a Website Using BeautifulSoup</title><style>
+      * {
+        font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+      }
+      html, body {
+        margin: 0;
+        padding: 0;
+      }
+      h1 {
+        font-size: 50px;
+        margin-bottom: 17px;
+        color: #333;
+      }
+      h2 {
+        font-size: 24px;
+        line-height: 1.6;
+        margin: 30px 0 0 0;
+        margin-bottom: 18px;
+        margin-top: 33px;
+        color: #333;
+      }
+      h3 {
+        font-size: 30px;
+        margin: 10px 0 20px 0;
+        color: #333;
+      }
+      header {
+        width: 640px;
+        margin: auto;
+      }
+      section {
+        width: 640px;
+        margin: auto;
+      }
+      section p {
+        margin-bottom: 27px;
+        font-size: 20px;
+        line-height: 1.6;
+        color: #333;
+      }
+      section img {
+        max-width: 640px;
+      }
+      footer {
+        padding: 0 20px;
+        margin: 50px 0;
+        text-align: center;
+        font-size: 12px;
+      }
+      .aspectRatioPlaceholder {
+        max-width: auto !important;
+        max-height: auto !important;
+      }
+      .aspectRatioPlaceholder-fill {
+        padding-bottom: 0 !important;
+      }
+      header,
+      section[data-field=subtitle],
+      section[data-field=description] {
+        display: none;
+      }
+      </style></head><body><article class="h-entry">
+<header>
+<h1 class="p-name">Scraping Tabular Data from a Website Using BeautifulSoup</h1>
+</header>
+<section data-field="subtitle" class="p-summary">
+Web scraping is a powerful technique for extracting data from websites. In this article, we’ll walk through a practical example of how to…
+</section>
+<section data-field="body" class="e-content">
+<section name="98d0" class="section section--body section--first section--last"><div class="section-divider"><hr class="section-divider"></div><div class="section-content"><div class="section-inner sectionLayout--insetColumn"><h3 name="6264" id="6264" class="graf graf--h3 graf--leading graf--title">Scraping Tabular Data from a Website Using BeautifulSoup</h3><figure name="c0a3" id="c0a3" class="graf graf--figure graf-after--h3"><img class="graf-image" data-image-id="1*M6g5hyAx_6yd1M8LO17Y0w.jpeg" data-width="1280" data-height="720" data-is-featured="true" src="https://cdn-images-1.medium.com/max/800/1*M6g5hyAx_6yd1M8LO17Y0w.jpeg"><figcaption class="imageCaption">Web Scraping using Python</figcaption></figure><p name="8c36" id="8c36" class="graf graf--p graf-after--figure">Web scraping is a powerful technique for extracting data from websites. In this article, we’ll walk through a practical example of how to scrape tabular data from a website using Python’s BeautifulSoup library. Specifically, we’ll be extracting data from the 2022 IPL auction page.</p><h3 name="c8e1" id="c8e1" class="graf graf--h3 graf-after--p">Prerequisites</h3><p name="aaee" id="aaee" class="graf graf--p graf-after--h3">Before we begin, make sure you have the following libraries installed:</p><ul class="postList"><li name="9a15" id="9a15" class="graf graf--li graf-after--p"><code class="markup--code markup--li-code">requests</code> for sending HTTP requests</li><li name="a4a9" id="a4a9" class="graf graf--li graf-after--li"><code class="markup--code markup--li-code">beautifulsoup4</code> for parsing HTML and XML documents</li><li name="0aa9" id="0aa9" class="graf graf--li graf-after--li"><code class="markup--code markup--li-code">pandas</code> for data manipulation and analysis</li></ul><p name="7e35" id="7e35" class="graf graf--p graf-after--li">You can install these libraries using pip:</p><pre data-code-block-mode="2" spellcheck="false" data-code-block-lang="bash" name="5dc5" id="5dc5" class="graf graf--pre graf-after--p graf--preV2"><span class="pre--content">pip install requests beautifulsoup4 pandas</span></pre><h3 name="1c1a" id="1c1a" class="graf graf--h3 graf-after--pre">Inspecting the Website for Tags and Classes</h3><p name="5258" id="5258" class="graf graf--p graf-after--h3">To scrape data from a website, you need to inspect the HTML structure of the page. Here’s how you can do that:</p><ol class="postList"><li name="9d94" id="9d94" class="graf graf--li graf-after--p"><strong class="markup--strong markup--li-strong">Open the website</strong> in your web browser (e.g., Chrome, Firefox).</li><li name="c0f1" id="c0f1" class="graf graf--li graf-after--li"><strong class="markup--strong markup--li-strong">Right-click on the element</strong> you want to scrape and select “Inspect” or “Inspect Element”.</li><li name="77eb" id="77eb" class="graf graf--li graf-after--li"><strong class="markup--strong markup--li-strong">Examine the HTML</strong> in the developer tools panel. Look for the tags and classes that define the table or elements you want to scrape.</li></ol><p name="3a8e" id="3a8e" class="graf graf--p graf-after--li">For example, on the IPL auction page:</p><ul class="postList"><li name="6125" id="6125" class="graf graf--li graf-after--p">Locate the table by finding the <code class="markup--code markup--li-code">&lt;table&gt;</code> tag.</li><li name="0bcf" id="0bcf" class="graf graf--li graf-after--li">Identify the class name (e.g., <code class="markup--code markup--li-code">class=&quot;ih-td-tab auction-tbl&quot;</code>) to target the specific table.</li><li name="1fe8" id="1fe8" class="graf graf--li graf-after--li">Identify the headers within <code class="markup--code markup--li-code">&lt;th&gt;</code> tags and rows within <code class="markup--code markup--li-code">&lt;tr&gt;</code> tags.</li><li name="45b0" id="45b0" class="graf graf--li graf-after--li">Note any additional nested tags or classes within the rows and cells that might be necessary to extract specific data.</li></ul><p name="2bc5" id="2bc5" class="graf graf--p graf-after--li">By inspecting the HTML, you can adjust your BeautifulSoup code to accurately target and extract the desired data.</p><h3 name="0c30" id="0c30" class="graf graf--h3 graf-after--p">Step-by-Step Guide</h3><h3 name="fd4f" id="fd4f" class="graf graf--h3 graf-after--h3">Complete Code</h3><p name="4a32" id="4a32" class="graf graf--p graf-after--h3">Here’s the complete code for scraping the IPL auction data and saving it to a CSV file:</p><pre data-code-block-mode="2" spellcheck="false" data-code-block-lang="python" name="e735" id="e735" class="graf graf--pre graf-after--p graf--preV2"><span class="pre--content"><span class="hljs-keyword">import</span> requests<br /><span class="hljs-keyword">from</span> bs4 <span class="hljs-keyword">import</span> BeautifulSoup<br /><span class="hljs-keyword">import</span> pandas <span class="hljs-keyword">as</span> pd<br /><br /><span class="hljs-comment"># Step 1: Send an HTTP request</span><br />url = <span class="hljs-string">&quot;https://www.iplt20.com/auction/2022&quot;</span><br />response = requests.get(url)<br />html_content = response.text<br /><br /><span class="hljs-comment"># Step 2: Parse the HTML content</span><br />soup = BeautifulSoup(html_content, <span class="hljs-string">&quot;lxml&quot;</span>)<br /><br /><span class="hljs-comment"># Step 3: Locate the table</span><br />table = soup.find(<span class="hljs-string">&quot;table&quot;</span>, class_=<span class="hljs-string">&quot;ih-td-tab auction-tbl&quot;</span>)<br /><br /><span class="hljs-comment"># Step 4: Extract table headers</span><br />headers = [header.text <span class="hljs-keyword">for</span> header <span class="hljs-keyword">in</span> table.find_all(<span class="hljs-string">&quot;th&quot;</span>)]<br /><br /><span class="hljs-comment"># Step 5: Create a DataFrame</span><br />df = pd.DataFrame(columns=headers)<br /><br /><span class="hljs-comment"># Step 6: Extract table rows</span><br />rows = table.find_all(<span class="hljs-string">&quot;tr&quot;</span>)<br /><span class="hljs-keyword">for</span> row <span class="hljs-keyword">in</span> rows[<span class="hljs-number">1</span>:]:<br />    first_td = row.find_all(<span class="hljs-string">&quot;td&quot;</span>)[<span class="hljs-number">0</span>].find(<span class="hljs-string">&quot;div&quot;</span>, class_=<span class="hljs-string">&quot;ih-pt-ic&quot;</span>).text.strip()<br />    data = [td.text <span class="hljs-keyword">for</span> td <span class="hljs-keyword">in</span> row.find_all(<span class="hljs-string">&quot;td&quot;</span>)[<span class="hljs-number">1</span>:]]<br />    data.insert(<span class="hljs-number">0</span>, first_td)<br />    df.loc[<span class="hljs-built_in">len</span>(df)] = data<br /><br /><span class="hljs-comment"># Step 7: Save the data to a CSV file</span><br />df.to_csv(<span class="hljs-string">&quot;ipl_auction.csv&quot;</span>, index=<span class="hljs-literal">False</span>)<br /><br /><span class="hljs-built_in">print</span>(df)</span></pre><h3 name="c6ac" id="c6ac" class="graf graf--h3 graf-after--pre">Explanation of the Code</h3><ul class="postList"><li name="b37c" id="b37c" class="graf graf--li graf-after--h3"><strong class="markup--strong markup--li-strong">Step 1: Send an HTTP Request: </strong>We send an HTTP GET request to the URL of the IPL auction page and store the HTML content of the page in the <code class="markup--code markup--li-code">html_content</code> variable.</li><li name="02f6" id="02f6" class="graf graf--li graf-after--li"><strong class="markup--strong markup--li-strong">Step 2: Parse the HTML Content: </strong>We parse the HTML content using BeautifulSoup and specify ‘lxml’ as the parser. This creates a BeautifulSoup object (<code class="markup--code markup--li-code">soup</code>) that allows us to navigate and search the HTML tree.</li><li name="8243" id="8243" class="graf graf--li graf-after--li"><strong class="markup--strong markup--li-strong">Step 3: Locate the Table: </strong>We locate the table containing the auction data by finding the <code class="markup--code markup--li-code">&lt;table&gt;</code> element with the class name &quot;ih-td-tab auction-tbl&quot;.</li><li name="eb4e" id="eb4e" class="graf graf--li graf-after--li"><strong class="markup--strong markup--li-strong">Step 4: Extract Table Headers: </strong>We extract the table headers by finding all <code class="markup--code markup--li-code">&lt;th&gt;</code> elements within the table and storing their text content in a list called <code class="markup--code markup--li-code">headers</code>.</li><li name="e73d" id="e73d" class="graf graf--li graf-after--li"><strong class="markup--strong markup--li-strong">Step 5: Create a DataFrame: </strong>We create an empty pandas DataFrame with the column names set to the extracted headers.</li><li name="5b2c" id="5b2c" class="graf graf--li graf-after--li"><strong class="markup--strong markup--li-strong">Step 6: Extract Table Rows: </strong>We extract the rows of the table by finding all <code class="markup--code markup--li-code">&lt;tr&gt;</code> elements. For each row, we:</li><li name="a06f" id="a06f" class="graf graf--li graf-after--li">Extract the text content of the first <code class="markup--code markup--li-code">&lt;td&gt;</code> element, which contains a <code class="markup--code markup--li-code">&lt;div&gt;</code> with the class &quot;ih-pt-ic&quot;.</li><li name="2b6f" id="2b6f" class="graf graf--li graf-after--li">Extract the text content of the remaining <code class="markup--code markup--li-code">&lt;td&gt;</code> elements.</li><li name="d253" id="d253" class="graf graf--li graf-after--li">Insert the first <code class="markup--code markup--li-code">&lt;td&gt;</code> element&#39;s text at the beginning of the row data.</li><li name="be9c" id="be9c" class="graf graf--li graf-after--li">Append the row data to the DataFrame.</li><li name="b688" id="b688" class="graf graf--li graf-after--li"><strong class="markup--strong markup--li-strong">Step 7: Save the Data to a CSV File: </strong>Finally, we save the DataFrame to a CSV file named “ipl_auction.csv” without including the index.</li></ul><h3 name="7aee" id="7aee" class="graf graf--h3 graf-after--li">Conclusion</h3><p name="9c88" id="9c88" class="graf graf--p graf-after--h3 graf--trailing">In this article, we’ve demonstrated how to scrape tabular data from a website using the BeautifulSoup library in Python. By following these steps, you can extract data from any webpage with a similar structure and save it for further analysis. Happy scraping!</p></div></div></section>
+</section>
+<footer><p>By <a href="https://medium.com/@noorfatimaafzalbutt" class="p-author h-card">Noor Fatima</a> on <a href="https://medium.com/p/47e938f1e637"><time class="dt-published" datetime="2024-06-24T05:58:46.377Z">June 24, 2024</time></a>.</p><p><a href="https://medium.com/@noorfatimaafzalbutt/scraping-tabular-data-from-a-website-using-beautifulsoup-47e938f1e637" class="p-canonical">Canonical link</a></p><p>Exported from <a href="https://medium.com">Medium</a> on April 20, 2026.</p></footer></article></body></html>

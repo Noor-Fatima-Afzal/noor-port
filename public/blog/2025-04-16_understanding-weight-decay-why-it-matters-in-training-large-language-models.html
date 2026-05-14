@@ -1,0 +1,72 @@
+<!DOCTYPE html><html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><title>Understanding Weight Decay: Why It Matters in Training Large Language Models</title><style>
+      * {
+        font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+      }
+      html, body {
+        margin: 0;
+        padding: 0;
+      }
+      h1 {
+        font-size: 50px;
+        margin-bottom: 17px;
+        color: #333;
+      }
+      h2 {
+        font-size: 24px;
+        line-height: 1.6;
+        margin: 30px 0 0 0;
+        margin-bottom: 18px;
+        margin-top: 33px;
+        color: #333;
+      }
+      h3 {
+        font-size: 30px;
+        margin: 10px 0 20px 0;
+        color: #333;
+      }
+      header {
+        width: 640px;
+        margin: auto;
+      }
+      section {
+        width: 640px;
+        margin: auto;
+      }
+      section p {
+        margin-bottom: 27px;
+        font-size: 20px;
+        line-height: 1.6;
+        color: #333;
+      }
+      section img {
+        max-width: 640px;
+      }
+      footer {
+        padding: 0 20px;
+        margin: 50px 0;
+        text-align: center;
+        font-size: 12px;
+      }
+      .aspectRatioPlaceholder {
+        max-width: auto !important;
+        max-height: auto !important;
+      }
+      .aspectRatioPlaceholder-fill {
+        padding-bottom: 0 !important;
+      }
+      header,
+      section[data-field=subtitle],
+      section[data-field=description] {
+        display: none;
+      }
+      </style></head><body><article class="h-entry">
+<header>
+<h1 class="p-name">Understanding Weight Decay: Why It Matters in Training Large Language Models</h1>
+</header>
+<section data-field="subtitle" class="p-summary">
+When training large language models (LLMs) like GPT, BERT, or LLaMA, the term weight decay comes up a lot, especially when trying to tune…
+</section>
+<section data-field="body" class="e-content">
+<section name="1a0c" class="section section--body section--first section--last"><div class="section-divider"><hr class="section-divider"></div><div class="section-content"><div class="section-inner sectionLayout--insetColumn"><h3 name="f53f" id="f53f" class="graf graf--h3 graf--leading graf--title">Understanding Weight Decay: Why It Matters in Training Large Language Models</h3><figure name="605b" id="605b" class="graf graf--figure graf-after--h3"><img class="graf-image" data-image-id="1*Z0-y-7zJ_Y3vmnUlzmQUeA.png" data-width="782" data-height="340" data-is-featured="true" alt="Brain" src="https://cdn-images-1.medium.com/max/800/1*Z0-y-7zJ_Y3vmnUlzmQUeA.png"></figure><p name="4b9d" id="4b9d" class="graf graf--p graf-after--figure">When training large language models (LLMs) like GPT, BERT, or LLaMA, the term <em class="markup--em markup--p-em">weight decay</em> comes up a lot, especially when trying to tune for performance or avoid overfitting. But what exactly is weight decay? How does it affect the training process? And why does increasing it seem to “shrink” model weights?</p><p name="737e" id="737e" class="graf graf--p graf-after--p">Let’s demystify this with intuition, math, and even an animation to make things click.</p><h3 name="fc84" id="fc84" class="graf graf--h3 graf-after--p">What is Weight Decay?</h3><p name="ede2" id="ede2" class="graf graf--p graf-after--h3"><strong class="markup--strong markup--p-strong">Weight decay</strong> is a regularization technique used to prevent models from overfitting. It works by adding a penalty term to the loss function, discouraging the model from assigning large values to its weights.</p><p name="eef1" id="eef1" class="graf graf--p graf-after--p">In simple terms, weight decay tells the model:</p><blockquote name="c129" id="c129" class="graf graf--blockquote graf--startsWithDoubleQuote graf-after--p"><em class="markup--em markup--blockquote-em">“Hey, don’t get too confident. Keep your weights small unless absolutely necessary.”</em></blockquote><h3 name="56d3" id="56d3" class="graf graf--h3 graf-after--blockquote">The Formula Behind Weight Decay</h3><p name="dae1" id="dae1" class="graf graf--p graf-after--h3">During training, models usually try to minimize a loss function, like cross-entropy. Weight decay modifies this loss function like this:</p><figure name="76fd" id="76fd" class="graf graf--figure graf-after--p"><img class="graf-image" data-image-id="1*5spg722g9855cKC9iu9XVA.png" data-width="685" data-height="171" src="https://cdn-images-1.medium.com/max/800/1*5spg722g9855cKC9iu9XVA.png"></figure><p name="474f" id="474f" class="graf graf--p graf-after--figure">The second term is the regularization part. It penalizes large weights, forcing the model to keep them smaller.</p><h3 name="620c" id="620c" class="graf graf--h3 graf-after--p">Why Use Weight Decay in LLMs?</h3><p name="985a" id="985a" class="graf graf--p graf-after--h3">Large Language Models are <strong class="markup--strong markup--p-strong">highly expressive</strong>, often with billions of parameters. Without regularization, they can memorize training data instead of learning general patterns , a problem called <strong class="markup--strong markup--p-strong">overfitting</strong>.</p><p name="59eb" id="59eb" class="graf graf--p graf-after--p">Weight decay acts as a constraint, promoting <strong class="markup--strong markup--p-strong">simpler and more generalizable</strong> models.</p><h3 name="9d8a" id="9d8a" class="graf graf--h3 graf-after--p">How Does It Affect Model Performance?</h3><p name="c13c" id="c13c" class="graf graf--p graf-after--h3">Let’s break it down:</p><ul class="postList"><li name="5118" id="5118" class="graf graf--li graf-after--p"><strong class="markup--strong markup--li-strong">Increasing weight decay</strong> → <strong class="markup--strong markup--li-strong">stronger penalty</strong> → <strong class="markup--strong markup--li-strong">smaller weights</strong></li><li name="78db" id="78db" class="graf graf--li graf-after--li"><strong class="markup--strong markup--li-strong">Decreasing weight decay</strong> → <strong class="markup--strong markup--li-strong">weaker penalty</strong> → <strong class="markup--strong markup--li-strong">larger weights</strong></li></ul><p name="f426" id="f426" class="graf graf--p graf-after--li">Now here’s the trick:</p><ul class="postList"><li name="0331" id="0331" class="graf graf--li graf-after--p">Too little weight decay = <strong class="markup--strong markup--li-strong">overfitting</strong></li><li name="ab5c" id="ab5c" class="graf graf--li graf-after--li">Too much weight decay = <strong class="markup--strong markup--li-strong">underfitting</strong></li></ul><p name="65c3" id="65c3" class="graf graf--p graf-after--li">So, it’s a balancing act!</p><h3 name="c7b4" id="c7b4" class="graf graf--h3 graf-after--p">A Closer Look: How Weights Shrink Mathematically</h3><p name="9dab" id="9dab" class="graf graf--p graf-after--h3">Imagine this: you’re using a simple optimizer like SGD. The update rule with weight decay looks like this:</p><figure name="ac47" id="ac47" class="graf graf--figure graf-after--p"><img class="graf-image" data-image-id="1*jY4jNTbMZj6Y3RzKQHKBBA.png" data-width="660" data-height="285" src="https://cdn-images-1.medium.com/max/800/1*jY4jNTbMZj6Y3RzKQHKBBA.png"></figure><p name="2444" id="2444" class="graf graf--p graf-after--figure">Which means:</p><ul class="postList"><li name="9a0e" id="9a0e" class="graf graf--li graf-after--p">Every weight update <strong class="markup--strong markup--li-strong">shrinks the weight a bit</strong>, pulling it toward zero</li><li name="c61a" id="c61a" class="graf graf--li graf-after--li">The higher the λ, the <strong class="markup--strong markup--li-strong">stronger</strong> this pull</li></ul><h3 name="f92b" id="f92b" class="graf graf--h3 graf-after--li">Numerical Example</h3><p name="2ba5" id="2ba5" class="graf graf--p graf-after--h3">Let’s say our original weights are:</p><pre data-code-block-mode="1" spellcheck="false" data-code-block-lang="csharp" name="0f8e" id="0f8e" class="graf graf--pre graf-after--p graf--preV2"><span class="pre--content">[<span class="hljs-meta">5.4, -2.1, 3.7</span>]</span></pre><p name="0fb0" id="0fb0" class="graf graf--p graf-after--pre">Now, we apply one update step with different weight decay values:</p><figure name="a77b" id="a77b" class="graf graf--figure graf-after--p"><img class="graf-image" data-image-id="1*cuhlsJaxRbQmXe80tQK0_A.png" data-width="850" data-height="258" src="https://cdn-images-1.medium.com/max/800/1*cuhlsJaxRbQmXe80tQK0_A.png"></figure><p name="debb" id="debb" class="graf graf--p graf-after--figure">You can see: the bigger the λ, the smaller the weights after the update.</p><h3 name="f014" id="f014" class="graf graf--h3 graf-after--p">Shrinking Weights Over Time</h3><p name="6951" id="6951" class="graf graf--p graf-after--h3">To make this visual, we created an animation showing how weights change over multiple training steps with weight decay applied. Here’s what happens with λ = 0.0, 0.01, 0.1, 1.0:</p><figure name="acdd" id="acdd" class="graf graf--figure graf-after--p"><img class="graf-image" data-image-id="1*VXCSTSTCtvrNoUPpnUHQOA.png" data-width="475" data-height="356" src="https://cdn-images-1.medium.com/max/800/1*VXCSTSTCtvrNoUPpnUHQOA.png"></figure><p name="6de5" id="6de5" class="graf graf--p graf-after--figure">In the animation, you can see the weights steadily pulled toward zero over 20 steps , a direct result of the decay term in action.</p><p name="4c97" id="4c97" class="graf graf--p graf-after--p">Want to try different λ values? λ = 0 results in flat lines (no change), while λ = 1.0 shows rapid decay to near-zero weights.</p><h3 name="53f8" id="53f8" class="graf graf--h3 graf-after--p">Caution: More Isn’t Always Better</h3><p name="53b8" id="53b8" class="graf graf--p graf-after--h3">Weight decay is powerful, but using too much can cripple your model:</p><ul class="postList"><li name="c883" id="c883" class="graf graf--li graf-after--p"><strong class="markup--strong markup--li-strong">Very high λ</strong>: Weights become too small to learn anything meaningful → <strong class="markup--strong markup--li-strong">underfitting</strong></li><li name="8a3c" id="8a3c" class="graf graf--li graf-after--li"><strong class="markup--strong markup--li-strong">Very low λ</strong>: Weights grow unchecked → <strong class="markup--strong markup--li-strong">overfitting</strong></li></ul><p name="6e02" id="6e02" class="graf graf--p graf-after--li">In practice:</p><ul class="postList"><li name="8ef6" id="8ef6" class="graf graf--li graf-after--p">LLMs use decays in the range of <code class="markup--code markup--li-code">0.01</code> to <code class="markup--code markup--li-code">0.1</code></li><li name="f65f" id="f65f" class="graf graf--li graf-after--li">You’ll often tune it as a hyperparameter</li></ul><h3 name="8716" id="8716" class="graf graf--h3 graf-after--li">Summary</h3><ul class="postList"><li name="ba69" id="ba69" class="graf graf--li graf-after--h3">Weight decay is a <strong class="markup--strong markup--li-strong">regularization tool</strong> that penalizes large weights.</li><li name="12b4" id="12b4" class="graf graf--li graf-after--li">It adds a <strong class="markup--strong markup--li-strong">shrinkage force</strong> during training updates.</li><li name="74ca" id="74ca" class="graf graf--li graf-after--li">Higher decay = more shrinkage = simpler models.</li><li name="5fd4" id="5fd4" class="graf graf--li graf-after--li">Too much decay = underfitting, too little = overfitting.</li><li name="c4dc" id="c4dc" class="graf graf--li graf-after--li">It’s crucial in training stable and generalizable LLMs.</li></ul><h3 name="a1f1" id="a1f1" class="graf graf--h3 graf-after--li">Final Thoughts</h3><p name="d3c1" id="d3c1" class="graf graf--p graf-after--h3">Weight decay might seem like a tiny detail, but it has a <strong class="markup--strong markup--p-strong">huge impact</strong> on model behavior — especially in complex neural networks like LLMs. Think of it as a gentle nudge that keeps your model humble and generalizable.</p><p name="15d9" id="15d9" class="graf graf--p graf-after--p graf--trailing">Want to experiment with weight decay in your own models? Try adjusting λ and observe how your training loss and model weights behave. You might be surprised how such a small number can steer such big systems.</p></div></div></section>
+</section>
+<footer><p>By <a href="https://medium.com/@noorfatimaafzalbutt" class="p-author h-card">Noor Fatima</a> on <a href="https://medium.com/p/b3a5f1ee2e9a"><time class="dt-published" datetime="2025-04-16T10:00:30.136Z">April 16, 2025</time></a>.</p><p><a href="https://medium.com/@noorfatimaafzalbutt/understanding-weight-decay-why-it-matters-in-training-large-language-models-b3a5f1ee2e9a" class="p-canonical">Canonical link</a></p><p>Exported from <a href="https://medium.com">Medium</a> on April 20, 2026.</p></footer></article></body></html>

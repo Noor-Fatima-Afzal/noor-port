@@ -1,0 +1,72 @@
+<!DOCTYPE html><html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><title>Applying Physical Constraints in Physics-Informed Neural Networks (PINNs): Methods and Examples</title><style>
+      * {
+        font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+      }
+      html, body {
+        margin: 0;
+        padding: 0;
+      }
+      h1 {
+        font-size: 50px;
+        margin-bottom: 17px;
+        color: #333;
+      }
+      h2 {
+        font-size: 24px;
+        line-height: 1.6;
+        margin: 30px 0 0 0;
+        margin-bottom: 18px;
+        margin-top: 33px;
+        color: #333;
+      }
+      h3 {
+        font-size: 30px;
+        margin: 10px 0 20px 0;
+        color: #333;
+      }
+      header {
+        width: 640px;
+        margin: auto;
+      }
+      section {
+        width: 640px;
+        margin: auto;
+      }
+      section p {
+        margin-bottom: 27px;
+        font-size: 20px;
+        line-height: 1.6;
+        color: #333;
+      }
+      section img {
+        max-width: 640px;
+      }
+      footer {
+        padding: 0 20px;
+        margin: 50px 0;
+        text-align: center;
+        font-size: 12px;
+      }
+      .aspectRatioPlaceholder {
+        max-width: auto !important;
+        max-height: auto !important;
+      }
+      .aspectRatioPlaceholder-fill {
+        padding-bottom: 0 !important;
+      }
+      header,
+      section[data-field=subtitle],
+      section[data-field=description] {
+        display: none;
+      }
+      </style></head><body><article class="h-entry">
+<header>
+<h1 class="p-name">Applying Physical Constraints in Physics-Informed Neural Networks (PINNs): Methods and Examples</h1>
+</header>
+<section data-field="subtitle" class="p-summary">
+As machine learning (ML) continues to advance, its intersection with physical sciences has given rise to Physics-Informed Neural Networks…
+</section>
+<section data-field="body" class="e-content">
+<section name="2a8c" class="section section--body section--first section--last"><div class="section-divider"><hr class="section-divider"></div><div class="section-content"><div class="section-inner sectionLayout--insetColumn"><h3 name="65ec" id="65ec" class="graf graf--h3 graf--leading graf--title">Applying Physical Constraints in Physics-Informed Neural Networks (PINNs): Methods and Examples</h3><figure name="b541" id="b541" class="graf graf--figure graf-after--h3"><img class="graf-image" data-image-id="0*yccI-BlPodSiIcGO.jpg" data-width="700" data-height="366" data-is-featured="true" src="https://cdn-images-1.medium.com/max/800/0*yccI-BlPodSiIcGO.jpg"><figcaption class="imageCaption">Physical Constraints in Physics-Informed Neural Networks</figcaption></figure><p name="60bd" id="60bd" class="graf graf--p graf-after--figure">As machine learning (ML) continues to advance, its intersection with physical sciences has given rise to <strong class="markup--strong markup--p-strong">Physics-Informed Neural Networks (PINNs)</strong>. These hybrid models combine <strong class="markup--strong markup--p-strong">data-driven learning</strong> with <strong class="markup--strong markup--p-strong">physical knowledge</strong> such as differential equations, conservation laws, or empirical relationships. One of the most critical aspects of PINNs is the way they <strong class="markup--strong markup--p-strong">embed physical constraints</strong> into the learning process.</p><p name="13c4" id="13c4" class="graf graf--p graf-after--p">In this article, we explore various <strong class="markup--strong markup--p-strong">methods to enforce physical laws in PINNs</strong>, along with examples from wind power forecasting and other domains.</p><h3 name="50d3" id="50d3" class="graf graf--h3 graf-after--p">Why Physical Constraints Matter</h3><p name="96cb" id="96cb" class="graf graf--p graf-after--h3">Traditional neural networks can <strong class="markup--strong markup--p-strong">overfit</strong>, generalize poorly, or produce <strong class="markup--strong markup--p-strong">non-physical predictions</strong> (e.g., negative wind power output or sudden spikes in fluid velocity). Integrating physics helps:</p><ul class="postList"><li name="6531" id="6531" class="graf graf--li graf-after--p">Improve generalization with limited data.</li><li name="943d" id="943d" class="graf graf--li graf-after--li">Ensure physically plausible outputs.</li><li name="171e" id="171e" class="graf graf--li graf-after--li">Accelerate convergence by reducing the solution space.</li></ul><h3 name="b68b" id="b68b" class="graf graf--h3 graf-after--li">Methods for Embedding Physical Constraints in PINNs</h3><h3 name="207d" id="207d" class="graf graf--h3 graf-after--h3">1. Loss Function Modification (Soft Constraints)</h3><p name="42dc" id="42dc" class="graf graf--p graf-after--h3">The most common approach is adding physical constraints as <strong class="markup--strong markup--p-strong">penalty terms</strong> in the <strong class="markup--strong markup--p-strong">loss function</strong>. This penalizes violations of known laws during training.</p><p name="4800" id="4800" class="graf graf--p graf-after--p"><strong class="markup--strong markup--p-strong">Example</strong>:<br> In wind power forecasting, the <strong class="markup--strong markup--p-strong">power output</strong> PPP is expected to follow a known <strong class="markup--strong markup--p-strong">power curve</strong> based on wind speed vvv:</p><figure name="4e17" id="4e17" class="graf graf--figure graf-after--p"><img class="graf-image" data-image-id="1*uN4WYV0Dh949GU8GWD75UQ.png" data-width="249" data-height="93" src="https://cdn-images-1.medium.com/max/800/1*uN4WYV0Dh949GU8GWD75UQ.png"></figure><p name="512e" id="512e" class="graf graf--p graf-after--figure">This equation can be included in the loss function to guide the network toward physically consistent outputs.</p><p name="7e4c" id="7e4c" class="graf graf--p graf-after--p"><strong class="markup--strong markup--p-strong">PINN Loss Function</strong>:</p><figure name="fadf" id="fadf" class="graf graf--figure graf-after--p"><img class="graf-image" data-image-id="1*HsBwaP4er9Cv6MWMa08vRQ.png" data-width="233" data-height="47" src="https://cdn-images-1.medium.com/max/800/1*HsBwaP4er9Cv6MWMa08vRQ.png"></figure><p name="a9f3" id="a9f3" class="graf graf--p graf-after--figure">Where:</p><ul class="postList"><li name="6873" id="6873" class="graf graf--li graf-after--p">Ldata​: typical MSE between predicted and actual values.</li><li name="dd80" id="dd80" class="graf graf--li graf-after--li">Lphysics​: physical law violation (e.g., deviation from power curve).</li><li name="fed6" id="fed6" class="graf graf--li graf-after--li">λ: weighting factor.</li></ul><h3 name="e8ea" id="e8ea" class="graf graf--h3 graf-after--li">2. Architectural Constraints (Hard Constraints)</h3><p name="d7bb" id="d7bb" class="graf graf--p graf-after--h3">Instead of adding penalties, some physical laws can be embedded <strong class="markup--strong markup--p-strong">directly into the network structure</strong> to make them <strong class="markup--strong markup--p-strong">always satisfied</strong>.</p><p name="2e9f" id="2e9f" class="graf graf--p graf-after--p"><strong class="markup--strong markup--p-strong">Example</strong>:<br> In fluid dynamics, a <strong class="markup--strong markup--p-strong">divergence-free condition</strong> for incompressible flow can be enforced by designing the output velocity field to satisfy this constraint automatically via custom activation functions or divergence-free layers.</p><p name="4887" id="4887" class="graf graf--p graf-after--p">In wind energy, you can design the final layer so outputs <strong class="markup--strong markup--p-strong">never exceed the turbine capacity</strong> or <strong class="markup--strong markup--p-strong">remain within physical power limits</strong>.</p><h3 name="e469" id="e469" class="graf graf--h3 graf-after--p">3. Physics-Informed Feature Engineering</h3><p name="d825" id="d825" class="graf graf--p graf-after--h3">Sometimes, it’s beneficial to inject physical knowledge by crafting <strong class="markup--strong markup--p-strong">physics-based input features</strong>.</p><p name="5d79" id="5d79" class="graf graf--p graf-after--p"><strong class="markup--strong markup--p-strong">Example</strong>:<br> Instead of feeding raw wind speed, include derived variables like:</p><ul class="postList"><li name="af34" id="af34" class="graf graf--li graf-after--p"><strong class="markup--strong markup--li-strong">Kinetic energy</strong> ∝ v^2</li><li name="4fb6" id="4fb6" class="graf graf--li graf-after--li"><strong class="markup--strong markup--li-strong">Turbulence intensity</strong></li><li name="6ff6" id="6ff6" class="graf graf--li graf-after--li"><strong class="markup--strong markup--li-strong">Wind shear</strong> or vertical gradients</li></ul><p name="6aa7" id="6aa7" class="graf graf--p graf-after--li">These features encode known physical relationships and <strong class="markup--strong markup--p-strong">help the model learn faster and better</strong>.</p><h3 name="702f" id="702f" class="graf graf--h3 graf-after--p">4. Regularization via Physics (Soft Priors)</h3><p name="8ab7" id="8ab7" class="graf graf--p graf-after--h3">Add regularization terms that reflect <strong class="markup--strong markup--p-strong">physical intuition</strong>, not necessarily hard constraints. This allows flexibility while discouraging physically implausible outputs.</p><p name="e506" id="e506" class="graf graf--p graf-after--p"><strong class="markup--strong markup--p-strong">Example</strong>:<br> Wind turbine power should generally <strong class="markup--strong markup--p-strong">increase monotonically</strong> with wind speed (within cut-in and rated speeds). Add a term that penalizes <strong class="markup--strong markup--p-strong">non-monotonic behavior</strong> in predicted power curves.</p><figure name="59cb" id="59cb" class="graf graf--figure graf-after--p"><img class="graf-image" data-image-id="1*33ihiCItfJyFzfYdwtdZEA.png" data-width="394" data-height="75" src="https://cdn-images-1.medium.com/max/800/1*33ihiCItfJyFzfYdwtdZEA.png"></figure><h3 name="62eb" id="62eb" class="graf graf--h3 graf-after--figure">5. Post-Processing Corrections</h3><p name="d988" id="d988" class="graf graf--p graf-after--h3">In some cases, you can apply a <strong class="markup--strong markup--p-strong">physics-based correction</strong> after model prediction to align results with physical reality.</p><p name="a586" id="a586" class="graf graf--p graf-after--p"><strong class="markup--strong markup--p-strong">Example</strong>:<br> Clamp predicted power values to lie between <strong class="markup--strong markup--p-strong">0</strong> and the <strong class="markup--strong markup--p-strong">maximum rated power</strong> of the turbine:</p><figure name="16a3" id="16a3" class="graf graf--figure graf-after--p"><img class="graf-image" data-image-id="1*3cGNjIYa2iLbeVrKOh9TmQ.png" data-width="410" data-height="68" src="https://cdn-images-1.medium.com/max/800/1*3cGNjIYa2iLbeVrKOh9TmQ.png"></figure><p name="dc9a" id="dc9a" class="graf graf--p graf-after--figure">While not elegant, this approach is simple and sometimes necessary when full physics integration isn’t feasible.</p><h3 name="52cc" id="52cc" class="graf graf--h3 graf-after--p">6. Hybrid Physical–ML Models</h3><p name="bac1" id="bac1" class="graf graf--p graf-after--h3">These models <strong class="markup--strong markup--p-strong">combine physical simulations</strong> (e.g., numerical weather prediction) with <strong class="markup--strong markup--p-strong">neural networks</strong> that learn from residual errors or fine-tune outputs.</p><p name="d401" id="d401" class="graf graf--p graf-after--p"><strong class="markup--strong markup--p-strong">Example</strong>:<br> Use a numerical model to predict baseline wind power and a neural network to predict and correct the <strong class="markup--strong markup--p-strong">bias</strong> or <strong class="markup--strong markup--p-strong">residual error</strong>.</p><figure name="3f43" id="3f43" class="graf graf--figure graf-after--p"><img class="graf-image" data-image-id="1*SIiGtDIF1W9V0ea8P0Wf-g.png" data-width="561" data-height="56" src="https://cdn-images-1.medium.com/max/800/1*SIiGtDIF1W9V0ea8P0Wf-g.png"></figure><p name="e197" id="e197" class="graf graf--p graf-after--figure">This allows leveraging strengths of both approaches — physical interpretability and data-driven flexibility.</p><h3 name="f5e7" id="f5e7" class="graf graf--h3 graf-after--p">Summary Table</h3><figure name="c1fa" id="c1fa" class="graf graf--figure graf-after--h3"><img class="graf-image" data-image-id="1*KuiUfUTgij0IF6zzFBixlA.png" data-width="672" data-height="241" src="https://cdn-images-1.medium.com/max/800/1*KuiUfUTgij0IF6zzFBixlA.png"></figure><h3 name="b27e" id="b27e" class="graf graf--h3 graf-after--figure">Conclusion</h3><p name="d750" id="d750" class="graf graf--p graf-after--h3">Physics-Informed Neural Networks are a powerful tool for tackling complex forecasting problems in wind energy and beyond. While using the loss function to enforce physical constraints is common, <strong class="markup--strong markup--p-strong">a variety of methods</strong> can be employed depending on the nature of the problem, the physical laws involved, and the available data.</p><p name="21da" id="21da" class="graf graf--p graf-after--p graf--trailing">Understanding and strategically combining these methods allows us to build <strong class="markup--strong markup--p-strong">robust, interpretable, and generalizable models</strong> that bridge the gap between <strong class="markup--strong markup--p-strong">theory and data</strong> — a cornerstone for advancing renewable energy forecasting.</p></div></div></section>
+</section>
+<footer><p>By <a href="https://medium.com/@noorfatimaafzalbutt" class="p-author h-card">Noor Fatima</a> on <a href="https://medium.com/p/715f7e778e47"><time class="dt-published" datetime="2025-05-30T22:16:09.169Z">May 30, 2025</time></a>.</p><p><a href="https://medium.com/@noorfatimaafzalbutt/applying-physical-constraints-in-physics-informed-neural-networks-pinns-methods-and-examples-715f7e778e47" class="p-canonical">Canonical link</a></p><p>Exported from <a href="https://medium.com">Medium</a> on April 20, 2026.</p></footer></article></body></html>

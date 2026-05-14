@@ -1,0 +1,72 @@
+<!DOCTYPE html><html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><title>In-Context Learning (ICL) in LLMs: How Models Learn Without Training</title><style>
+      * {
+        font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+      }
+      html, body {
+        margin: 0;
+        padding: 0;
+      }
+      h1 {
+        font-size: 50px;
+        margin-bottom: 17px;
+        color: #333;
+      }
+      h2 {
+        font-size: 24px;
+        line-height: 1.6;
+        margin: 30px 0 0 0;
+        margin-bottom: 18px;
+        margin-top: 33px;
+        color: #333;
+      }
+      h3 {
+        font-size: 30px;
+        margin: 10px 0 20px 0;
+        color: #333;
+      }
+      header {
+        width: 640px;
+        margin: auto;
+      }
+      section {
+        width: 640px;
+        margin: auto;
+      }
+      section p {
+        margin-bottom: 27px;
+        font-size: 20px;
+        line-height: 1.6;
+        color: #333;
+      }
+      section img {
+        max-width: 640px;
+      }
+      footer {
+        padding: 0 20px;
+        margin: 50px 0;
+        text-align: center;
+        font-size: 12px;
+      }
+      .aspectRatioPlaceholder {
+        max-width: auto !important;
+        max-height: auto !important;
+      }
+      .aspectRatioPlaceholder-fill {
+        padding-bottom: 0 !important;
+      }
+      header,
+      section[data-field=subtitle],
+      section[data-field=description] {
+        display: none;
+      }
+      </style></head><body><article class="h-entry">
+<header>
+<h1 class="p-name">In-Context Learning (ICL) in LLMs: How Models Learn Without Training</h1>
+</header>
+<section data-field="subtitle" class="p-summary">
+Large Language Models (LLMs) have transformed natural language processing (NLP), enabling powerful applications like chatbots, content…
+</section>
+<section data-field="body" class="e-content">
+<section name="5360" class="section section--body section--first section--last"><div class="section-divider"><hr class="section-divider"></div><div class="section-content"><div class="section-inner sectionLayout--insetColumn"><h3 name="2fdc" id="2fdc" class="graf graf--h3 graf--leading graf--title">In-Context Learning (ICL) in LLMs: How Models Learn Without Training</h3><figure name="7d69" id="7d69" class="graf graf--figure graf-after--h3"><img class="graf-image" data-image-id="1*ImWeAqtNoUF7qYfDa_T_VA.png" data-width="478" data-height="250" data-is-featured="true" src="https://cdn-images-1.medium.com/max/800/1*ImWeAqtNoUF7qYfDa_T_VA.png"></figure><p name="a176" id="a176" class="graf graf--p graf-after--figure">Large Language Models (LLMs) have transformed natural language processing (NLP), enabling powerful applications like chatbots, content generation, and code completion. One of their most fascinating abilities is <strong class="markup--strong markup--p-strong">In-Context Learning (ICL)</strong> — the ability to <strong class="markup--strong markup--p-strong">learn temporarily from examples within a prompt</strong> without requiring additional training. But how does this work, and why is it so powerful? Let’s explore.</p><h3 name="35c0" id="35c0" class="graf graf--h3 graf-after--p">What Is In-Context Learning (ICL)?</h3><p name="1a7f" id="1a7f" class="graf graf--p graf-after--h3"><strong class="markup--strong markup--p-strong">In-Context Learning (ICL)</strong> refers to an LLM’s ability to <strong class="markup--strong markup--p-strong">understand and mimic a pattern</strong> based on examples given within a prompt. Unlike traditional machine learning models that require fine-tuning on labeled datasets, LLMs can <strong class="markup--strong markup--p-strong">adapt on the fly</strong> using just a few examples.</p><h3 name="23c4" id="23c4" class="graf graf--h3 graf-after--p">How Does ICL Work?</h3><p name="d8b8" id="d8b8" class="graf graf--p graf-after--h3">When an LLM is given a prompt structured as:</p><pre data-code-block-mode="1" spellcheck="false" data-code-block-lang="yaml" name="f7e2" id="f7e2" class="graf graf--pre graf-after--p graf--preV2"><span class="pre--content"><span class="hljs-attr">Input:</span> <span class="hljs-string">X1</span> <span class="hljs-string">→</span> <span class="hljs-attr">Output:</span> <span class="hljs-string">Y1</span>  <br /><span class="hljs-attr">Input:</span> <span class="hljs-string">X2</span> <span class="hljs-string">→</span> <span class="hljs-attr">Output:</span> <span class="hljs-string">Y2</span>  <br /><span class="hljs-attr">Input:</span> <span class="hljs-string">X3</span> <span class="hljs-string">→</span> <span class="hljs-attr">Output:</span> <span class="hljs-string">Y3</span>  <br /><span class="hljs-attr">Input:</span> <span class="hljs-string">X4</span> <span class="hljs-string">→</span> <span class="hljs-string">?</span></span></pre><p name="0c69" id="0c69" class="graf graf--p graf-after--pre">The model <strong class="markup--strong markup--p-strong">infers</strong> the relationship between inputs and outputs and predicts Y4 based on the pattern.</p><p name="78ba" id="78ba" class="graf graf--p graf-after--p">For example, if we give GPT-4 a prompt like:</p><pre data-code-block-mode="1" spellcheck="false" data-code-block-lang="css" name="7c5f" id="7c5f" class="graf graf--pre graf-after--p graf--preV2"><span class="pre--content">Translate the following English words <span class="hljs-selector-tag">to</span> French:  <br />Apple → Pomme  <br />Car → Voiture  <br />House → Maison  <br />Dog → ?</span></pre><p name="0bf2" id="0bf2" class="graf graf--p graf-after--pre">The model <strong class="markup--strong markup--p-strong">understands the pattern</strong> and responds with:</p><pre data-code-block-mode="1" spellcheck="false" data-code-block-lang="typescript" name="c4a3" id="c4a3" class="graf graf--pre graf-after--p graf--preV2"><span class="pre--content"><span class="hljs-title class_">Chien</span></span></pre><p name="c60d" id="c60d" class="graf graf--p graf-after--pre">Even though it wasn’t explicitly trained in that moment, it <strong class="markup--strong markup--p-strong">learned temporarily</strong> within the context of the prompt.</p><h3 name="f9a0" id="f9a0" class="graf graf--h3 graf-after--p">Why Is ICL Important?</h3><h3 name="2c67" id="2c67" class="graf graf--h3 graf-after--h3">1️⃣ No Fine-Tuning Needed</h3><p name="2c97" id="2c97" class="graf graf--p graf-after--h3">ICL eliminates the need for <strong class="markup--strong markup--p-strong">training new models</strong> for different tasks. Instead of fine-tuning a model on specific datasets, users can simply <strong class="markup--strong markup--p-strong">provide examples</strong> and get immediate, context-aware responses.</p><h3 name="f7e9" id="f7e9" class="graf graf--h3 graf-after--p">2️⃣ Few-Shot and Zero-Shot Learning</h3><ul class="postList"><li name="ae4f" id="ae4f" class="graf graf--li graf-after--h3"><strong class="markup--strong markup--li-strong">Zero-shot learning</strong>: The model performs a task <strong class="markup--strong markup--li-strong">without any examples</strong> (e.g., “Translate ‘apple’ to French.”).</li><li name="919e" id="919e" class="graf graf--li graf-after--li"><strong class="markup--strong markup--li-strong">Few-shot learning</strong>: The model performs a task <strong class="markup--strong markup--li-strong">with a few examples</strong> (as seen in the previous prompt).</li></ul><p name="6aea" id="6aea" class="graf graf--p graf-after--li">ICL enables powerful <strong class="markup--strong markup--p-strong">few-shot learning</strong>, making LLMs more adaptable across diverse tasks.</p><h3 name="5f13" id="5f13" class="graf graf--h3 graf-after--p">3️⃣ Flexible and Dynamic Learning</h3><p name="fedf" id="fedf" class="graf graf--p graf-after--h3">ICL allows users to customize behavior dynamically, enabling use cases like:</p><ul class="postList"><li name="9699" id="9699" class="graf graf--li graf-after--p"><strong class="markup--strong markup--li-strong">Custom chatbots</strong> that adjust to specific tones or styles.</li><li name="ca41" id="ca41" class="graf graf--li graf-after--li"><strong class="markup--strong markup--li-strong">Code completion</strong> that adapts to a developer’s coding conventions.</li><li name="da3c" id="da3c" class="graf graf--li graf-after--li"><strong class="markup--strong markup--li-strong">Data classification</strong> based on ad hoc labeling within a prompt.</li></ul><h3 name="f07c" id="f07c" class="graf graf--h3 graf-after--li">Limitations of ICL</h3><p name="1ecd" id="1ecd" class="graf graf--p graf-after--h3">Despite its advantages, ICL has some challenges:</p><ul class="postList"><li name="3ac2" id="3ac2" class="graf graf--li graf-after--p"><strong class="markup--strong markup--li-strong">Limited Context Window</strong> — If examples exceed the model’s context length, early examples get discarded.</li><li name="8a0c" id="8a0c" class="graf graf--li graf-after--li"><strong class="markup--strong markup--li-strong">Inconsistency</strong> — The model might misinterpret patterns, leading to errors.</li><li name="0649" id="0649" class="graf graf--li graf-after--li"><strong class="markup--strong markup--li-strong">Higher Computational Cost</strong> — Longer prompts require more processing power.</li></ul><h3 name="47f0" id="47f0" class="graf graf--h3 graf-after--li">Final Thoughts</h3><p name="abc7" id="abc7" class="graf graf--p graf-after--h3">In-Context Learning (ICL) is one of the most powerful features of LLMs, allowing them to <strong class="markup--strong markup--p-strong">adapt without retraining</strong>. By simply structuring prompts with examples, users can <strong class="markup--strong markup--p-strong">guide models to produce desired outputs dynamically</strong>. While ICL isn’t perfect, its ability to perform <strong class="markup--strong markup--p-strong">few-shot learning</strong> makes it an invaluable tool for diverse AI applications.</p><p name="c183" id="c183" class="graf graf--p graf-after--p graf--trailing">Have you experimented with ICL in LLMs? Share your experiences in the comments! 🚀</p></div></div></section>
+</section>
+<footer><p>By <a href="https://medium.com/@noorfatimaafzalbutt" class="p-author h-card">Noor Fatima</a> on <a href="https://medium.com/p/dc3aaaac9a71"><time class="dt-published" datetime="2025-02-20T18:15:10.774Z">February 20, 2025</time></a>.</p><p><a href="https://medium.com/@noorfatimaafzalbutt/in-context-learning-icl-in-llms-how-models-learn-without-training-dc3aaaac9a71" class="p-canonical">Canonical link</a></p><p>Exported from <a href="https://medium.com">Medium</a> on April 20, 2026.</p></footer></article></body></html>

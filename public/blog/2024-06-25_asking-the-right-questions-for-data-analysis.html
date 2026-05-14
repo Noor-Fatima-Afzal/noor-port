@@ -1,0 +1,72 @@
+<!DOCTYPE html><html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><title>Asking the Right Questions for Data Analysis</title><style>
+      * {
+        font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+      }
+      html, body {
+        margin: 0;
+        padding: 0;
+      }
+      h1 {
+        font-size: 50px;
+        margin-bottom: 17px;
+        color: #333;
+      }
+      h2 {
+        font-size: 24px;
+        line-height: 1.6;
+        margin: 30px 0 0 0;
+        margin-bottom: 18px;
+        margin-top: 33px;
+        color: #333;
+      }
+      h3 {
+        font-size: 30px;
+        margin: 10px 0 20px 0;
+        color: #333;
+      }
+      header {
+        width: 640px;
+        margin: auto;
+      }
+      section {
+        width: 640px;
+        margin: auto;
+      }
+      section p {
+        margin-bottom: 27px;
+        font-size: 20px;
+        line-height: 1.6;
+        color: #333;
+      }
+      section img {
+        max-width: 640px;
+      }
+      footer {
+        padding: 0 20px;
+        margin: 50px 0;
+        text-align: center;
+        font-size: 12px;
+      }
+      .aspectRatioPlaceholder {
+        max-width: auto !important;
+        max-height: auto !important;
+      }
+      .aspectRatioPlaceholder-fill {
+        padding-bottom: 0 !important;
+      }
+      header,
+      section[data-field=subtitle],
+      section[data-field=description] {
+        display: none;
+      }
+      </style></head><body><article class="h-entry">
+<header>
+<h1 class="p-name">Asking the Right Questions for Data Analysis</h1>
+</header>
+<section data-field="subtitle" class="p-summary">
+In data analysis, asking the right questions is crucial for effective decision-making and insights extraction. These questions guide the…
+</section>
+<section data-field="body" class="e-content">
+<section name="adbb" class="section section--body section--first section--last"><div class="section-divider"><hr class="section-divider"></div><div class="section-content"><div class="section-inner sectionLayout--insetColumn"><h3 name="79f7" id="79f7" class="graf graf--h3 graf--leading graf--title">Asking the Right Questions for Data Analysis</h3><figure name="1ed6" id="1ed6" class="graf graf--figure graf-after--h3"><img class="graf-image" data-image-id="1*8w86it6YRB54YU5eL7Qo_w.jpeg" data-width="960" data-height="636" data-is-featured="true" src="https://cdn-images-1.medium.com/max/800/1*8w86it6YRB54YU5eL7Qo_w.jpeg"></figure><p name="8e18" id="8e18" class="graf graf--p graf-after--figure">In data analysis, asking the right questions is crucial for effective decision-making and insights extraction. These questions guide the analytical process, ensuring that the data is thoroughly understood and correctly processed. Below are some essential questions to ask when analyzing a dataset, along with corresponding methods in Python using the pandas library.</p><h3 name="b42b" id="b42b" class="graf graf--h3 graf-after--p">How Big Is the Data?</h3><p name="abbd" id="abbd" class="graf graf--p graf-after--h3">Understanding the size of your dataset is the first step in data analysis. The size can give you an idea of the computational resources needed and the complexity of the analysis.</p><pre data-code-block-mode="2" spellcheck="false" data-code-block-lang="python" name="696a" id="696a" class="graf graf--pre graf-after--p graf--preV2"><span class="pre--content">df.shape</span></pre><p name="166e" id="166e" class="graf graf--p graf-after--pre">The <code class="markup--code markup--p-code">shape</code> attribute of a DataFrame returns a tuple representing the dimensions of the DataFrame: (number of rows, number of columns).</p><h3 name="b151" id="b151" class="graf graf--h3 graf-after--p">How Does the Data Look Like?</h3><p name="da9d" id="da9d" class="graf graf--p graf-after--h3">Gaining an initial understanding of what your data looks like is essential. This helps in identifying any obvious issues and familiarizing yourself with the structure and content of the data.</p><pre data-code-block-mode="2" spellcheck="false" data-code-block-lang="python" name="912e" id="912e" class="graf graf--pre graf-after--p graf--preV2"><span class="pre--content">df.head()</span></pre><p name="67fe" id="67fe" class="graf graf--p graf-after--pre">The <code class="markup--code markup--p-code">head()</code> method returns the first five rows of the DataFrame, providing a quick glance at the dataset.</p><pre data-code-block-mode="2" spellcheck="false" data-code-block-lang="python" name="fc5a" id="fc5a" class="graf graf--pre graf-after--p graf--preV2"><span class="pre--content">df.sample(g)</span></pre><p name="3405" id="3405" class="graf graf--p graf-after--pre">The <code class="markup--code markup--p-code">sample(g)</code> method returns <code class="markup--code markup--p-code">g</code> random rows from the DataFrame, which can help in assessing the variability and distribution of the data.</p><h3 name="7f0f" id="7f0f" class="graf graf--h3 graf-after--p">What Are the Data Types of Columns?</h3><p name="3f0c" id="3f0c" class="graf graf--p graf-after--h3">Knowing the data types of each column is important for identifying the types of analyses and transformations that can be performed on the data.</p><pre data-code-block-mode="2" spellcheck="false" data-code-block-lang="python" name="110b" id="110b" class="graf graf--pre graf-after--p graf--preV2"><span class="pre--content">df.info()</span></pre><p name="f5e9" id="f5e9" class="graf graf--p graf-after--pre">The <code class="markup--code markup--p-code">info()</code> method provides a summary of the DataFrame, including the data types of each column, the number of non-null values, and memory usage.</p><h3 name="1d88" id="1d88" class="graf graf--h3 graf-after--p">Are There Any Missing Values?</h3><p name="3cbf" id="3cbf" class="graf graf--p graf-after--h3">Missing values can significantly affect your analysis. Identifying and handling them appropriately is crucial.</p><pre data-code-block-mode="2" spellcheck="false" data-code-block-lang="python" name="955e" id="955e" class="graf graf--pre graf-after--p graf--preV2"><span class="pre--content">df.isnull().<span class="hljs-built_in">sum</span>()</span></pre><p name="a899" id="a899" class="graf graf--p graf-after--pre">The <code class="markup--code markup--p-code">isnull().sum()</code> method returns the number of missing values in each column, helping you to understand the extent of missing data in your dataset.</p><h3 name="1102" id="1102" class="graf graf--h3 graf-after--p">How Does the Data Look Mathematically?</h3><p name="55b2" id="55b2" class="graf graf--p graf-after--h3">Descriptive statistics provide a mathematical overview of the data, such as mean, median, standard deviation, minimum, and maximum values.</p><pre data-code-block-mode="2" spellcheck="false" data-code-block-lang="python" name="5d74" id="5d74" class="graf graf--pre graf-after--p graf--preV2"><span class="pre--content">df.describe()</span></pre><p name="ab53" id="ab53" class="graf graf--p graf-after--pre">The <code class="markup--code markup--p-code">describe()</code> method generates descriptive statistics for numerical columns, giving a quick summary of the central tendency, dispersion, and shape of the dataset’s distribution.</p><h3 name="25a9" id="25a9" class="graf graf--h3 graf-after--p">Are There Duplicate Values?</h3><p name="492a" id="492a" class="graf graf--p graf-after--h3">Duplicate values can skew the analysis and lead to incorrect conclusions. Identifying and removing duplicates ensures the accuracy of your results.</p><pre data-code-block-mode="2" spellcheck="false" data-code-block-lang="python" name="bbdc" id="bbdc" class="graf graf--pre graf-after--p graf--preV2"><span class="pre--content">df.duplicated().<span class="hljs-built_in">sum</span>()</span></pre><p name="c83f" id="c83f" class="graf graf--p graf-after--pre">The <code class="markup--code markup--p-code">duplicated().sum()</code> method counts the number of duplicate rows in the DataFrame.</p><h3 name="1c8d" id="1c8d" class="graf graf--h3 graf-after--p">How Is the Correlation Between Columns?</h3><p name="33eb" id="33eb" class="graf graf--p graf-after--h3">Understanding the correlation between columns helps in identifying relationships and dependencies within the data. This is particularly useful in feature selection and multivariate analysis.</p><pre data-code-block-mode="2" spellcheck="false" data-code-block-lang="python" name="e604" id="e604" class="graf graf--pre graf-after--p graf--preV2"><span class="pre--content">df.corr()</span></pre><p name="c70a" id="c70a" class="graf graf--p graf-after--pre">The <code class="markup--code markup--p-code">corr()</code> method computes the pairwise correlation of columns, providing insights into how variables are related to each other.</p><h3 name="733e" id="733e" class="graf graf--h3 graf-after--p">Conclusion</h3><p name="7d55" id="7d55" class="graf graf--p graf-after--h3 graf--trailing">By asking these fundamental questions, you can gain a comprehensive understanding of your dataset and prepare it effectively for analysis. Each of these questions addresses a critical aspect of data exploration and preprocessing, laying a solid foundation for further analytical tasks. Using pandas, you can efficiently answer these questions and ensure your data is ready for more complex analyses and modeling.</p></div></div></section>
+</section>
+<footer><p>By <a href="https://medium.com/@noorfatimaafzalbutt" class="p-author h-card">Noor Fatima</a> on <a href="https://medium.com/p/3f9ff4021bf1"><time class="dt-published" datetime="2024-06-25T15:05:14.483Z">June 25, 2024</time></a>.</p><p><a href="https://medium.com/@noorfatimaafzalbutt/asking-the-right-questions-for-data-analysis-3f9ff4021bf1" class="p-canonical">Canonical link</a></p><p>Exported from <a href="https://medium.com">Medium</a> on April 20, 2026.</p></footer></article></body></html>

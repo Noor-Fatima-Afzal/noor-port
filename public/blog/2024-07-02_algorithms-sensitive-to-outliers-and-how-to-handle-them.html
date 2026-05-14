@@ -1,0 +1,72 @@
+<!DOCTYPE html><html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><title>Algorithms Sensitive to Outliers and How to Handle Them</title><style>
+      * {
+        font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+      }
+      html, body {
+        margin: 0;
+        padding: 0;
+      }
+      h1 {
+        font-size: 50px;
+        margin-bottom: 17px;
+        color: #333;
+      }
+      h2 {
+        font-size: 24px;
+        line-height: 1.6;
+        margin: 30px 0 0 0;
+        margin-bottom: 18px;
+        margin-top: 33px;
+        color: #333;
+      }
+      h3 {
+        font-size: 30px;
+        margin: 10px 0 20px 0;
+        color: #333;
+      }
+      header {
+        width: 640px;
+        margin: auto;
+      }
+      section {
+        width: 640px;
+        margin: auto;
+      }
+      section p {
+        margin-bottom: 27px;
+        font-size: 20px;
+        line-height: 1.6;
+        color: #333;
+      }
+      section img {
+        max-width: 640px;
+      }
+      footer {
+        padding: 0 20px;
+        margin: 50px 0;
+        text-align: center;
+        font-size: 12px;
+      }
+      .aspectRatioPlaceholder {
+        max-width: auto !important;
+        max-height: auto !important;
+      }
+      .aspectRatioPlaceholder-fill {
+        padding-bottom: 0 !important;
+      }
+      header,
+      section[data-field=subtitle],
+      section[data-field=description] {
+        display: none;
+      }
+      </style></head><body><article class="h-entry">
+<header>
+<h1 class="p-name">Algorithms Sensitive to Outliers and How to Handle Them</h1>
+</header>
+<section data-field="subtitle" class="p-summary">
+Outliers are data points that deviate significantly from other observations. They can skew and distort the results of various machine…
+</section>
+<section data-field="body" class="e-content">
+<section name="5db8" class="section section--body section--first section--last"><div class="section-divider"><hr class="section-divider"></div><div class="section-content"><div class="section-inner sectionLayout--insetColumn"><h3 name="1cd1" id="1cd1" class="graf graf--h3 graf--leading graf--title">Algorithms Sensitive to Outliers and How to Handle Them</h3><figure name="8bf8" id="8bf8" class="graf graf--figure graf-after--h3"><img class="graf-image" data-image-id="1*poac4-8AEjMD0PaJ_xAeRQ.jpeg" data-width="1400" data-height="927" data-is-featured="true" src="https://cdn-images-1.medium.com/max/800/1*poac4-8AEjMD0PaJ_xAeRQ.jpeg"></figure><p name="dd97" id="dd97" class="graf graf--p graf-after--figure">Outliers are data points that deviate significantly from other observations. They can skew and distort the results of various machine learning algorithms, leading to inaccurate models and predictions. Here, we discuss algorithms that are particularly sensitive to outliers, methods to detect and treat outliers, and techniques to remove them.</p><h3 name="c60c" id="c60c" class="graf graf--h3 graf-after--p">Algorithms Sensitive to Outliers</h3><ol class="postList"><li name="eb22" id="eb22" class="graf graf--li graf-after--h3"><strong class="markup--strong markup--li-strong">Linear Regression</strong>: Linear regression attempts to find a line of best fit through the data points. Outliers can significantly affect the slope and intercept, leading to an inaccurate model.</li><li name="f03b" id="f03b" class="graf graf--li graf-after--li"><strong class="markup--strong markup--li-strong">Logistic Regression</strong>: Similar to linear regression, logistic regression can be sensitive to outliers in the predictor variables, which can distort the decision boundary.</li><li name="b75f" id="b75f" class="graf graf--li graf-after--li"><strong class="markup--strong markup--li-strong">AdaBoost</strong>: AdaBoost assigns weights to each instance in the training set, with a higher focus on misclassified instances. Outliers can disproportionately influence these weights, causing the model to perform poorly.</li><li name="987a" id="987a" class="graf graf--li graf-after--li"><strong class="markup--strong markup--li-strong">Deep Learning</strong>: Deep learning models, especially neural networks, can overfit to outliers due to their high flexibility and capacity. This overfitting reduces the generalization ability of the model.</li></ol><h3 name="0ff0" id="0ff0" class="graf graf--h3 graf-after--li">How to Treat Outliers</h3><h4 name="6a15" id="6a15" class="graf graf--h4 graf-after--h3">1. Trimming</h4><ul class="postList"><li name="6c8b" id="6c8b" class="graf graf--li graf-after--h4"><strong class="markup--strong markup--li-strong">Description</strong>: Removing outliers from the dataset.</li><li name="001c" id="001c" class="graf graf--li graf-after--li"><strong class="markup--strong markup--li-strong">Disadvantage</strong>: Can lead to loss of valuable data, making the dataset thinner and potentially less representative.</li></ul><h4 name="f42c" id="f42c" class="graf graf--h4 graf-after--li">2. Capping</h4><ul class="postList"><li name="08bb" id="08bb" class="graf graf--li graf-after--h4"><strong class="markup--strong markup--li-strong">Description</strong>: Setting a threshold to limit the influence of extreme values by capping them at a certain value.</li><li name="eef9" id="eef9" class="graf graf--li graf-after--li"><strong class="markup--strong markup--li-strong">Advantage</strong>: Retains all data points while reducing the impact of outliers.</li></ul><h4 name="0069" id="0069" class="graf graf--h4 graf-after--li">Less Used Methods:</h4><ol class="postList"><li name="efb1" id="efb1" class="graf graf--li graf-after--h4"><strong class="markup--strong markup--li-strong">Treating Outliers as Missing Values</strong>: Outliers can be treated as missing values and imputed.</li><li name="a1b3" id="a1b3" class="graf graf--li graf-after--li"><strong class="markup--strong markup--li-strong">Discretization (Binning)</strong>: Transforming continuous variables into categorical ones can reduce the impact of outliers.</li></ol><h3 name="2f41" id="2f41" class="graf graf--h3 graf-after--li">How to Detect Outliers</h3><h4 name="be7d" id="be7d" class="graf graf--h4 graf-after--h3">1. Statistical Methods</h4><ul class="postList"><li name="89a5" id="89a5" class="graf graf--li graf-after--h4"><strong class="markup--strong markup--li-strong">Mean ± 3 Standard Deviations (Mu ± 3 Sigma)</strong>: Points lying outside this range can be considered outliers.</li><li name="afcd" id="afcd" class="graf graf--li graf-after--li"><strong class="markup--strong markup--li-strong">Interquartile Range (IQR)</strong>:</li></ul><p name="7e27" id="7e27" class="graf graf--p graf-after--li">Calculate Q1 (25th percentile) and Q3 (75th percentile).</p><p name="be84" id="be84" class="graf graf--p graf-after--p">IQR = Q3 — Q1.</p><p name="6ec9" id="6ec9" class="graf graf--p graf-after--p">Outliers are data points below Q1−1.5×IQR or above Q3+1.5×IQR.</p><h4 name="88f5" id="88f5" class="graf graf--h4 graf-after--p">2. Percentile-Based</h4><ul class="postList"><li name="62a0" id="62a0" class="graf graf--li graf-after--h4"><strong class="markup--strong markup--li-strong">2.5th Percentile to 97.5th Percentile</strong>: Data points outside this range can be treated as outliers.</li></ul><h3 name="4b54" id="4b54" class="graf graf--h3 graf-after--li">Techniques to Remove Outliers</h3><ol class="postList"><li name="6582" id="6582" class="graf graf--li graf-after--h3"><strong class="markup--strong markup--li-strong">Z-Score Treatment</strong></li></ol><ul class="postList"><li name="5b3c" id="5b3c" class="graf graf--li graf-after--li"><strong class="markup--strong markup--li-strong">Description</strong>: Calculate the z-score for each data point, which measures the number of standard deviations a data point is from the mean.</li><li name="cd71" id="cd71" class="graf graf--li graf-after--li"><strong class="markup--strong markup--li-strong">Procedure</strong>: Remove points with a z-score greater than 3 or less than -3.</li></ul><ol class="postList"><li name="4532" id="4532" class="graf graf--li graf-after--li"><strong class="markup--strong markup--li-strong">IQR-Based Filtering</strong></li></ol><ul class="postList"><li name="e355" id="e355" class="graf graf--li graf-after--li"><strong class="markup--strong markup--li-strong">Description</strong>: Use the IQR method mentioned above to filter out outliers.</li><li name="9ff7" id="9ff7" class="graf graf--li graf-after--li"><strong class="markup--strong markup--li-strong">Procedure</strong>: Remove data points outside the range of Q1−1.5×IQR and Q3+1.5×IQR.</li></ul><ol class="postList"><li name="4ec6" id="4ec6" class="graf graf--li graf-after--li"><strong class="markup--strong markup--li-strong">Percentile Method</strong></li></ol><ul class="postList"><li name="1f56" id="1f56" class="graf graf--li graf-after--li"><strong class="markup--strong markup--li-strong">Description</strong>: Filter out data points outside the 2.5th and 97.5th percentiles.</li></ul><ol class="postList"><li name="8236" id="8236" class="graf graf--li graf-after--li"><strong class="markup--strong markup--li-strong">Winsorization</strong></li></ol><ul class="postList"><li name="e5d4" id="e5d4" class="graf graf--li graf-after--li"><strong class="markup--strong markup--li-strong">Description</strong>: Limits extreme values in the dataset by setting them to the nearest percentile values within a specific range.</li><li name="5285" id="5285" class="graf graf--li graf-after--li"><strong class="markup--strong markup--li-strong">Procedure</strong>: Replace data points below the 2.5th percentile with the value at the 2.5th percentile and those above the 97.5th percentile with the value at the 97.5th percentile.</li></ul><h3 name="1abc" id="1abc" class="graf graf--h3 graf-after--li">Conclusion</h3><p name="edf0" id="edf0" class="graf graf--p graf-after--h3 graf--trailing">Outliers can significantly impact the performance of various machine learning algorithms, particularly linear regression, logistic regression, AdaBoost, and deep learning models. Detecting and treating outliers is crucial to ensure accurate and reliable models. Techniques like trimming, capping, and discretization, along with detection methods such as statistical measures and percentile-based approaches, provide effective ways to handle outliers. Properly addressing outliers ensures that the models built on the data are robust and generalizable.</p></div></div></section>
+</section>
+<footer><p>By <a href="https://medium.com/@noorfatimaafzalbutt" class="p-author h-card">Noor Fatima</a> on <a href="https://medium.com/p/ff989296b9e5"><time class="dt-published" datetime="2024-07-02T08:51:54.813Z">July 2, 2024</time></a>.</p><p><a href="https://medium.com/@noorfatimaafzalbutt/algorithms-sensitive-to-outliers-and-how-to-handle-them-ff989296b9e5" class="p-canonical">Canonical link</a></p><p>Exported from <a href="https://medium.com">Medium</a> on April 20, 2026.</p></footer></article></body></html>

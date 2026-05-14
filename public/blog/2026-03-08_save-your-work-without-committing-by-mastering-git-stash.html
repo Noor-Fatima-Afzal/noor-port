@@ -1,0 +1,72 @@
+<!DOCTYPE html><html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><title>Save Your Work Without Committing by Mastering Git Stash</title><style>
+      * {
+        font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+      }
+      html, body {
+        margin: 0;
+        padding: 0;
+      }
+      h1 {
+        font-size: 50px;
+        margin-bottom: 17px;
+        color: #333;
+      }
+      h2 {
+        font-size: 24px;
+        line-height: 1.6;
+        margin: 30px 0 0 0;
+        margin-bottom: 18px;
+        margin-top: 33px;
+        color: #333;
+      }
+      h3 {
+        font-size: 30px;
+        margin: 10px 0 20px 0;
+        color: #333;
+      }
+      header {
+        width: 640px;
+        margin: auto;
+      }
+      section {
+        width: 640px;
+        margin: auto;
+      }
+      section p {
+        margin-bottom: 27px;
+        font-size: 20px;
+        line-height: 1.6;
+        color: #333;
+      }
+      section img {
+        max-width: 640px;
+      }
+      footer {
+        padding: 0 20px;
+        margin: 50px 0;
+        text-align: center;
+        font-size: 12px;
+      }
+      .aspectRatioPlaceholder {
+        max-width: auto !important;
+        max-height: auto !important;
+      }
+      .aspectRatioPlaceholder-fill {
+        padding-bottom: 0 !important;
+      }
+      header,
+      section[data-field=subtitle],
+      section[data-field=description] {
+        display: none;
+      }
+      </style></head><body><article class="h-entry">
+<header>
+<h1 class="p-name">Save Your Work Without Committing by Mastering Git Stash</h1>
+</header>
+<section data-field="subtitle" class="p-summary">
+Every developer has faced it: you’re mid-way through a feature, and suddenly a critical bug needs attention. You don’t want to commit…
+</section>
+<section data-field="body" class="e-content">
+<section name="696c" class="section section--body section--first section--last"><div class="section-divider"><hr class="section-divider"></div><div class="section-content"><div class="section-inner sectionLayout--insetColumn"><h3 name="9028" id="9028" class="graf graf--h3 graf--leading graf--title">Save Your Work Without Committing by Mastering Git Stash</h3><figure name="0a42" id="0a42" class="graf graf--figure graf-after--h3"><img class="graf-image" data-image-id="1*Jx4mimiCy6hJxHMJtKg7Ug.png" data-width="582" data-height="231" src="https://cdn-images-1.medium.com/max/800/1*Jx4mimiCy6hJxHMJtKg7Ug.png"></figure><p name="4c43" id="4c43" class="graf graf--p graf-after--figure">Every developer has faced it: you’re mid-way through a feature, and suddenly a critical bug needs attention. You don’t want to commit unfinished code, but you also don’t want to lose your progress. Enter <code class="markup--code markup--p-code"><strong class="markup--strong markup--p-strong">git stash</strong></code> — your temporary storage for uncommitted changes.</p><p name="2029" id="2029" class="graf graf--p graf-after--p">Let’s dive into how to use it effectively.</p><h3 name="3452" id="3452" class="graf graf--h3 graf-after--p">Create a Practice Repository</h3><p name="396b" id="396b" class="graf graf--p graf-after--h3">Before we experiment, let’s set up a test project:</p><pre data-code-block-mode="1" spellcheck="false" data-code-block-lang="bash" name="7809" id="7809" class="graf graf--pre graf-after--p graf--preV2"><span class="pre--content"><span class="hljs-built_in">mkdir</span> git-stash-practice<br /><span class="hljs-built_in">cd</span> git-stash-practice<br />git init</span></pre><p name="2ff2" id="2ff2" class="graf graf--p graf-after--pre">Create a file:</p><pre data-code-block-mode="1" spellcheck="false" data-code-block-lang="bash" name="2108" id="2108" class="graf graf--pre graf-after--p graf--preV2"><span class="pre--content"><span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;Hello World&quot;</span> &gt; app.txt</span></pre><p name="03e1" id="03e1" class="graf graf--p graf-after--pre">Add and commit it:</p><pre data-code-block-mode="1" spellcheck="false" data-code-block-lang="sql" name="3fdb" id="3fdb" class="graf graf--pre graf-after--p graf--preV2"><span class="pre--content">git <span class="hljs-keyword">add</span> .<br />git <span class="hljs-keyword">commit</span> <span class="hljs-operator">-</span>m &quot;Initial commit&quot;</span></pre><p name="2ac0" id="2ac0" class="graf graf--p graf-after--pre">Now you have a clean repository to play with.</p><h3 name="e3ea" id="e3ea" class="graf graf--h3 graf-after--p">Make Changes (Uncommitted Work)</h3><p name="1d36" id="1d36" class="graf graf--p graf-after--h3">Edit the file to simulate work in progress:</p><pre data-code-block-mode="1" spellcheck="false" data-code-block-lang="bash" name="88a2" id="88a2" class="graf graf--pre graf-after--p graf--preV2"><span class="pre--content"><span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;New feature line&quot;</span> &gt;&gt; app.txt</span></pre><p name="b836" id="b836" class="graf graf--p graf-after--pre">Check the status:</p><pre data-code-block-mode="1" spellcheck="false" data-code-block-lang="lua" name="6a4e" id="6a4e" class="graf graf--pre graf-after--p graf--preV2"><span class="pre--content">git <span class="hljs-built_in">status</span></span></pre><p name="b741" id="b741" class="graf graf--p graf-after--pre">You’ll see:</p><pre data-code-block-mode="1" spellcheck="false" data-code-block-lang="makefile" name="0503" id="0503" class="graf graf--pre graf-after--p graf--preV2"><span class="pre--content"><span class="hljs-section">modified: app.txt</span></span></pre><p name="79ad" id="79ad" class="graf graf--p graf-after--pre">This indicates you have changes that aren’t committed yet.</p><h3 name="e7c9" id="e7c9" class="graf graf--h3 graf-after--p">Use <code class="markup--code markup--h3-code">git stash</code></h3><p name="e4ab" id="e4ab" class="graf graf--p graf-after--h3">To temporarily save these changes:</p><pre data-code-block-mode="1" spellcheck="false" data-code-block-lang="typescript" name="ecd1" id="ecd1" class="graf graf--pre graf-after--p graf--preV2"><span class="pre--content">git stash</span></pre><p name="8d90" id="8d90" class="graf graf--p graf-after--pre">Git stores your changes and cleans your working directory. Verify:</p><pre data-code-block-mode="1" spellcheck="false" data-code-block-lang="lua" name="294f" id="294f" class="graf graf--pre graf-after--p graf--preV2"><span class="pre--content">git <span class="hljs-built_in">status</span></span></pre><p name="5f55" id="5f55" class="graf graf--p graf-after--pre">Output:</p><pre data-code-block-mode="1" spellcheck="false" data-code-block-lang="vbnet" name="8fd6" id="8fd6" class="graf graf--pre graf-after--p graf--preV2"><span class="pre--content"><span class="hljs-literal">nothing</span> <span class="hljs-keyword">to</span> commit, working tree clean</span></pre><p name="6526" id="6526" class="graf graf--p graf-after--pre">Your edits are safely hidden in the stash.</p><h3 name="92a3" id="92a3" class="graf graf--h3 graf-after--p">View Stashed Changes</h3><p name="3fb7" id="3fb7" class="graf graf--p graf-after--h3">To see all stashed changes:</p><pre data-code-block-mode="1" spellcheck="false" data-code-block-lang="typescript" name="91f2" id="91f2" class="graf graf--pre graf-after--p graf--preV2"><span class="pre--content">git stash list</span></pre><p name="776f" id="776f" class="graf graf--p graf-after--pre">Example:</p><pre data-code-block-mode="1" spellcheck="false" data-code-block-lang="less" name="9e46" id="9e46" class="graf graf--pre graf-after--p graf--preV2"><span class="pre--content"><span class="hljs-selector-tag">stash</span><span class="hljs-variable">@{0}</span>: <span class="hljs-selector-tag">WIP</span> <span class="hljs-selector-tag">on</span> <span class="hljs-selector-tag">main</span>: <span class="hljs-selector-tag">Initial</span> <span class="hljs-selector-tag">commit</span></span></pre><p name="5786" id="5786" class="graf graf--p graf-after--pre">You now have one stash stored.</p><h3 name="b130" id="b130" class="graf graf--h3 graf-after--p">Restore Stashed Changes</h3><p name="a519" id="a519" class="graf graf--p graf-after--h3">Bring your changes back into the working directory:</p><pre data-code-block-mode="1" spellcheck="false" data-code-block-lang="typescript" name="99dd" id="99dd" class="graf graf--pre graf-after--p graf--preV2"><span class="pre--content">git stash apply</span></pre><p name="b280" id="b280" class="graf graf--p graf-after--pre">Check the status:</p><pre data-code-block-mode="1" spellcheck="false" data-code-block-lang="lua" name="20eb" id="20eb" class="graf graf--pre graf-after--p graf--preV2"><span class="pre--content">git <span class="hljs-built_in">status</span></span></pre><p name="b09e" id="b09e" class="graf graf--p graf-after--pre">Your modifications are restored, ready for further editing.</p><h3 name="fad4" id="fad4" class="graf graf--h3 graf-after--p">Remove the Stash After Applying</h3><p name="db02" id="db02" class="graf graf--p graf-after--h3"><code class="markup--code markup--p-code">apply</code> keeps the stash. To restore <strong class="markup--strong markup--p-strong">and</strong> remove it:</p><pre data-code-block-mode="1" spellcheck="false" data-code-block-lang="perl" name="ff0d" id="ff0d" class="graf graf--pre graf-after--p graf--preV2"><span class="pre--content">git stash <span class="hljs-keyword">pop</span></span></pre><p name="e74b" id="e74b" class="graf graf--p graf-after--pre">This applies the stash and deletes it from the list.</p><h3 name="2ce3" id="2ce3" class="graf graf--h3 graf-after--p">Create Named Stash (Best Practice)</h3><p name="6ec8" id="6ec8" class="graf graf--p graf-after--h3">Instead of generic messages, name your stash for clarity:</p><pre data-code-block-mode="1" spellcheck="false" data-code-block-lang="perl" name="72ce" id="72ce" class="graf graf--pre graf-after--p graf--preV2"><span class="pre--content">git stash <span class="hljs-keyword">push</span> -m <span class="hljs-string">&quot;login feature changes&quot;</span><br /><br />git stash list</span></pre><p name="8b12" id="8b12" class="graf graf--p graf-after--pre">Now you can easily identify the stash you need.</p><h3 name="dd9f" id="dd9f" class="graf graf--h3 graf-after--p">Apply a Specific Stash</h3><p name="8120" id="8120" class="graf graf--p graf-after--h3">If multiple stashes exist, restore a specific one:</p><pre data-code-block-mode="1" spellcheck="false" data-code-block-lang="kotlin" name="e912" id="e912" class="graf graf--pre graf-after--p graf--preV2"><span class="pre--content">git stash apply <span class="hljs-symbol">stash@</span>{<span class="hljs-number">0</span>}</span></pre><p name="db7f" id="db7f" class="graf graf--p graf-after--pre">This ensures you’re applying the right set of changes.</p><h3 name="49c0" id="49c0" class="graf graf--h3 graf-after--p">Delete a Stash</h3><p name="92f6" id="92f6" class="graf graf--p graf-after--h3">Remove one stash:</p><pre data-code-block-mode="1" spellcheck="false" data-code-block-lang="kotlin" name="656d" id="656d" class="graf graf--pre graf-after--p graf--preV2"><span class="pre--content">git stash drop <span class="hljs-symbol">stash@</span>{<span class="hljs-number">0</span>}</span></pre><p name="0175" id="0175" class="graf graf--p graf-after--pre">Remove all stashes:</p><pre data-code-block-mode="1" spellcheck="false" data-code-block-lang="css" name="e100" id="e100" class="graf graf--pre graf-after--p graf--preV2"><span class="pre--content">git stash <span class="hljs-attribute">clear</span></span></pre><p name="f12d" id="f12d" class="graf graf--p graf-after--pre">Keep your stash list tidy to avoid confusion.</p><h3 name="de92" id="de92" class="graf graf--h3 graf-after--p">Real-World Scenario: Why Developers Use Stash</h3><p name="2e06" id="2e06" class="graf graf--p graf-after--h3">Imagine working on a <strong class="markup--strong markup--p-strong">feature branch</strong>, and a critical bug pops up. You can’t commit unfinished code. Here’s how stash saves the day:</p><pre data-code-block-mode="1" spellcheck="false" data-code-block-lang="perl" name="fe40" id="fe40" class="graf graf--pre graf-after--p graf--preV2"><span class="pre--content">git stash<br />git checkout bug-fix-branch<br /><span class="hljs-comment"># Fix the bug</span><br />git checkout feature-branch<br />git stash <span class="hljs-keyword">pop</span></span></pre><p name="b11b" id="b11b" class="graf graf--p graf-after--pre">Your unfinished work returns, and the bug is resolved — all without polluting your commit history.</p><h3 name="247d" id="247d" class="graf graf--h3 graf-after--p">Conclusion</h3><p name="9e9c" id="9e9c" class="graf graf--p graf-after--h3 graf--trailing"><code class="markup--code markup--p-code">git stash</code> is a lifesaver for developers juggling multiple tasks. It provides a safe, temporary place for work in progress, letting you switch contexts without committing half-done features. By using named stashes and cleaning up regularly, you can keep your workflow clean and efficient.</p></div></div></section>
+</section>
+<footer><p>By <a href="https://medium.com/@noorfatimaafzalbutt" class="p-author h-card">Noor Fatima</a> on <a href="https://medium.com/p/70ee23a9260e"><time class="dt-published" datetime="2026-03-08T09:26:30.453Z">March 8, 2026</time></a>.</p><p><a href="https://medium.com/@noorfatimaafzalbutt/save-your-work-without-committing-by-mastering-git-stash-70ee23a9260e" class="p-canonical">Canonical link</a></p><p>Exported from <a href="https://medium.com">Medium</a> on April 20, 2026.</p></footer></article></body></html>
