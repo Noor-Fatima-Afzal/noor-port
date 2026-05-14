@@ -3,7 +3,7 @@
 // this function (see ../vercel.json). The function converts the Node IncomingMessage
 // into a web Request, passes it to the SSR handler, and streams the response back.
 import { Readable } from "node:stream";
-import handler from "../dist/server/server.js";
+import handler from "../dist/server/index.js";
 
 // Note: Do not set `export const config = { runtime: "..." }` here.
 // Vercel's serverless function config only accepts "edge" / "experimental-edge"
