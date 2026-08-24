@@ -163,6 +163,18 @@ export function ContactPage() {
               <div className="text-sm font-medium">+92-327-8734825</div>
             </div>
           </div>
+          <a
+            href="tel:+14743573672"
+            className="group flex items-center gap-3 rounded-xl border border-border bg-card p-4 hover:border-primary/40 transition-colors"
+          >
+            <span className="h-10 w-10 grid place-items-center rounded-lg bg-primary/10 text-primary">
+              <Phone className="h-4 w-4" />
+            </span>
+            <div>
+              <div className="text-xs text-muted-foreground">Phone</div>
+              <div className="text-sm font-medium">+1 474-357-3672</div>
+            </div>
+          </a>
           <div className="flex items-center gap-3 rounded-xl border border-border bg-card p-4">
             <span className="h-10 w-10 grid place-items-center rounded-lg bg-primary/10 text-primary">
               <MapPin className="h-4 w-4" />
