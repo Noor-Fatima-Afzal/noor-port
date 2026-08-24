@@ -68,20 +68,6 @@ const publications: Pub[] = [
     tags: ["Transformers", "Multimodal", "Healthcare AI", "EEG"],
     icon: FileText,
   },
-  {
-    title:
-      "Machine Learning-Based Classification for High-Efficiency Perovskite Solar Cell Material Screening",
-    authors: "Iqra Ashfaq, Hassan Saeed, Zaki Uddin, Aaisha Abid, Noor Fatima",
-    venue: "2026 International Conference on Robotics and Automation in Industry (ICRAI)",
-    status: "Published",
-    relevance:
-      "A machine learning classification framework for screening high-efficiency perovskite solar cell materials, comparing nine models across 5,909 experimentally validated devices.",
-    abstract:
-      "Perovskite solar cells (PSCs) have achieved power conversion efficiencies exceeding 25%, yet the vast combinatorial space of material compositions makes experimental optimization prohibitively expensive. This study presents a machine learning classification framework for predicting high-efficiency PSC devices from material composition alone, enabling computational pre-screening before experimental synthesis. We analyze 5,909 experimentally validated devices extracted from the Perovskite Database, comparing nine classification algorithms spanning linear models, ensemble methods, instance-based learning, kernel methods, and neural networks. Our best-performing model, Random Forest, obtains a receiver operating characteristic area under the curve (ROC-AUC) of 0.870, accuracy of 81.3%, and recall of 74.6% for predicting whether a material combination is capable of achieving PCE ≥15%. Analysis of feature importance indicates that perovskite composition is a major contributor to classification accuracy, followed by electron transport layer (ETL) and hole transport layer (HTL). The study also demonstrates that simple label-encoded material features perform comparably to expanded chemical feature sets, suggesting that raw material identifiers implicitly contain useful stoichiometric information.",
-    link: "https://ieeexplore.ieee.org/abstract/document/11551959/",
-    tags: ["Machine Learning", "Classification", "Perovskite Solar Cells", "Materials Screening"],
-    icon: FileText,
-  },
 ];
 
 export function PublicationsPage() {
