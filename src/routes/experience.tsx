@@ -34,6 +34,22 @@ interface Item {
 
 const experience: Item[] = [
   {
+    role: "AI-QC Researcher",
+    org: "University of Saskatchewan",
+    type: "Research Internship / Researcher",
+    location: "Saskatoon, Saskatchewan, Canada",
+    date: "Aug 2026 — Present",
+    highlight: true,
+    tags: ["Quantum Machine Learning", "Quantum Computing", "Variational Quantum Circuits", "AI Optimization"],
+    bullets: [
+      "Conducting research on a Hybrid AI-Quantum Approach for Efficient Variational Circuit Design, focusing on improving the efficiency of variational quantum circuits through AI-driven optimization.",
+      "Developing and evaluating quantum machine learning methods for quantum circuit architecture search, optimization, pruning, and computational efficiency.",
+      "Investigating hybrid AI-quantum techniques to reduce circuit complexity and improve the practical performance of variational quantum algorithms.",
+      "Research conducted under the supervision of Dr. Seok-Bum Ko, Chair of the Department of Electrical and Computer Engineering at the University of Saskatchewan.",
+      "Research internship fully funded through Mitacs.",
+    ],
+  },
+  {
     role: "Research Assistant",
     org: "Dpoint Technologies Ltd",
     type: "Part-time",
