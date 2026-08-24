@@ -1,0 +1,72 @@
+<!DOCTYPE html><html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><title>The Perceptron Trick: A Simple Guide to Training a Perceptron</title><style>
+      * {
+        font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+      }
+      html, body {
+        margin: 0;
+        padding: 0;
+      }
+      h1 {
+        font-size: 50px;
+        margin-bottom: 17px;
+        color: #333;
+      }
+      h2 {
+        font-size: 24px;
+        line-height: 1.6;
+        margin: 30px 0 0 0;
+        margin-bottom: 18px;
+        margin-top: 33px;
+        color: #333;
+      }
+      h3 {
+        font-size: 30px;
+        margin: 10px 0 20px 0;
+        color: #333;
+      }
+      header {
+        width: 640px;
+        margin: auto;
+      }
+      section {
+        width: 640px;
+        margin: auto;
+      }
+      section p {
+        margin-bottom: 27px;
+        font-size: 20px;
+        line-height: 1.6;
+        color: #333;
+      }
+      section img {
+        max-width: 640px;
+      }
+      footer {
+        padding: 0 20px;
+        margin: 50px 0;
+        text-align: center;
+        font-size: 12px;
+      }
+      .aspectRatioPlaceholder {
+        max-width: auto !important;
+        max-height: auto !important;
+      }
+      .aspectRatioPlaceholder-fill {
+        padding-bottom: 0 !important;
+      }
+      header,
+      section[data-field=subtitle],
+      section[data-field=description] {
+        display: none;
+      }
+      </style></head><body><article class="h-entry">
+<header>
+<h1 class="p-name">The Perceptron Trick: A Simple Guide to Training a Perceptron</h1>
+</header>
+<section data-field="subtitle" class="p-summary">
+The Perceptron is a fundamental building block in machine learning and neural networks. It is a type of linear classifier that makes its…
+</section>
+<section data-field="body" class="e-content">
+<section name="9c4a" class="section section--body section--first section--last"><div class="section-divider"><hr class="section-divider"></div><div class="section-content"><div class="section-inner sectionLayout--insetColumn"><h3 name="fe58" id="fe58" class="graf graf--h3 graf--leading graf--title">The Perceptron Trick: A Simple Guide to Training a Perceptron</h3><figure name="59df" id="59df" class="graf graf--figure graf-after--h3"><img class="graf-image" data-image-id="1*oiZGlPhnUE5UE-pTWhnwYA.png" data-width="668" data-height="468" data-is-featured="true" src="https://cdn-images-1.medium.com/max/800/1*oiZGlPhnUE5UE-pTWhnwYA.png"></figure><p name="fed2" id="fed2" class="graf graf--p graf-after--figure">The Perceptron is a fundamental building block in machine learning and neural networks. It is a type of linear classifier that makes its predictions based on a linear predictor function combining a set of weights with the feature vector. This article will guide you through the Perceptron trick and how to train a Perceptron using a simple example.</p><h3 name="2d74" id="2d74" class="graf graf--h3 graf-after--p">Introduction to Perceptron</h3><p name="ca06" id="ca06" class="graf graf--p graf-after--h3">The Perceptron algorithm was introduced by Frank Rosenblatt in 1958. It is used for binary classification tasks and can linearly separate data points into two distinct classes. The Perceptron model can be mathematically expressed as:</p><figure name="4bf0" id="4bf0" class="graf graf--figure graf-after--p"><img class="graf-image" data-image-id="1*jhUTQ2lE7zSLvxou3QPfwg.png" data-width="667" data-height="264" src="https://cdn-images-1.medium.com/max/800/1*jhUTQ2lE7zSLvxou3QPfwg.png"></figure><h3 name="77f9" id="77f9" class="graf graf--h3 graf-after--figure">The Perceptron Trick</h3><p name="f44f" id="f44f" class="graf graf--p graf-after--h3">The Perceptron trick involves updating the weights and bias of the Perceptron based on misclassified examples to minimize the error and achieve better classification.</p><h3 name="36ec" id="36ec" class="graf graf--h3 graf-after--p">Implementing the Perceptron Trick</h3><p name="4413" id="4413" class="graf graf--p graf-after--h3">Let’s implement the Perceptron trick step-by-step using Python. We’ll use <code class="markup--code markup--p-code">numpy</code> for numerical computations and <code class="markup--code markup--p-code">matplotlib</code> for visualization.</p><h4 name="1fdb" id="1fdb" class="graf graf--h4 graf-after--p">Step 1: Import Libraries</h4><pre data-code-block-mode="2" spellcheck="false" data-code-block-lang="python" name="f938" id="f938" class="graf graf--pre graf-after--h4 graf--preV2"><span class="pre--content"><span class="hljs-keyword">import</span> numpy <span class="hljs-keyword">as</span> np<br /><span class="hljs-keyword">import</span> matplotlib.pyplot <span class="hljs-keyword">as</span> plt<br /><span class="hljs-keyword">from</span> sklearn.datasets <span class="hljs-keyword">import</span> make_classification</span></pre><h4 name="43c2" id="43c2" class="graf graf--h4 graf-after--pre">Step 2: Create a Synthetic Dataset</h4><p name="5164" id="5164" class="graf graf--p graf-after--h4">We’ll create a synthetic dataset using <code class="markup--code markup--p-code">make_classification</code> from <code class="markup--code markup--p-code">sklearn</code>.</p><pre data-code-block-mode="1" spellcheck="false" data-code-block-lang="python" name="d413" id="d413" class="graf graf--pre graf-after--p graf--preV2"><span class="pre--content">X, y = make_classification(<br />    n_samples=<span class="hljs-number">100</span>, n_features=<span class="hljs-number">2</span>, n_informative=<span class="hljs-number">1</span>, n_redundant=<span class="hljs-number">0</span>,<br />    n_classes=<span class="hljs-number">2</span>, n_clusters_per_class=<span class="hljs-number">1</span>, random_state=<span class="hljs-number">41</span>, hypercube=<span class="hljs-literal">False</span>, class_sep=<span class="hljs-number">10</span><br />)<br /><br />plt.figure(figsize=(<span class="hljs-number">10</span>, <span class="hljs-number">6</span>))<br />plt.scatter(X[:, <span class="hljs-number">0</span>], X[:, <span class="hljs-number">1</span>], c=y, cmap=<span class="hljs-string">&#x27;winter&#x27;</span>, s=<span class="hljs-number">100</span>)<br />plt.show()</span></pre><h4 name="c16b" id="c16b" class="graf graf--h4 graf-after--pre">Step 3: Define the Perceptron and Step Functions</h4><p name="ac08" id="ac08" class="graf graf--p graf-after--h4">The <code class="markup--code markup--p-code">perceptron</code> function will update the weights based on misclassifications, and the <code class="markup--code markup--p-code">step</code> function will determine the output based on the sign of the input.</p><pre data-code-block-mode="1" spellcheck="false" data-code-block-lang="python" name="be42" id="be42" class="graf graf--pre graf-after--p graf--preV2"><span class="pre--content"><span class="hljs-keyword">def</span> <span class="hljs-title function_">step</span>(<span class="hljs-params">z</span>):<br />    <span class="hljs-keyword">return</span> <span class="hljs-number">1</span> <span class="hljs-keyword">if</span> z &gt; <span class="hljs-number">0</span> <span class="hljs-keyword">else</span> <span class="hljs-number">0</span><br /><br /><span class="hljs-keyword">def</span> <span class="hljs-title function_">perceptron</span>(<span class="hljs-params">X, y</span>):<br />    X = np.insert(X, <span class="hljs-number">0</span>, <span class="hljs-number">1</span>, axis=<span class="hljs-number">1</span>)  <span class="hljs-comment"># Add bias term to the input features</span><br />    weights = np.ones(X.shape[<span class="hljs-number">1</span>])<br />    lr = <span class="hljs-number">0.1</span>  <span class="hljs-comment"># Learning rate</span><br />    <br />    <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">1000</span>):<br />        j = np.random.randint(<span class="hljs-number">0</span>, <span class="hljs-number">100</span>)<br />        y_hat = step(np.dot(X[j], weights))<br />        weights = weights + lr * (y[j] - y_hat) * X[j]<br />        <br />    <span class="hljs-keyword">return</span> weights[<span class="hljs-number">0</span>], weights[<span class="hljs-number">1</span>:]</span></pre><h4 name="02e0" id="02e0" class="graf graf--h4 graf-after--pre">Step 4: Train the Perceptron</h4><p name="9f48" id="9f48" class="graf graf--p graf-after--h4">We’ll train the Perceptron on our synthetic dataset.</p><pre data-code-block-mode="2" spellcheck="false" data-code-block-lang="python" name="8233" id="8233" class="graf graf--pre graf-after--p graf--preV2"><span class="pre--content">intercept_, coef_ = perceptron(X, y)<br /><span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;Weights:&quot;</span>, coef_)<br /><span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;Intercept:&quot;</span>, intercept_)</span></pre><h4 name="d300" id="d300" class="graf graf--h4 graf-after--pre">Step 5: Plot the Decision Boundary</h4><p name="b455" id="b455" class="graf graf--p graf-after--h4">We’ll plot the decision boundary along with the data points to visualize the classification.</p><pre data-code-block-mode="2" spellcheck="false" data-code-block-lang="python" name="b64c" id="b64c" class="graf graf--pre graf-after--p graf--preV2"><span class="pre--content">m = -(coef_[<span class="hljs-number">0</span>] / coef_[<span class="hljs-number">1</span>])<br />b = -(intercept_ / coef_[<span class="hljs-number">1</span>])<br />x_input = np.linspace(-<span class="hljs-number">3</span>, <span class="hljs-number">3</span>, <span class="hljs-number">100</span>)<br />y_input = m * x_input + b<br /><br />plt.figure(figsize=(<span class="hljs-number">10</span>, <span class="hljs-number">6</span>))<br />plt.plot(x_input, y_input, color=<span class="hljs-string">&#x27;red&#x27;</span>, linewidth=<span class="hljs-number">3</span>)<br />plt.scatter(X[:, <span class="hljs-number">0</span>], X[:, <span class="hljs-number">1</span>], c=y, cmap=<span class="hljs-string">&#x27;winter&#x27;</span>, s=<span class="hljs-number">100</span>)<br />plt.ylim(-<span class="hljs-number">3</span>, <span class="hljs-number">2</span>)<br />plt.show()</span></pre><h3 name="4a01" id="4a01" class="graf graf--h3 graf-after--pre">Conclusion</h3><p name="d648" id="d648" class="graf graf--p graf-after--h3 graf--trailing">The Perceptron trick is a simple yet effective way to train a Perceptron for binary classification tasks. By iteratively updating the weights based on misclassified examples, the Perceptron can learn to separate the data points linearly. This guide demonstrated how to implement and visualize the Perceptron training process using Python.</p></div></div></section>
+</section>
+<footer><p>By <a href="https://medium.com/@noorfatimaafzalbutt" class="p-author h-card">Noor Fatima</a> on <a href="https://medium.com/p/b298f7ca9509"><time class="dt-published" datetime="2024-07-24T19:52:35.493Z">July 24, 2024</time></a>.</p><p><a href="https://medium.com/@noorfatimaafzalbutt/the-perceptron-trick-a-simple-guide-to-training-a-perceptron-b298f7ca9509" class="p-canonical">Canonical link</a></p><p>Exported from <a href="https://medium.com">Medium</a> on April 20, 2026.</p></footer></article></body></html>

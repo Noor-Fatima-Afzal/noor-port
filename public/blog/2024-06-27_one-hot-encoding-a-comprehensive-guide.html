@@ -1,0 +1,72 @@
+<!DOCTYPE html><html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><title>One-Hot Encoding: A Comprehensive Guide</title><style>
+      * {
+        font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+      }
+      html, body {
+        margin: 0;
+        padding: 0;
+      }
+      h1 {
+        font-size: 50px;
+        margin-bottom: 17px;
+        color: #333;
+      }
+      h2 {
+        font-size: 24px;
+        line-height: 1.6;
+        margin: 30px 0 0 0;
+        margin-bottom: 18px;
+        margin-top: 33px;
+        color: #333;
+      }
+      h3 {
+        font-size: 30px;
+        margin: 10px 0 20px 0;
+        color: #333;
+      }
+      header {
+        width: 640px;
+        margin: auto;
+      }
+      section {
+        width: 640px;
+        margin: auto;
+      }
+      section p {
+        margin-bottom: 27px;
+        font-size: 20px;
+        line-height: 1.6;
+        color: #333;
+      }
+      section img {
+        max-width: 640px;
+      }
+      footer {
+        padding: 0 20px;
+        margin: 50px 0;
+        text-align: center;
+        font-size: 12px;
+      }
+      .aspectRatioPlaceholder {
+        max-width: auto !important;
+        max-height: auto !important;
+      }
+      .aspectRatioPlaceholder-fill {
+        padding-bottom: 0 !important;
+      }
+      header,
+      section[data-field=subtitle],
+      section[data-field=description] {
+        display: none;
+      }
+      </style></head><body><article class="h-entry">
+<header>
+<h1 class="p-name">One-Hot Encoding: A Comprehensive Guide</h1>
+</header>
+<section data-field="subtitle" class="p-summary">
+Introduction
+</section>
+<section data-field="body" class="e-content">
+<section name="498d" class="section section--body section--first section--last"><div class="section-divider"><hr class="section-divider"></div><div class="section-content"><div class="section-inner sectionLayout--insetColumn"><h3 name="04fa" id="04fa" class="graf graf--h3 graf--leading graf--title">One-Hot Encoding: A Comprehensive Guide</h3><figure name="4db3" id="4db3" class="graf graf--figure graf-after--h3"><img class="graf-image" data-image-id="1*6sGItzhJDr0nRlKxkkg8Sg.jpeg" data-width="1050" data-height="520" data-is-featured="true" src="https://cdn-images-1.medium.com/max/800/1*6sGItzhJDr0nRlKxkkg8Sg.jpeg"></figure><h3 name="9f43" id="9f43" class="graf graf--h3 graf-after--figure">Introduction</h3><p name="f2ef" id="f2ef" class="graf graf--p graf-after--h3">One-hot encoding is a method used to convert categorical data into a format that can be provided to machine learning algorithms to improve predictions. This technique is particularly useful for nominal data, where each category is represented as a unique column in the dataset.</p><h3 name="2310" id="2310" class="graf graf--h3 graf-after--p">Understanding One-Hot Encoding</h3><h4 name="9a23" id="9a23" class="graf graf--h4 graf-after--h3">Basics</h4><ul class="postList"><li name="ebe5" id="ebe5" class="graf graf--li graf-after--h4"><strong class="markup--strong markup--li-strong">Nominal Data</strong>: Data that represents categories without any inherent order.</li><li name="f53e" id="f53e" class="graf graf--li graf-after--li"><strong class="markup--strong markup--li-strong">Each Category -&gt; Each Column</strong>: In one-hot encoding, each category in a column is converted into a separate column.</li><li name="436e" id="436e" class="graf graf--li graf-after--li"><strong class="markup--strong markup--li-strong">N Categories -&gt; N-1 Columns</strong>: To avoid the dummy variable trap, which occurs due to multicollinearity (a mathematical relationship between columns), we use N-1 columns. This is crucial in linear models such as linear regression and logistic regression.</li></ul><h4 name="edfa" id="edfa" class="graf graf--h4 graf-after--li">Example</h4><p name="beee" id="beee" class="graf graf--p graf-after--h4">Imagine a column with colors: Red, Green, and Yellow. After one-hot encoding, it transforms into three columns:</p><ul class="postList"><li name="bd07" id="bd07" class="graf graf--li graf-after--p">Red: [1, 0, 0]</li><li name="0fb8" id="0fb8" class="graf graf--li graf-after--li">Green: [0, 1, 0]</li><li name="8578" id="8578" class="graf graf--li graf-after--li">Yellow: [0, 0, 1]</li></ul><h3 name="730d" id="730d" class="graf graf--h3 graf-after--li">1. One-Hot Encoding in Pandas</h3><p name="cd59" id="cd59" class="graf graf--p graf-after--h3">To perform one-hot encoding in pandas, you can use the <code class="markup--code markup--p-code">pd.get_dummies</code> function:</p><pre data-code-block-mode="2" spellcheck="false" data-code-block-lang="python" name="0e09" id="0e09" class="graf graf--pre graf-after--p graf--preV2"><span class="pre--content"><span class="hljs-keyword">import</span> pandas <span class="hljs-keyword">as</span> pd<br /><br /><span class="hljs-comment"># Assume df is your DataFrame</span><br />df_encoded = pd.get_dummies(df, columns=[<span class="hljs-string">&#x27;fuel&#x27;</span>, <span class="hljs-string">&#x27;owner&#x27;</span>])</span></pre><p name="286e" id="286e" class="graf graf--p graf-after--pre"><strong class="markup--strong markup--p-strong">To address multicollinearity</strong>, you can drop the first column:</p><pre data-code-block-mode="2" spellcheck="false" data-code-block-lang="python" name="796d" id="796d" class="graf graf--pre graf-after--p graf--preV2"><span class="pre--content">df_encoded = pd.get_dummies(df, columns=[<span class="hljs-string">&#x27;fuel&#x27;</span>, <span class="hljs-string">&#x27;owner&#x27;</span>], drop_first=<span class="hljs-literal">True</span>)</span></pre><h3 name="85c7" id="85c7" class="graf graf--h3 graf-after--pre">Challenges with Many Categories</h3><p name="653d" id="653d" class="graf graf--p graf-after--h3">When dealing with a large number of categories, the dimensionality of the data increases significantly. This can lead to computational inefficiency and potential overfitting. To mitigate this, we can:</p><ol class="postList"><li name="b095" id="b095" class="graf graf--li graf-after--p"><strong class="markup--strong markup--li-strong">Keep Frequently Occurring Categories</strong>: Focus on categories that appear frequently in the dataset.</li><li name="1ebc" id="1ebc" class="graf graf--li graf-after--li"><strong class="markup--strong markup--li-strong">Specify Less Frequent Categories as ‘Others’</strong>: Group infrequent categories into a single ‘Others’ category.</li></ol><h4 name="9e3c" id="9e3c" class="graf graf--h4 graf-after--li">Code Example</h4><p name="07b4" id="07b4" class="graf graf--p graf-after--h4">Here’s how you can implement this in Python using pandas:</p><pre data-code-block-mode="2" spellcheck="false" data-code-block-lang="python" name="864a" id="864a" class="graf graf--pre graf-after--p graf--preV2"><span class="pre--content"><span class="hljs-keyword">import</span> pandas <span class="hljs-keyword">as</span> pd<br /><span class="hljs-comment"># Assume df is your DataFrame and &#x27;brand&#x27; is the column with many categories</span><br />counts = df[<span class="hljs-string">&#x27;brand&#x27;</span>].value_counts()<br />threshold = <span class="hljs-number">100</span><br />repl = counts[counts &lt;= threshold].index<br />df[<span class="hljs-string">&#x27;brand&#x27;</span>] = df[<span class="hljs-string">&#x27;brand&#x27;</span>].replace(repl, <span class="hljs-string">&#x27;uncommon&#x27;</span>)<br />df = pd.get_dummies(df[<span class="hljs-string">&#x27;brand&#x27;</span>])</span></pre><h3 name="feac" id="feac" class="graf graf--h3 graf-after--pre">Limitation in Machine Learning</h3><p name="76f9" id="76f9" class="graf graf--p graf-after--h3">One of the limitations of using pandas for one-hot encoding in machine learning is that pandas does not remember which column corresponds to which category. This can be problematic when you need to ensure consistency between the training and test datasets.</p><h3 name="aff1" id="aff1" class="graf graf--h3 graf-after--p">2. One-Hot Encoding in Scikit-Learn</h3><p name="8060" id="8060" class="graf graf--p graf-after--h3">Scikit-Learn provides a more robust way to handle one-hot encoding through the <code class="markup--code markup--p-code">OneHotEncoder</code> class. Here are the steps:</p><ol class="postList"><li name="2a20" id="2a20" class="graf graf--li graf-after--p"><strong class="markup--strong markup--li-strong">Split the Data into Train and Test Sets</strong>:</li></ol><pre data-code-block-mode="2" spellcheck="false" data-code-block-lang="python" name="d8ca" id="d8ca" class="graf graf--pre graf-after--li graf--preV2"><span class="pre--content"><span class="hljs-keyword">from</span> sklearn.model_selection <span class="hljs-keyword">import</span> train_test_split<br /><br />X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=<span class="hljs-number">0.2</span>, random_state=<span class="hljs-number">42</span>)</span></pre><p name="5ea2" id="5ea2" class="graf graf--p graf-after--pre"><strong class="markup--strong markup--p-strong">2. Create an Object of OneHotEncoder</strong>:</p><pre data-code-block-mode="2" spellcheck="false" data-code-block-lang="python" name="55f1" id="55f1" class="graf graf--pre graf-after--p graf--preV2"><span class="pre--content"><span class="hljs-keyword">from</span> sklearn.preprocessing <span class="hljs-keyword">import</span> OneHotEncoder<br /><br />encoder = OneHotEncoder()</span></pre><p name="97af" id="97af" class="graf graf--p graf-after--pre"><strong class="markup--strong markup--p-strong">3. Apply One-Hot Encoding</strong>:</p><pre data-code-block-mode="2" spellcheck="false" data-code-block-lang="python" name="fb90" id="fb90" class="graf graf--pre graf-after--p graf--preV2"><span class="pre--content"><span class="hljs-comment"># Fit and transform the train set</span><br />X_train_encoded = encoder.fit_transform(X_train[[<span class="hljs-string">&#x27;fuel&#x27;</span>, <span class="hljs-string">&#x27;owner&#x27;</span>]])<br /><br /><span class="hljs-comment"># Transform the test set</span><br />X_test_encoded = encoder.transform(X_test[[<span class="hljs-string">&#x27;fuel&#x27;</span>, <span class="hljs-string">&#x27;owner&#x27;</span>]])</span></pre><p name="a1c1" id="a1c1" class="graf graf--p graf-after--pre">To seamlessly apply one-hot encoding to different columns and then merge them back, the <code class="markup--code markup--p-code">ColumnTransformer</code> from Scikit-Learn can be used, which will be covered in the next article.</p><h3 name="009e" id="009e" class="graf graf--h3 graf-after--p">Conclusion</h3><p name="d551" id="d551" class="graf graf--p graf-after--h3 graf--trailing">One-hot encoding is a powerful technique for handling categorical data in machine learning. Whether using pandas or Scikit-Learn, understanding the nuances of one-hot encoding helps ensure your models perform efficiently and effectively. By addressing challenges like high dimensionality and multicollinearity, you can better prepare your data for machine learning algorithms.</p></div></div></section>
+</section>
+<footer><p>By <a href="https://medium.com/@noorfatimaafzalbutt" class="p-author h-card">Noor Fatima</a> on <a href="https://medium.com/p/4ed23db332e8"><time class="dt-published" datetime="2024-06-27T10:23:39.546Z">June 27, 2024</time></a>.</p><p><a href="https://medium.com/@noorfatimaafzalbutt/one-hot-encoding-a-comprehensive-guide-4ed23db332e8" class="p-canonical">Canonical link</a></p><p>Exported from <a href="https://medium.com">Medium</a> on April 20, 2026.</p></footer></article></body></html>

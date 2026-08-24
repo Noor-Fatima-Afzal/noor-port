@@ -1,0 +1,72 @@
+<!DOCTYPE html><html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><title>Mean and Median imputation in sklearn: A Practical Guide</title><style>
+      * {
+        font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+      }
+      html, body {
+        margin: 0;
+        padding: 0;
+      }
+      h1 {
+        font-size: 50px;
+        margin-bottom: 17px;
+        color: #333;
+      }
+      h2 {
+        font-size: 24px;
+        line-height: 1.6;
+        margin: 30px 0 0 0;
+        margin-bottom: 18px;
+        margin-top: 33px;
+        color: #333;
+      }
+      h3 {
+        font-size: 30px;
+        margin: 10px 0 20px 0;
+        color: #333;
+      }
+      header {
+        width: 640px;
+        margin: auto;
+      }
+      section {
+        width: 640px;
+        margin: auto;
+      }
+      section p {
+        margin-bottom: 27px;
+        font-size: 20px;
+        line-height: 1.6;
+        color: #333;
+      }
+      section img {
+        max-width: 640px;
+      }
+      footer {
+        padding: 0 20px;
+        margin: 50px 0;
+        text-align: center;
+        font-size: 12px;
+      }
+      .aspectRatioPlaceholder {
+        max-width: auto !important;
+        max-height: auto !important;
+      }
+      .aspectRatioPlaceholder-fill {
+        padding-bottom: 0 !important;
+      }
+      header,
+      section[data-field=subtitle],
+      section[data-field=description] {
+        display: none;
+      }
+      </style></head><body><article class="h-entry">
+<header>
+<h1 class="p-name">Mean and Median imputation in sklearn: A Practical Guide</h1>
+</header>
+<section data-field="subtitle" class="p-summary">
+In the realm of machine learning, handling missing data is a crucial preprocessing step that can significantly impact the performance and…
+</section>
+<section data-field="body" class="e-content">
+<section name="ad53" class="section section--body section--first section--last"><div class="section-divider"><hr class="section-divider"></div><div class="section-content"><div class="section-inner sectionLayout--insetColumn"><h3 name="42ca" id="42ca" class="graf graf--h3 graf--leading graf--title">Mean and Median imputation in sklearn: A Practical Guide</h3><figure name="7149" id="7149" class="graf graf--figure graf-after--h3"><img class="graf-image" data-image-id="1*xCu2gtukzHNMIZL7nlIWOg.jpeg" data-width="776" data-height="315" data-is-featured="true" src="https://cdn-images-1.medium.com/max/800/1*xCu2gtukzHNMIZL7nlIWOg.jpeg"></figure><p name="e34f" id="e34f" class="graf graf--p graf-after--figure">In the realm of machine learning, handling missing data is a crucial preprocessing step that can significantly impact the performance and reliability of your models. Fortunately, scikit-learn (<code class="markup--code markup--p-code">sklearn</code>) provides powerful tools to facilitate this process, making it easier to impute missing values and prepare your data for analysis.</p><h3 name="a2ba" id="a2ba" class="graf graf--h3 graf-after--p">Introduction</h3><p name="da5a" id="da5a" class="graf graf--p graf-after--h3">Dealing with missing data is a common challenge in real-world datasets. Missing values can arise due to various reasons such as data collection errors, incomplete surveys, or simply data not being available at the time of recording. Ignoring or mishandling missing data can lead to biased results and erroneous conclusions when training machine learning models.</p><p name="0670" id="0670" class="graf graf--p graf-after--p">In this article, we will explore how to effectively handle missing data using <code class="markup--code markup--p-code">sklearn</code>, focusing on two fundamental tools: <code class="markup--code markup--p-code">SimpleImputer</code> for imputing missing values and <code class="markup--code markup--p-code">ColumnTransformer</code> for applying different imputation strategies to specific columns.</p><h3 name="3d2c" id="3d2c" class="graf graf--h3 graf-after--p">Understanding the Dataset</h3><p name="3ea7" id="3ea7" class="graf graf--p graf-after--h3">To illustrate these concepts, let’s consider a classic dataset often used for machine learning tutorials: the Titanic dataset. This dataset contains information about passengers aboard the Titanic, including features like age, fare, and survival status.</p><pre data-code-block-mode="1" spellcheck="false" data-code-block-lang="python" name="970e" id="970e" class="graf graf--pre graf-after--p graf--preV2"><span class="pre--content"><span class="hljs-comment"># Load dataset (example)</span><br /><span class="hljs-keyword">from</span> sklearn.datasets <span class="hljs-keyword">import</span> load_boston<br />X, y = load_boston(return_X_y=<span class="hljs-literal">True</span>)</span></pre><h3 name="3148" id="3148" class="graf graf--h3 graf-after--pre">Step-by-Step Data Preprocessing</h3><h4 name="8bea" id="8bea" class="graf graf--h4 graf-after--h3">Step 1: Splitting the Data</h4><p name="1789" id="1789" class="graf graf--p graf-after--h4">Before diving into preprocessing, it’s essential to split our data into training and testing sets to evaluate our model later.</p><pre data-code-block-mode="2" spellcheck="false" data-code-block-lang="python" name="506c" id="506c" class="graf graf--pre graf-after--p graf--preV2"><span class="pre--content"><span class="hljs-keyword">from</span> sklearn.model_selection <span class="hljs-keyword">import</span> train_test_split<br /><br />X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=<span class="hljs-number">0.2</span>, random_state=<span class="hljs-number">2</span>)</span></pre><h4 name="335f" id="335f" class="graf graf--h4 graf-after--pre">Step 2: Imputing Missing Values</h4><p name="b6f8" id="b6f8" class="graf graf--p graf-after--h4">The next step is to handle missing values in our dataset. <code class="markup--code markup--p-code">SimpleImputer</code> from <code class="markup--code markup--p-code">sklearn</code> provides several strategies for imputing missing data, such as replacing missing values with the mean, median, or most frequent value of the respective column.</p><pre data-code-block-mode="1" spellcheck="false" data-code-block-lang="python" name="2546" id="2546" class="graf graf--pre graf-after--p graf--preV2"><span class="pre--content"><span class="hljs-keyword">from</span> sklearn.impute <span class="hljs-keyword">import</span> SimpleImputer<br /><br /><span class="hljs-comment"># Create imputers for median and mean strategies</span><br />imputer1 = SimpleImputer(strategy=<span class="hljs-string">&#x27;median&#x27;</span>)<br />imputer2 = SimpleImputer(strategy=<span class="hljs-string">&#x27;mean&#x27;</span>)</span></pre><h4 name="c48e" id="c48e" class="graf graf--h4 graf-after--pre">Step 3: Column Transformation</h4><p name="514b" id="514b" class="graf graf--p graf-after--h4">Using <code class="markup--code markup--p-code">ColumnTransformer</code>, we can apply different imputation strategies to specific columns while preserving others in their original state. This is particularly useful when dealing with datasets containing a mix of numerical and categorical data.</p><pre data-code-block-mode="1" spellcheck="false" data-code-block-lang="python" name="31df" id="31df" class="graf graf--pre graf-after--p graf--preV2"><span class="pre--content"><span class="hljs-keyword">from</span> sklearn.compose <span class="hljs-keyword">import</span> ColumnTransformer<br /><br /><span class="hljs-comment"># Define transformers with specified imputers</span><br />trf = ColumnTransformer([<br />    (<span class="hljs-string">&#x27;imputer1&#x27;</span>, imputer1, [<span class="hljs-string">&#x27;Age&#x27;</span>]),<br />    (<span class="hljs-string">&#x27;imputer2&#x27;</span>, imputer2, [<span class="hljs-string">&#x27;Fare&#x27;</span>])<br />], remainder=<span class="hljs-string">&#x27;passthrough&#x27;</span>)<br /><br /><span class="hljs-comment"># Fit the transformer on the training data</span><br />trf.fit(X_train)</span></pre><h4 name="b3d0" id="b3d0" class="graf graf--h4 graf-after--pre">Step 4: Applying Transformations</h4><p name="d7b9" id="d7b9" class="graf graf--p graf-after--h4">Once the transformers are fitted, apply the transformations to both training and testing sets to impute missing values accordingly.</p><pre data-code-block-mode="1" spellcheck="false" data-code-block-lang="ini" name="7cdd" id="7cdd" class="graf graf--pre graf-after--p graf--preV2"><span class="pre--content"><span class="hljs-comment"># Transform the training and testing data</span><br /><span class="hljs-attr">X_train</span> = trf.transform(X_train)<br /><span class="hljs-attr">X_test</span> = trf.transform(X_test)</span></pre><h3 name="975e" id="975e" class="graf graf--h3 graf-after--pre">Conclusion</h3><p name="85f0" id="85f0" class="graf graf--p graf-after--h3">In this article, we’ve covered the essential steps involved in handling missing data using <code class="markup--code markup--p-code">sklearn</code>. By utilizing tools like <code class="markup--code markup--p-code">SimpleImputer</code> and <code class="markup--code markup--p-code">ColumnTransformer</code>, you can effectively preprocess your data, ensuring that missing values are handled appropriately before training your machine learning models.</p><p name="d4d3" id="d4d3" class="graf graf--p graf-after--p graf--trailing">Handling missing data is just one aspect of data preprocessing in machine learning, but it’s a critical one that can significantly impact the performance and reliability of your models. With <code class="markup--code markup--p-code">sklearn</code>&#39;s comprehensive set of tools, you can streamline this process and focus more on building and evaluating your models.</p></div></div></section>
+</section>
+<footer><p>By <a href="https://medium.com/@noorfatimaafzalbutt" class="p-author h-card">Noor Fatima</a> on <a href="https://medium.com/p/a799133abbf6"><time class="dt-published" datetime="2024-06-30T19:43:57.727Z">June 30, 2024</time></a>.</p><p><a href="https://medium.com/@noorfatimaafzalbutt/handling-missing-data-with-sklearn-a-practical-guide-a799133abbf6" class="p-canonical">Canonical link</a></p><p>Exported from <a href="https://medium.com">Medium</a> on April 20, 2026.</p></footer></article></body></html>

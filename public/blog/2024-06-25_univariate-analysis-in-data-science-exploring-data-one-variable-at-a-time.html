@@ -1,0 +1,72 @@
+<!DOCTYPE html><html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><title>Univariate Analysis in Data Science: Exploring Data One Variable at a Time</title><style>
+      * {
+        font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+      }
+      html, body {
+        margin: 0;
+        padding: 0;
+      }
+      h1 {
+        font-size: 50px;
+        margin-bottom: 17px;
+        color: #333;
+      }
+      h2 {
+        font-size: 24px;
+        line-height: 1.6;
+        margin: 30px 0 0 0;
+        margin-bottom: 18px;
+        margin-top: 33px;
+        color: #333;
+      }
+      h3 {
+        font-size: 30px;
+        margin: 10px 0 20px 0;
+        color: #333;
+      }
+      header {
+        width: 640px;
+        margin: auto;
+      }
+      section {
+        width: 640px;
+        margin: auto;
+      }
+      section p {
+        margin-bottom: 27px;
+        font-size: 20px;
+        line-height: 1.6;
+        color: #333;
+      }
+      section img {
+        max-width: 640px;
+      }
+      footer {
+        padding: 0 20px;
+        margin: 50px 0;
+        text-align: center;
+        font-size: 12px;
+      }
+      .aspectRatioPlaceholder {
+        max-width: auto !important;
+        max-height: auto !important;
+      }
+      .aspectRatioPlaceholder-fill {
+        padding-bottom: 0 !important;
+      }
+      header,
+      section[data-field=subtitle],
+      section[data-field=description] {
+        display: none;
+      }
+      </style></head><body><article class="h-entry">
+<header>
+<h1 class="p-name">Univariate Analysis in Data Science: Exploring Data One Variable at a Time</h1>
+</header>
+<section data-field="subtitle" class="p-summary">
+In data science, univariate analysis serves as a fundamental step to understand the distribution and characteristics of individual…
+</section>
+<section data-field="body" class="e-content">
+<section name="8206" class="section section--body section--first section--last"><div class="section-divider"><hr class="section-divider"></div><div class="section-content"><div class="section-inner sectionLayout--insetColumn"><h3 name="5286" id="5286" class="graf graf--h3 graf--leading graf--title">Univariate Analysis in Data Science: Exploring Data One Variable at a Time</h3><figure name="4528" id="4528" class="graf graf--figure graf-after--h3"><img class="graf-image" data-image-id="1*gM2LY_hObTpzUXe9Ncxd3w.jpeg" data-width="563" data-height="375" data-is-featured="true" src="https://cdn-images-1.medium.com/max/800/1*gM2LY_hObTpzUXe9Ncxd3w.jpeg"></figure><p name="fb6d" id="fb6d" class="graf graf--p graf-after--figure">In data science, univariate analysis serves as a fundamental step to understand the distribution and characteristics of individual variables within a dataset. This article dives into the methods and visualizations used for univariate analysis, focusing on both categorical and numerical data types.</p><h4 name="752b" id="752b" class="graf graf--h4 graf-after--p">Understanding Categorical Data</h4><p name="758b" id="758b" class="graf graf--p graf-after--h4">Categorical data represents discrete values that fall into specific categories or groups. Examples include gender, marital status, or types of products. Analyzing categorical data involves examining the frequency distribution of each category.</p><p name="60ab" id="60ab" class="graf graf--p graf-after--p"><strong class="markup--strong markup--p-strong">1. Countplot:</strong></p><ul class="postList"><li name="5d83" id="5d83" class="graf graf--li graf-after--p"><strong class="markup--strong markup--li-strong">Definition:</strong> A countplot displays the number of occurrences of each category using bars.</li><li name="f003" id="f003" class="graf graf--li graf-after--li"><strong class="markup--strong markup--li-strong">Implementation:</strong> <code class="markup--code markup--li-code">sns.countplot(x=&#39;column&#39;, data=df)</code></li></ul><pre data-code-block-mode="2" spellcheck="false" data-code-block-lang="python" name="d1f5" id="d1f5" class="graf graf--pre graf-after--li graf--preV2"><span class="pre--content">sns.countplot(x=<span class="hljs-string">&#x27;toss_decision&#x27;</span>, data=df)</span></pre><figure name="f19c" id="f19c" class="graf graf--figure graf-after--pre"><img class="graf-image" data-image-id="1*B29_gUm7ztYRZwaZoT8aUw.jpeg" data-width="637" data-height="553" src="https://cdn-images-1.medium.com/max/800/1*B29_gUm7ztYRZwaZoT8aUw.jpeg"><figcaption class="imageCaption">Count Plot</figcaption></figure><p name="8898" id="8898" class="graf graf--p graf-after--figure"><strong class="markup--strong markup--p-strong">2. Pie Chart:</strong></p><ul class="postList"><li name="2ece" id="2ece" class="graf graf--li graf-after--p"><strong class="markup--strong markup--li-strong">Definition:</strong> A pie chart illustrates the proportion of each category relative to the whole.</li><li name="0149" id="0149" class="graf graf--li graf-after--li"><strong class="markup--strong markup--li-strong">Implementation:</strong> <code class="markup--code markup--li-code">df[&#39;column&#39;].value_counts().plot(kind=&#39;pie&#39;, autopct=&#39;%1.1f%%&#39;)</code></li></ul><pre data-code-block-mode="2" spellcheck="false" data-code-block-lang="python" name="3fc8" id="3fc8" class="graf graf--pre graf-after--li graf--preV2"><span class="pre--content">df[<span class="hljs-string">&#x27;toss_decision&#x27;</span>].value_counts().plot(kind=<span class="hljs-string">&#x27;pie&#x27;</span>, autopct=<span class="hljs-string">&#x27;%1.1f%%&#x27;</span>)</span></pre><figure name="d3bc" id="d3bc" class="graf graf--figure graf-after--pre"><img class="graf-image" data-image-id="1*k05KRg93wdj7LyN6kSg_DA.jpeg" data-width="641" data-height="550" src="https://cdn-images-1.medium.com/max/800/1*k05KRg93wdj7LyN6kSg_DA.jpeg"><figcaption class="imageCaption">Pie Chart</figcaption></figure><h4 name="0dd8" id="0dd8" class="graf graf--h4 graf-after--figure">Exploring Numerical Data</h4><p name="8ca1" id="8ca1" class="graf graf--p graf-after--h4">Numerical data consists of measurable quantities that can be represented with numbers, such as age, income, or temperature. Univariate analysis for numerical data aims to understand the distribution, central tendency, and spread of values.</p><p name="a1b4" id="a1b4" class="graf graf--p graf-after--p"><strong class="markup--strong markup--p-strong">1. Histogram:</strong></p><ul class="postList"><li name="7e65" id="7e65" class="graf graf--li graf-after--p"><strong class="markup--strong markup--li-strong">Definition:</strong> A histogram shows the distribution of numerical data by dividing it into bins and displaying the frequency of values in each bin.</li><li name="b725" id="b725" class="graf graf--li graf-after--li"><strong class="markup--strong markup--li-strong">Implementation:</strong> <code class="markup--code markup--li-code">plt.hist(df[&#39;column&#39;], bins=10)</code></li></ul><pre data-code-block-mode="2" spellcheck="false" data-code-block-lang="python" name="0354" id="0354" class="graf graf--pre graf-after--li graf--preV2"><span class="pre--content">plt.hist(df[<span class="hljs-string">&#x27;win_by_runs&#x27;</span>], bins=<span class="hljs-number">10</span>)</span></pre><figure name="dc1c" id="dc1c" class="graf graf--figure graf-after--pre"><img class="graf-image" data-image-id="1*dg5aTDTr5mG_ZCcEeFvnfA.jpeg" data-width="637" data-height="550" src="https://cdn-images-1.medium.com/max/800/1*dg5aTDTr5mG_ZCcEeFvnfA.jpeg"><figcaption class="imageCaption">Hist Plot</figcaption></figure><p name="4a05" id="4a05" class="graf graf--p graf-after--figure"><strong class="markup--strong markup--p-strong">2. Kernel Density Estimation (KDE) Plot:</strong></p><ul class="postList"><li name="1ab7" id="1ab7" class="graf graf--li graf-after--p"><strong class="markup--strong markup--li-strong">Definition:</strong> A KDE plot represents the probability density function of a continuous variable.</li><li name="d005" id="d005" class="graf graf--li graf-after--li"><strong class="markup--strong markup--li-strong">Implementation:</strong> <code class="markup--code markup--li-code">sns.kdeplot(df[&#39;column&#39;], shade=True)</code></li></ul><pre data-code-block-mode="2" spellcheck="false" data-code-block-lang="python" name="52bb" id="52bb" class="graf graf--pre graf-after--li graf--preV2"><span class="pre--content">sns.kdeplot(df[<span class="hljs-string">&#x27;win_by_runs&#x27;</span>], shade=<span class="hljs-literal">True</span>)</span></pre><figure name="25bf" id="25bf" class="graf graf--figure graf-after--pre"><img class="graf-image" data-image-id="1*iW_A0Lto4NflgXxEsiKfRQ.jpeg" data-width="640" data-height="550" src="https://cdn-images-1.medium.com/max/800/1*iW_A0Lto4NflgXxEsiKfRQ.jpeg"><figcaption class="imageCaption">KDE Plot</figcaption></figure><p name="4013" id="4013" class="graf graf--p graf-after--figure"><strong class="markup--strong markup--p-strong">3. Skewness:</strong></p><ul class="postList"><li name="d475" id="d475" class="graf graf--li graf-after--p"><strong class="markup--strong markup--li-strong">Definition:</strong> Skewness measures the asymmetry of the distribution of numerical data.</li><li name="b349" id="b349" class="graf graf--li graf-after--li"><strong class="markup--strong markup--li-strong">Implementation:</strong> <code class="markup--code markup--li-code">df[&#39;column&#39;].skew()</code></li></ul><pre data-code-block-mode="2" spellcheck="false" data-code-block-lang="python" name="8f90" id="8f90" class="graf graf--pre graf-after--li graf--preV2"><span class="pre--content">df[<span class="hljs-string">&#x27;win_by_runs&#x27;</span>].skew()</span></pre><p name="ad57" id="ad57" class="graf graf--p graf-after--pre"><strong class="markup--strong markup--p-strong">4. Boxplot (Five-Number Summary):</strong></p><ul class="postList"><li name="afb0" id="afb0" class="graf graf--li graf-after--p"><strong class="markup--strong markup--li-strong">Definition:</strong> A boxplot displays the distribution of numerical data through quartiles, identifying outliers and skewness.</li><li name="611c" id="611c" class="graf graf--li graf-after--li"><strong class="markup--strong markup--li-strong">Implementation:</strong> <code class="markup--code markup--li-code">sns.boxplot(x=df[&#39;column&#39;])</code></li></ul><pre data-code-block-mode="2" spellcheck="false" data-code-block-lang="python" name="82b8" id="82b8" class="graf graf--pre graf-after--li graf--preV2"><span class="pre--content">sns.boxplot(x=df[<span class="hljs-string">&#x27;win_by_runs&#x27;</span>])</span></pre><figure name="0edf" id="0edf" class="graf graf--figure graf-after--pre"><img class="graf-image" data-image-id="1*r2Dt2RHCq516uwcp9lNJ1Q.jpeg" data-width="644" data-height="550" src="https://cdn-images-1.medium.com/max/800/1*r2Dt2RHCq516uwcp9lNJ1Q.jpeg"><figcaption class="imageCaption">Box Plot</figcaption></figure><h4 name="6254" id="6254" class="graf graf--h4 graf-after--figure">Conclusion</h4><p name="b51d" id="b51d" class="graf graf--p graf-after--h4">Univariate analysis provides crucial insights into the characteristics of individual variables, whether categorical or numerical. By utilizing appropriate visualizations and statistical measures, data scientists can uncover patterns, anomalies, and distributions within data, laying a solid foundation for further exploration and modeling.</p><p name="f8da" id="f8da" class="graf graf--p graf-after--p graf--trailing">In summary, mastering univariate analysis techniques equips data scientists with the necessary tools to derive meaningful insights and make informed decisions based on the characteristics of each variable in a dataset.</p></div></div></section>
+</section>
+<footer><p>By <a href="https://medium.com/@noorfatimaafzalbutt" class="p-author h-card">Noor Fatima</a> on <a href="https://medium.com/p/dd0f6076ecc9"><time class="dt-published" datetime="2024-06-25T16:31:18.742Z">June 25, 2024</time></a>.</p><p><a href="https://medium.com/@noorfatimaafzalbutt/univariate-analysis-in-data-science-exploring-data-one-variable-at-a-time-dd0f6076ecc9" class="p-canonical">Canonical link</a></p><p>Exported from <a href="https://medium.com">Medium</a> on April 20, 2026.</p></footer></article></body></html>

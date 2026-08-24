@@ -1,0 +1,72 @@
+<!DOCTYPE html><html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><title>Detailed Guide to loc and iloc in Pandas</title><style>
+      * {
+        font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+      }
+      html, body {
+        margin: 0;
+        padding: 0;
+      }
+      h1 {
+        font-size: 50px;
+        margin-bottom: 17px;
+        color: #333;
+      }
+      h2 {
+        font-size: 24px;
+        line-height: 1.6;
+        margin: 30px 0 0 0;
+        margin-bottom: 18px;
+        margin-top: 33px;
+        color: #333;
+      }
+      h3 {
+        font-size: 30px;
+        margin: 10px 0 20px 0;
+        color: #333;
+      }
+      header {
+        width: 640px;
+        margin: auto;
+      }
+      section {
+        width: 640px;
+        margin: auto;
+      }
+      section p {
+        margin-bottom: 27px;
+        font-size: 20px;
+        line-height: 1.6;
+        color: #333;
+      }
+      section img {
+        max-width: 640px;
+      }
+      footer {
+        padding: 0 20px;
+        margin: 50px 0;
+        text-align: center;
+        font-size: 12px;
+      }
+      .aspectRatioPlaceholder {
+        max-width: auto !important;
+        max-height: auto !important;
+      }
+      .aspectRatioPlaceholder-fill {
+        padding-bottom: 0 !important;
+      }
+      header,
+      section[data-field=subtitle],
+      section[data-field=description] {
+        display: none;
+      }
+      </style></head><body><article class="h-entry">
+<header>
+<h1 class="p-name">Detailed Guide to loc and iloc in Pandas</h1>
+</header>
+<section data-field="subtitle" class="p-summary">
+Pandas, a powerful data manipulation library in Python, provides several methods to select and filter data from DataFrames. Two of the most…
+</section>
+<section data-field="body" class="e-content">
+<section name="a2a7" class="section section--body section--first section--last"><div class="section-divider"><hr class="section-divider"></div><div class="section-content"><div class="section-inner sectionLayout--insetColumn"><h3 name="a9ce" id="a9ce" class="graf graf--h3 graf--leading graf--title">Detailed Guide to <code class="markup--code markup--h3-code">loc</code> and <code class="markup--code markup--h3-code">iloc</code> in Pandas</h3><figure name="37cb" id="37cb" class="graf graf--figure graf-after--h3"><img class="graf-image" data-image-id="1*pJnfAWcDbz7qnQr7at3jkw.png" data-width="770" data-height="322" data-is-featured="true" src="https://cdn-images-1.medium.com/max/800/1*pJnfAWcDbz7qnQr7at3jkw.png"></figure><p name="434a" id="434a" class="graf graf--p graf-after--figure">Pandas, a powerful data manipulation library in Python, provides several methods to select and filter data from DataFrames. Two of the most commonly used methods are <code class="markup--code markup--p-code">loc</code> and <code class="markup--code markup--p-code">iloc</code>. This article will delve into the details of these two methods, their slicing behavior, their differences in handling boolean indexing, and how to create new rows and columns using <code class="markup--code markup--p-code">loc</code>.</p><h3 name="5ba1" id="5ba1" class="graf graf--h3 graf-after--p">Understanding <code class="markup--code markup--h3-code">loc</code></h3><p name="2eb7" id="2eb7" class="graf graf--p graf-after--h3">The <code class="markup--code markup--p-code">loc</code> method is label-based, meaning you select data by the labels of rows and columns. It is highly flexible and allows for the selection of data based on row and column labels.</p><h3 name="e3ee" id="e3ee" class="graf graf--h3 graf-after--p">Basic Usage</h3><p name="ac26" id="ac26" class="graf graf--p graf-after--h3">Here is a simple example of how to use <code class="markup--code markup--p-code">loc</code>:</p><pre data-code-block-mode="2" spellcheck="false" data-code-block-lang="python" name="a777" id="a777" class="graf graf--pre graf-after--p graf--preV2"><span class="pre--content"><span class="hljs-keyword">import</span> pandas <span class="hljs-keyword">as</span> pd<br /><br /><span class="hljs-comment"># Sample DataFrame</span><br />data = {<br />    <span class="hljs-string">&#x27;A&#x27;</span>: [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>],<br />    <span class="hljs-string">&#x27;B&#x27;</span>: [<span class="hljs-number">5</span>, <span class="hljs-number">6</span>, <span class="hljs-number">7</span>, <span class="hljs-number">8</span>],<br />    <span class="hljs-string">&#x27;C&#x27;</span>: [<span class="hljs-number">9</span>, <span class="hljs-number">10</span>, <span class="hljs-number">11</span>, <span class="hljs-number">12</span>]<br />}<br />df = pd.DataFrame(data)<br /><br /><span class="hljs-comment"># Selecting a single row by label</span><br />row = df.loc[<span class="hljs-number">0</span>]<br /><br /><span class="hljs-comment"># Selecting multiple rows by label</span><br />rows = df.loc[[<span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">3</span>]]<br /><br /><span class="hljs-comment"># Selecting rows and specific columns</span><br />subset = df.loc[<span class="hljs-number">0</span>:<span class="hljs-number">2</span>, [<span class="hljs-string">&#x27;A&#x27;</span>, <span class="hljs-string">&#x27;C&#x27;</span>]]</span></pre><h3 name="6d24" id="6d24" class="graf graf--h3 graf-after--pre">Slicing Behavior with <code class="markup--code markup--h3-code">loc</code></h3><p name="d9e2" id="d9e2" class="graf graf--p graf-after--h3">When using slicing with <code class="markup--code markup--p-code">loc</code>, the endpoint is inclusive. This means that when you specify a range, both the start and end labels are included in the output.</p><pre data-code-block-mode="2" spellcheck="false" data-code-block-lang="python" name="2f56" id="2f56" class="graf graf--pre graf-after--p graf--preV2"><span class="pre--content"><span class="hljs-comment"># Inclusive slicing with loc</span><br />inclusive_slice = df.loc[<span class="hljs-number">0</span>:<span class="hljs-number">2</span>]  <span class="hljs-comment"># Includes rows 0, 1, and 2</span></span></pre><h3 name="844b" id="844b" class="graf graf--h3 graf-after--pre">Creating Rows and Columns with <code class="markup--code markup--h3-code">loc</code></h3><p name="4c96" id="4c96" class="graf graf--p graf-after--h3">The <code class="markup--code markup--p-code">loc</code> method can also be used to create new rows and columns in a DataFrame. This feature is particularly useful for data manipulation and augmentation.</p><h4 name="b7ae" id="b7ae" class="graf graf--h4 graf-after--p">Adding a New Column</h4><pre data-code-block-mode="2" spellcheck="false" data-code-block-lang="python" name="0c61" id="0c61" class="graf graf--pre graf-after--h4 graf--preV2"><span class="pre--content"><span class="hljs-comment"># Adding a new column using loc</span><br />df.loc[:, <span class="hljs-string">&#x27;D&#x27;</span>] = [<span class="hljs-number">13</span>, <span class="hljs-number">14</span>, <span class="hljs-number">15</span>, <span class="hljs-number">16</span>]</span></pre><h4 name="3671" id="3671" class="graf graf--h4 graf-after--pre">Adding a New Row</h4><pre data-code-block-mode="2" spellcheck="false" data-code-block-lang="python" name="f433" id="f433" class="graf graf--pre graf-after--h4 graf--preV2"><span class="pre--content"><span class="hljs-comment"># Adding a new row using loc</span><br />df.loc[<span class="hljs-number">4</span>] = [<span class="hljs-number">17</span>, <span class="hljs-number">18</span>, <span class="hljs-number">19</span>, <span class="hljs-number">20</span>]</span></pre><h3 name="2ec9" id="2ec9" class="graf graf--h3 graf-after--pre">Understanding <code class="markup--code markup--h3-code">iloc</code></h3><p name="5c93" id="5c93" class="graf graf--p graf-after--h3">The <code class="markup--code markup--p-code">iloc</code> method is integer position-based, meaning you select data by the integer locations of rows and columns. It strictly requires integer indices and is useful for selections based on numerical indices.</p><h3 name="ab6d" id="ab6d" class="graf graf--h3 graf-after--p">Basic Usage</h3><p name="a6be" id="a6be" class="graf graf--p graf-after--h3">Here is an example of how to use <code class="markup--code markup--p-code">iloc</code>:</p><pre data-code-block-mode="2" spellcheck="false" data-code-block-lang="python" name="fd21" id="fd21" class="graf graf--pre graf-after--p graf--preV2"><span class="pre--content"><span class="hljs-comment"># Selecting a single row by integer position</span><br />row = df.iloc[<span class="hljs-number">0</span>]<br /><br /><span class="hljs-comment"># Selecting multiple rows by integer positions</span><br />rows = df.iloc[[<span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">3</span>]]<br /><br /><span class="hljs-comment"># Selecting rows and specific columns by integer positions</span><br />subset = df.iloc[<span class="hljs-number">0</span>:<span class="hljs-number">2</span>, [<span class="hljs-number">0</span>, <span class="hljs-number">2</span>]]</span></pre><h3 name="71ec" id="71ec" class="graf graf--h3 graf-after--pre">Slicing Behavior with <code class="markup--code markup--h3-code">iloc</code></h3><p name="6995" id="6995" class="graf graf--p graf-after--h3">When using slicing with <code class="markup--code markup--p-code">iloc</code>, the endpoint is exclusive. This means that the specified range will include the start index but exclude the end index.</p><pre data-code-block-mode="2" spellcheck="false" data-code-block-lang="python" name="b613" id="b613" class="graf graf--pre graf-after--p graf--preV2"><span class="pre--content"><span class="hljs-comment"># Exclusive slicing with iloc</span><br />exclusive_slice = df.iloc[<span class="hljs-number">0</span>:<span class="hljs-number">2</span>]  <span class="hljs-comment"># Includes rows 0 and 1, but not 2</span></span></pre><h3 name="6b37" id="6b37" class="graf graf--h3 graf-after--pre">Comparison of Slicing Behavior</h3><ul class="postList"><li name="ba54" id="ba54" class="graf graf--li graf-after--h3"><code class="markup--code markup--li-code">loc[]</code>: Slicing is inclusive of the endpoint.</li><li name="9072" id="9072" class="graf graf--li graf-after--li"><code class="markup--code markup--li-code">iloc[]</code>: Slicing is exclusive of the endpoint.</li></ul><h3 name="88fd" id="88fd" class="graf graf--h3 graf-after--li">Handling Boolean Indexing</h3><h3 name="71a2" id="71a2" class="graf graf--h3 graf-after--h3">Boolean Indexing with <code class="markup--code markup--h3-code">loc</code></h3><p name="9939" id="9939" class="graf graf--p graf-after--h3">The <code class="markup--code markup--p-code">loc</code> method allows for boolean indexing, enabling the selection of data based on conditions. You can use boolean arrays or masks to filter data.</p><pre data-code-block-mode="2" spellcheck="false" data-code-block-lang="python" name="80bf" id="80bf" class="graf graf--pre graf-after--p graf--preV2"><span class="pre--content"><span class="hljs-comment"># Boolean indexing with loc</span><br />boolean_indexing = df.loc[df[<span class="hljs-string">&#x27;A&#x27;</span>] &gt; <span class="hljs-number">2</span>]</span></pre><h3 name="aec2" id="aec2" class="graf graf--h3 graf-after--pre">Boolean Indexing with <code class="markup--code markup--h3-code">iloc</code></h3><p name="5d81" id="5d81" class="graf graf--p graf-after--h3">The <code class="markup--code markup--p-code">iloc</code> method does not support boolean indexing directly. It strictly uses integer positions. To achieve similar results, you must first convert the boolean mask to integer positions.</p><pre data-code-block-mode="2" spellcheck="false" data-code-block-lang="python" name="f5ad" id="f5ad" class="graf graf--pre graf-after--p graf--preV2"><span class="pre--content"><span class="hljs-comment"># Boolean indexing with iloc (indirectly)</span><br />mask = df[<span class="hljs-string">&#x27;A&#x27;</span>] &gt; <span class="hljs-number">2</span><br />positions = mask[mask].index<br />boolean_indexing_iloc = df.iloc[positions]</span></pre><h3 name="cdaa" id="cdaa" class="graf graf--h3 graf-after--pre">Summary</h3><ul class="postList"><li name="c4dc" id="c4dc" class="graf graf--li graf-after--h3"><code class="markup--code markup--li-code"><strong class="markup--strong markup--li-strong">loc[]</strong></code>: Label-based, inclusive slicing, supports boolean indexing, allows for adding new rows and columns.</li><li name="81ab" id="81ab" class="graf graf--li graf-after--li"><code class="markup--code markup--li-code"><strong class="markup--strong markup--li-strong">iloc[]</strong></code>: Integer position-based, exclusive slicing, does not support boolean indexing directly.</li></ul><p name="c5dd" id="c5dd" class="graf graf--p graf-after--li graf--trailing">Understanding the differences and appropriate use cases for <code class="markup--code markup--p-code">loc</code> and <code class="markup--code markup--p-code">iloc</code> will significantly enhance your data manipulation skills in Pandas. Whether you need label-based selection or integer position-based selection, these methods provide the flexibility and power to handle a wide range of data tasks efficiently.</p></div></div></section>
+</section>
+<footer><p>By <a href="https://medium.com/@noorfatimaafzalbutt" class="p-author h-card">Noor Fatima</a> on <a href="https://medium.com/p/a3966b9e33a4"><time class="dt-published" datetime="2024-06-28T06:03:23.641Z">June 28, 2024</time></a>.</p><p><a href="https://medium.com/@noorfatimaafzalbutt/detailed-guide-to-loc-and-iloc-in-pandas-a3966b9e33a4" class="p-canonical">Canonical link</a></p><p>Exported from <a href="https://medium.com">Medium</a> on April 20, 2026.</p></footer></article></body></html>

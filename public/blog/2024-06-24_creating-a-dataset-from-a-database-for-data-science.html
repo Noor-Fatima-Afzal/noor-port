@@ -1,0 +1,72 @@
+<!DOCTYPE html><html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><title>Creating a Dataset from a Database for Data Science</title><style>
+      * {
+        font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+      }
+      html, body {
+        margin: 0;
+        padding: 0;
+      }
+      h1 {
+        font-size: 50px;
+        margin-bottom: 17px;
+        color: #333;
+      }
+      h2 {
+        font-size: 24px;
+        line-height: 1.6;
+        margin: 30px 0 0 0;
+        margin-bottom: 18px;
+        margin-top: 33px;
+        color: #333;
+      }
+      h3 {
+        font-size: 30px;
+        margin: 10px 0 20px 0;
+        color: #333;
+      }
+      header {
+        width: 640px;
+        margin: auto;
+      }
+      section {
+        width: 640px;
+        margin: auto;
+      }
+      section p {
+        margin-bottom: 27px;
+        font-size: 20px;
+        line-height: 1.6;
+        color: #333;
+      }
+      section img {
+        max-width: 640px;
+      }
+      footer {
+        padding: 0 20px;
+        margin: 50px 0;
+        text-align: center;
+        font-size: 12px;
+      }
+      .aspectRatioPlaceholder {
+        max-width: auto !important;
+        max-height: auto !important;
+      }
+      .aspectRatioPlaceholder-fill {
+        padding-bottom: 0 !important;
+      }
+      header,
+      section[data-field=subtitle],
+      section[data-field=description] {
+        display: none;
+      }
+      </style></head><body><article class="h-entry">
+<header>
+<h1 class="p-name">Creating a Dataset from a Database for Data Science</h1>
+</header>
+<section data-field="subtitle" class="p-summary">
+In the era of big data, data scientists often encounter data stored in various formats and locations. One common scenario is retrieving…
+</section>
+<section data-field="body" class="e-content">
+<section name="5491" class="section section--body section--first section--last"><div class="section-divider"><hr class="section-divider"></div><div class="section-content"><div class="section-inner sectionLayout--insetColumn"><h3 name="f985" id="f985" class="graf graf--h3 graf--leading graf--title">Creating a Dataset from a Database for Data Science</h3><figure name="4da1" id="4da1" class="graf graf--figure graf-after--h3"><img class="graf-image" data-image-id="1*TEkWq9Mf6YoiUDrsimtHHw.jpeg" data-width="800" data-height="400" data-is-featured="true" src="https://cdn-images-1.medium.com/max/800/1*TEkWq9Mf6YoiUDrsimtHHw.jpeg"><figcaption class="imageCaption">MySQL for Data Science</figcaption></figure><p name="8e8c" id="8e8c" class="graf graf--p graf-after--figure">In the era of big data, data scientists often encounter data stored in various formats and locations. One common scenario is retrieving data from a relational database and converting it into a format suitable for analysis, such as a CSV file. This article will guide you through the process of connecting to a MySQL database, fetching data, and creating a dataset in CSV format using Python.</p><h3 name="d488" id="d488" class="graf graf--h3 graf-after--p">Why Use Databases in Data Science?</h3><p name="f783" id="f783" class="graf graf--p graf-after--h3">Relational databases are a cornerstone of data storage for many organizations. They offer several advantages:</p><ul class="postList"><li name="88c2" id="88c2" class="graf graf--li graf-after--p"><strong class="markup--strong markup--li-strong">Structured Data</strong>: Databases ensure that data is stored in a structured manner with relationships between different tables.</li><li name="e044" id="e044" class="graf graf--li graf-after--li"><strong class="markup--strong markup--li-strong">Efficiency</strong>: They provide efficient querying and data manipulation capabilities.</li><li name="1763" id="1763" class="graf graf--li graf-after--li"><strong class="markup--strong markup--li-strong">Security</strong>: Databases come with built-in security features to control access to data.</li></ul><h3 name="55aa" id="55aa" class="graf graf--h3 graf-after--li">Tools and Libraries</h3><p name="bfd2" id="bfd2" class="graf graf--p graf-after--h3">We’ll use the following tools and libraries:</p><ul class="postList"><li name="e967" id="e967" class="graf graf--li graf-after--p"><strong class="markup--strong markup--li-strong">MySQL</strong>: A popular relational database management system.</li><li name="cf96" id="cf96" class="graf graf--li graf-after--li"><strong class="markup--strong markup--li-strong">mysql-connector-python</strong>: A MySQL driver that allows Python to interact with MySQL databases.</li><li name="653c" id="653c" class="graf graf--li graf-after--li"><strong class="markup--strong markup--li-strong">Pandas</strong>: A powerful data manipulation library in Python.</li></ul><h3 name="c7f9" id="c7f9" class="graf graf--h3 graf-after--li">Step-by-Step Guide</h3><h4 name="234e" id="234e" class="graf graf--h4 graf-after--h3">Step 1: Setting Up the Database</h4><p name="d73c" id="d73c" class="graf graf--p graf-after--h4">Before we start coding, ensure you have a MySQL server running with a database named <code class="markup--code markup--p-code">college</code>. For this example, we will work with a <code class="markup--code markup--p-code">students</code> table. Here’s the SQL statement to create the table:</p><pre data-code-block-mode="2" spellcheck="false" data-code-block-lang="sql" name="8af7" id="8af7" class="graf graf--pre graf-after--p graf--preV2"><span class="pre--content"><span class="hljs-keyword">CREATE</span> <span class="hljs-keyword">TABLE</span> IF <span class="hljs-keyword">NOT</span> <span class="hljs-keyword">EXISTS</span> students (<br />    id <span class="hljs-type">INT</span> <span class="hljs-keyword">PRIMARY</span> KEY,<br />    student_name <span class="hljs-type">VARCHAR</span>(<span class="hljs-number">200</span>),<br />    father_name <span class="hljs-type">VARCHAR</span>(<span class="hljs-number">200</span>),<br />    address <span class="hljs-type">VARCHAR</span>(<span class="hljs-number">200</span>),<br />    fees <span class="hljs-type">INT</span> <span class="hljs-keyword">NOT</span> <span class="hljs-keyword">NULL</span>,<br />    department <span class="hljs-type">VARCHAR</span>(<span class="hljs-number">200</span>),<br />    grade <span class="hljs-type">VARCHAR</span>(<span class="hljs-number">50</span>)<br />);</span></pre><h4 name="7971" id="7971" class="graf graf--h4 graf-after--pre">Step 2: Connecting to the Database and Fetching Data</h4><p name="fb6b" id="fb6b" class="graf graf--p graf-after--h4">Next, we’ll write a Python script to connect to the database, fetch data from the <code class="markup--code markup--p-code">students</code> table, and convert it into a Pandas DataFrame.</p><pre data-code-block-mode="2" spellcheck="false" data-code-block-lang="python" name="86ea" id="86ea" class="graf graf--pre graf-after--p graf--preV2"><span class="pre--content"><span class="hljs-keyword">import</span> mysql.connector <span class="hljs-keyword">as</span> connector<br /><span class="hljs-keyword">import</span> pandas <span class="hljs-keyword">as</span> pd<br /><br /><span class="hljs-keyword">class</span> <span class="hljs-title class_">DB</span>:<br />    <span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self</span>): <br />        self.con = connector.connect(  <br />                host=<span class="hljs-string">&#x27;localhost&#x27;</span>,<br />                user=<span class="hljs-string">&#x27;root&#x27;</span>,<br />                password=<span class="hljs-string">&#x27;your_password&#x27;</span>, <br />                database=<span class="hljs-string">&#x27;college&#x27;</span>,<br />                port=<span class="hljs-number">3306</span><br />            )<br />        query = <span class="hljs-string">&#x27;CREATE TABLE IF NOT EXISTS students(id INT PRIMARY KEY, student_name VARCHAR(200), father_name VARCHAR(200), address VARCHAR(200), fees INT NOT NULL, department VARCHAR(200), grade VARCHAR(50))&#x27;</span><br />        cur = self.con.cursor()<br />        cur.execute(query)<br />        <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;Table created&quot;</span>)<br /><br />    <span class="hljs-keyword">def</span> <span class="hljs-title function_">fetch_all</span>(<span class="hljs-params">self</span>):<br />        query = <span class="hljs-string">&quot;SELECT * FROM students&quot;</span><br />        cur = self.con.cursor()<br />        cur.execute(query)<br />        rows = cur.fetchall()  <span class="hljs-comment"># Fetch all rows from the executed query</span><br />        columns = [desc[<span class="hljs-number">0</span>] <span class="hljs-keyword">for</span> desc <span class="hljs-keyword">in</span> cur.description]  <span class="hljs-comment"># Get column names from cursor description</span><br />        <span class="hljs-keyword">return</span> pd.DataFrame(rows, columns=columns)  <span class="hljs-comment"># Create a DataFrame from fetched data</span><br /><br /><span class="hljs-comment"># Create an instance of the DB class</span><br />db = DB()<br /><br /><span class="hljs-comment"># Fetch all data and create a DataFrame</span><br />df = db.fetch_all()<br /><br /><span class="hljs-comment"># Display the DataFrame</span><br /><span class="hljs-built_in">print</span>(df)</span></pre><h4 name="cd63" id="cd63" class="graf graf--h4 graf-after--pre">Step 3: Saving Data to a CSV File</h4><p name="a969" id="a969" class="graf graf--p graf-after--h4">Once we have the data in a DataFrame, saving it to a CSV file is straightforward using Pandas:</p><pre data-code-block-mode="2" spellcheck="false" data-code-block-lang="python" name="a814" id="a814" class="graf graf--pre graf-after--p graf--preV2"><span class="pre--content"><span class="hljs-comment"># Save the DataFrame to a CSV file</span><br />df.to_csv(<span class="hljs-string">&#x27;students_data.csv&#x27;</span>, index=<span class="hljs-literal">False</span>)</span></pre><h3 name="6de4" id="6de4" class="graf graf--h3 graf-after--pre">Conclusion</h3><p name="eb25" id="eb25" class="graf graf--p graf-after--h3">By following these steps, you can easily retrieve data from a MySQL database and convert it into a CSV file for data analysis. This process is essential for data scientists who need to work with data stored in relational databases. The CSV format is widely used and can be easily integrated into various data processing and machine learning workflows.</p><h3 name="9b07" id="9b07" class="graf graf--h3 graf-after--p">Benefits of This Approach</h3><ol class="postList"><li name="52cb" id="52cb" class="graf graf--li graf-after--h3"><strong class="markup--strong markup--li-strong">Automation</strong>: Automate the process of fetching and saving data, which can be scheduled to run periodically.</li><li name="5c83" id="5c83" class="graf graf--li graf-after--li"><strong class="markup--strong markup--li-strong">Scalability</strong>: Handle large datasets efficiently by leveraging the power of SQL queries.</li><li name="5962" id="5962" class="graf graf--li graf-after--li"><strong class="markup--strong markup--li-strong">Flexibility</strong>: Convert data into various formats suitable for different stages of data analysis and machine learning.</li></ol><p name="154d" id="154d" class="graf graf--p graf-after--li">By incorporating database integration into your data science toolkit, you enhance your ability to manage and analyze data effectively, making your analyses more robust and insightful.</p><h3 name="d248" id="d248" class="graf graf--h3 graf-after--p">Next Steps</h3><p name="d671" id="d671" class="graf graf--p graf-after--h3">Explore further by:</p><ul class="postList"><li name="4d2a" id="4d2a" class="graf graf--li graf-after--p">Enhancing the script to handle more complex queries and data manipulations.</li><li name="a754" id="a754" class="graf graf--li graf-after--li">Integrating data from multiple tables.</li><li name="04f0" id="04f0" class="graf graf--li graf-after--li">Implementing data validation and cleaning procedures before saving the CSV file.</li></ul><p name="7e2d" id="7e2d" class="graf graf--p graf-after--li graf--trailing">Happy coding and analyzing!</p></div></div></section>
+</section>
+<footer><p>By <a href="https://medium.com/@noorfatimaafzalbutt" class="p-author h-card">Noor Fatima</a> on <a href="https://medium.com/p/d062127092fd"><time class="dt-published" datetime="2024-06-24T20:43:42.386Z">June 24, 2024</time></a>.</p><p><a href="https://medium.com/@noorfatimaafzalbutt/creating-a-dataset-from-a-database-for-data-science-d062127092fd" class="p-canonical">Canonical link</a></p><p>Exported from <a href="https://medium.com">Medium</a> on April 20, 2026.</p></footer></article></body></html>

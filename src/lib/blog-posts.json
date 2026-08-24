@@ -1,0 +1,1136 @@
+[
+  {
+    "slug": "nobody-told-you-what-init-py-actually-does-let-me-fix-that",
+    "file": "2026-03-08_nobody-told-you-what-init-py-actually-does-let-me-fix-that.html",
+    "title": "Nobody Told You What __init__.py Actually Does. Let Me Fix That",
+    "date": "2026-03-08",
+    "snippet": "When most people learn Python, someone tells them: “Just put an empty __init__.py in your folder and it becomes a package.\"",
+    "cover": "https://cdn-images-1.medium.com/max/800/0*uObjZKObiLIxnKGR.jpg",
+    "category": "Programming / Python"
+  },
+  {
+    "slug": "save-your-work-without-committing-by-mastering-git-stash",
+    "file": "2026-03-08_save-your-work-without-committing-by-mastering-git-stash.html",
+    "title": "Save Your Work Without Committing by Mastering Git Stash",
+    "date": "2026-03-08",
+    "snippet": "Every developer has faced it: you’re mid-way through a feature, and suddenly a critical bug needs attention. You don’t want to commit…",
+    "cover": "https://cdn-images-1.medium.com/max/800/1*Jx4mimiCy6hJxHMJtKg7Ug.png",
+    "category": "DevOps & Engineering"
+  },
+  {
+    "slug": "removing-impediments-the-scrum-master-s-superpower",
+    "file": "2026-02-08_removing-impediments-the-scrum-master-s-superpower.html",
+    "title": "Removing Impediments: The Scrum Master’s Superpower",
+    "date": "2026-02-08",
+    "snippet": "Introduction",
+    "cover": "https://cdn-images-1.medium.com/max/800/0*EYhaXHKNTzuOG7ec.png",
+    "category": "Agile & Project Management"
+  },
+  {
+    "slug": "advanced-metrics-lead-time-cycle-time-and-flow-efficiency",
+    "file": "2026-01-25_advanced-metrics-lead-time-cycle-time-and-flow-efficiency.html",
+    "title": "Advanced Metrics: Lead Time, Cycle Time, and Flow Efficiency",
+    "date": "2026-01-25",
+    "snippet": "Introduction",
+    "cover": "https://cdn-images-1.medium.com/max/800/0*8KqhbfxtiPWIwrl5.png",
+    "category": "Miscellaneous"
+  },
+  {
+    "slug": "velocity-and-burn-down-charts-measuring-progress",
+    "file": "2026-01-25_velocity-and-burn-down-charts-measuring-progress.html",
+    "title": "Velocity and Burn-down Charts: Measuring Progress",
+    "date": "2026-01-25",
+    "snippet": "Introduction",
+    "cover": "https://cdn-images-1.medium.com/max/800/0*MVm32foCKh7i23Sn.png",
+    "category": "Agile & Project Management"
+  },
+  {
+    "slug": "estimation-techniques-story-points-planning-poker-and-t-shirt-sizing",
+    "file": "2025-11-23_estimation-techniques-story-points-planning-poker-and-t-shirt-sizing.html",
+    "title": "Estimation Techniques: Story Points, Planning Poker, and T-Shirt Sizing",
+    "date": "2025-11-23",
+    "snippet": "Introduction",
+    "cover": "https://cdn-images-1.medium.com/max/800/0*GCi9-UkXlAUIRpvu.png",
+    "category": "Agile & Project Management"
+  },
+  {
+    "slug": "user-stories-writing-effective-requirements",
+    "file": "2025-11-23_user-stories-writing-effective-requirements.html",
+    "title": "User Stories: Writing Effective Requirements",
+    "date": "2025-11-23",
+    "snippet": "Introduction",
+    "cover": "https://cdn-images-1.medium.com/max/800/0*BWLBPoY4jeshS2Xu.png",
+    "category": "Agile & Project Management"
+  },
+  {
+    "slug": "sprint-backlog-transparency-in-sprint-work",
+    "file": "2025-11-18_sprint-backlog-transparency-in-sprint-work.html",
+    "title": "Sprint Backlog: Transparency in Sprint Work",
+    "date": "2025-11-18",
+    "snippet": "Introduction",
+    "cover": "https://cdn-images-1.medium.com/max/800/0*DHnL5v3d1PBY7V9E.png",
+    "category": "Agile & Project Management"
+  },
+  {
+    "slug": "the-increment-and-definition-of-done",
+    "file": "2025-11-18_the-increment-and-definition-of-done.html",
+    "title": "The Increment and Definition of Done",
+    "date": "2025-11-18",
+    "snippet": "Introduction",
+    "cover": "https://cdn-images-1.medium.com/max/800/0*TnIqhd_9bJTx7NHE.png",
+    "category": "Miscellaneous"
+  },
+  {
+    "slug": "building-a-production-ready-ci-cd-pipeline-a-complete-guide-with-flask-docker-and-github-actions",
+    "file": "2025-10-26_building-a-production-ready-ci-cd-pipeline-a-complete-guide-with-flask-docker-and-github-actions.html",
+    "title": "Building a Production-Ready CI/CD Pipeline: A Complete Guide with Flask, Docker, and GitHub Actions",
+    "date": "2025-10-26",
+    "snippet": "Introduction",
+    "cover": "https://cdn-images-1.medium.com/max/800/0*ZiqhEN3xZKh1BFz2.png",
+    "category": "DevOps & Engineering"
+  },
+  {
+    "slug": "product-backlog-the-single-source-of-truth",
+    "file": "2025-10-26_product-backlog-the-single-source-of-truth.html",
+    "title": "Product Backlog: The Single Source of Truth",
+    "date": "2025-10-26",
+    "snippet": "Introduction",
+    "cover": "https://cdn-images-1.medium.com/max/800/0*lsEkmwLdVPYZz1lZ.png",
+    "category": "Agile & Project Management"
+  },
+  {
+    "slug": "building-your-first-convolutional-neural-network-with-pytorch-a-beginner-s-guide",
+    "file": "2025-10-24_building-your-first-convolutional-neural-network-with-pytorch-a-beginner-s-guide.html",
+    "title": "Building Your First Convolutional Neural Network with PyTorch: A Beginner’s Guide",
+    "date": "2025-10-24",
+    "snippet": "Convolutional Neural Networks (CNNs) have revolutionized computer vision, powering everything from face recognition to self-driving cars…",
+    "cover": "https://cdn-images-1.medium.com/max/800/0*R78K1B78IwqKuvxq.png",
+    "category": "Computer Vision"
+  },
+  {
+    "slug": "facilitation-techniques-for-effective-scrum-events",
+    "file": "2025-10-24_facilitation-techniques-for-effective-scrum-events.html",
+    "title": "Facilitation Techniques for Effective Scrum Events",
+    "date": "2025-10-24",
+    "snippet": "Introduction",
+    "cover": "https://cdn-images-1.medium.com/max/800/0*VrWYbIDY1UiILSID.png",
+    "category": "Agile & Project Management"
+  },
+  {
+    "slug": "refinement-sessions-preparing-for-future-sprints",
+    "file": "2025-10-24_refinement-sessions-preparing-for-future-sprints.html",
+    "title": "Refinement Sessions: Preparing for Future Sprints",
+    "date": "2025-10-24",
+    "snippet": "Introduction",
+    "cover": "https://cdn-images-1.medium.com/max/800/0*KIpGY_8qApt06T6e.png",
+    "category": "Agile & Project Management"
+  },
+  {
+    "slug": "pytorch-for-deep-learning-lovers",
+    "file": "2025-10-11_pytorch-for-deep-learning-lovers.html",
+    "title": "PyTorch for Deep Learning Lovers",
+    "date": "2025-10-11",
+    "snippet": "Introduction",
+    "cover": "https://cdn-images-1.medium.com/max/800/0*z_FCSAzwzA179FVh.png",
+    "category": "Machine Learning / AI"
+  },
+  {
+    "slug": "recurrent-neural-networks-rnn-with-pytorch-a-complete-guide",
+    "file": "2025-10-11_recurrent-neural-networks-rnn-with-pytorch-a-complete-guide.html",
+    "title": "Recurrent Neural Networks (RNN) with PyTorch: A Complete Guide",
+    "date": "2025-10-11",
+    "snippet": "Introduction",
+    "cover": "https://cdn-images-1.medium.com/max/800/0*KIABVPccMq18Kr7S.png",
+    "category": "Machine Learning / AI"
+  },
+  {
+    "slug": "sprint-retrospective-continuous-improvement-in-action",
+    "file": "2025-10-09_sprint-retrospective-continuous-improvement-in-action.html",
+    "title": "Sprint Retrospective: Continuous Improvement in Action",
+    "date": "2025-10-09",
+    "snippet": "Introduction",
+    "cover": "https://cdn-images-1.medium.com/max/800/0*rETp0l_VbI4HO1hZ.png",
+    "category": "Agile & Project Management"
+  },
+  {
+    "slug": "sprint-review-demonstrating-value-to-stakeholders",
+    "file": "2025-10-08_sprint-review-demonstrating-value-to-stakeholders.html",
+    "title": "Sprint Review: Demonstrating Value to Stakeholders",
+    "date": "2025-10-08",
+    "snippet": "Introduction",
+    "cover": "https://cdn-images-1.medium.com/max/800/0*YDvNo2ZqRPwumzrX.png",
+    "category": "Agile & Project Management"
+  },
+  {
+    "slug": "daily-scrum-the-15-minute-power-meeting",
+    "file": "2025-10-07_daily-scrum-the-15-minute-power-meeting.html",
+    "title": "Daily Scrum: The 15-Minute Power Meeting",
+    "date": "2025-10-07",
+    "snippet": "Introduction",
+    "cover": "https://cdn-images-1.medium.com/max/800/0*oc8OWArJJ97NFtiq.png",
+    "category": "Agile & Project Management"
+  },
+  {
+    "slug": "sprint-planning-setting-the-stage-for-success",
+    "file": "2025-10-07_sprint-planning-setting-the-stage-for-success.html",
+    "title": "Sprint Planning: Setting the Stage for Success",
+    "date": "2025-10-07",
+    "snippet": "Introduction",
+    "cover": "https://cdn-images-1.medium.com/max/800/0*C9Wsu-yDvZ0MtaND.png",
+    "category": "Agile & Project Management"
+  },
+  {
+    "slug": "the-development-team-self-organization-and-cross-functionality",
+    "file": "2025-10-07_the-development-team-self-organization-and-cross-functionality.html",
+    "title": "The Development Team: Self-Organization and Cross-Functionality",
+    "date": "2025-10-07",
+    "snippet": "Introduction",
+    "cover": "https://cdn-images-1.medium.com/max/800/0*idsSWMoWqyo7hRA2.png",
+    "category": "Miscellaneous"
+  },
+  {
+    "slug": "product-owner-deep-dive-responsibilities-and-collaboration",
+    "file": "2025-10-06_product-owner-deep-dive-responsibilities-and-collaboration.html",
+    "title": "Product Owner Deep Dive: Responsibilities and Collaboration",
+    "date": "2025-10-06",
+    "snippet": "Introduction",
+    "cover": "https://cdn-images-1.medium.com/max/800/0*O8hnfvvFPv80FpO9.png",
+    "category": "NLP"
+  },
+  {
+    "slug": "the-scrum-master-role-servant-leader-coach-and-facilitator",
+    "file": "2025-10-06_the-scrum-master-role-servant-leader-coach-and-facilitator.html",
+    "title": "The Scrum Master Role: Servant Leader, Coach, and Facilitator",
+    "date": "2025-10-06",
+    "snippet": "Introduction",
+    "cover": "https://cdn-images-1.medium.com/max/800/0*yR5EfqklQBFrgjHx.png",
+    "category": "Agile & Project Management"
+  },
+  {
+    "slug": "understanding-the-scrum-framework-roles-events-and-artifacts",
+    "file": "2025-10-06_understanding-the-scrum-framework-roles-events-and-artifacts.html",
+    "title": "Understanding the Scrum Framework: Roles, Events, and Artifacts",
+    "date": "2025-10-06",
+    "snippet": "Introduction",
+    "cover": "https://cdn-images-1.medium.com/max/800/0*sQhVj2QhAxD89b6q.png",
+    "category": "Agile & Project Management"
+  },
+  {
+    "slug": "the-five-scrum-values-commitment-focus-openness-respect-and-courage",
+    "file": "2025-10-05_the-five-scrum-values-commitment-focus-openness-respect-and-courage.html",
+    "title": "The Five Scrum Values: Commitment, Focus, Openness, Respect, and Courage",
+    "date": "2025-10-05",
+    "snippet": "Introduction",
+    "cover": "https://cdn-images-1.medium.com/max/800/0*MT1bAkUT8u2JKobu.png",
+    "category": "Agile & Project Management"
+  },
+  {
+    "slug": "the-three-pillars-of-scrum-transparency-inspection-and-adaptation",
+    "file": "2025-10-05_the-three-pillars-of-scrum-transparency-inspection-and-adaptation.html",
+    "title": "The Three Pillars of Scrum: Transparency, Inspection, and Adaptation",
+    "date": "2025-10-05",
+    "snippet": "Introduction",
+    "cover": "https://cdn-images-1.medium.com/max/800/0*aI9h7FsXCBiGBSyA.png",
+    "category": "Agile & Project Management"
+  },
+  {
+    "slug": "what-is-scrum-understanding-the-agile-framework",
+    "file": "2025-10-05_what-is-scrum-understanding-the-agile-framework.html",
+    "title": "What is Scrum? Understanding the Agile Framework",
+    "date": "2025-10-05",
+    "snippet": "Introduction",
+    "cover": "https://cdn-images-1.medium.com/max/800/0*6hdj7-4z72dT2vpG.png",
+    "category": "Agile & Project Management"
+  },
+  {
+    "slug": "neuromorphic-quantumphotonics-where-brain-inspired-computing-meets-quantum-light",
+    "file": "2025-09-26_neuromorphic-quantumphotonics-where-brain-inspired-computing-meets-quantum-light.html",
+    "title": "Neuromorphic QuantumPhotonics: Where Brain-Inspired Computing Meets Quantum Light",
+    "date": "2025-09-26",
+    "snippet": "The convergence of three revolutionary technologies is reshaping the future of computation",
+    "cover": "https://cdn-images-1.medium.com/max/800/0*WH-CYJ11Yxo7ibvD.jpg",
+    "category": "Quantum Computing"
+  },
+  {
+    "slug": "quantum-hardware-a-comparative-review-of-qubit-technologies",
+    "file": "2025-08-11_quantum-hardware-a-comparative-review-of-qubit-technologies.html",
+    "title": "Quantum Hardware: A Comparative Review of Qubit Technologies",
+    "date": "2025-08-11",
+    "snippet": "1. Quantum Hardware",
+    "cover": "https://cdn-images-1.medium.com/max/800/1*V2Y8l7-um5Ub7JJsmgPNug.jpeg",
+    "category": "Quantum Computing"
+  },
+  {
+    "slug": "python-gotchas-power-tips-every-developer-should-know",
+    "file": "2025-07-06_python-gotchas-power-tips-every-developer-should-know.html",
+    "title": "Python Gotchas & Power Tips Every Developer Should Know",
+    "date": "2025-07-06",
+    "snippet": "Python is beloved for its simplicity and elegance, but that elegance can sometimes hide subtle behavior that surprises even experienced…",
+    "cover": "https://cdn-images-1.medium.com/max/800/0*AnuZJTZIrZHXBDCv.jpg",
+    "category": "Programming / Python"
+  },
+  {
+    "slug": "from-embedding-to-retrieval-inside-the-vector-database-pipeline",
+    "file": "2025-06-15_from-embedding-to-retrieval-inside-the-vector-database-pipeline.html",
+    "title": "From Embedding to Retrieval: Inside the Vector Database Pipeline",
+    "date": "2025-06-15",
+    "snippet": "Introduction",
+    "cover": "https://cdn-images-1.medium.com/max/800/1*udC4aFelKcH1nTg3LJmtgQ.png",
+    "category": "NLP"
+  },
+  {
+    "slug": "quantum-computing-history-principles-and-future-impact",
+    "file": "2025-06-04_quantum-computing-history-principles-and-future-impact.html",
+    "title": "Quantum Computing: History, Principles, and Future Impact",
+    "date": "2025-06-04",
+    "snippet": "Quantum computing represents a paradigm shift in how we process information, a shift that finds its roots in discoveries made over a…",
+    "cover": "https://cdn-images-1.medium.com/max/800/1*5n5MzKijNxkNaGxEroUE8A.png",
+    "category": "Quantum Computing"
+  },
+  {
+    "slug": "applying-physical-constraints-in-physics-informed-neural-networks-pinns-methods-and-examples",
+    "file": "2025-05-30_applying-physical-constraints-in-physics-informed-neural-networks-pinns-methods-and-examples.html",
+    "title": "Applying Physical Constraints in Physics-Informed Neural Networks (PINNs): Methods and Examples",
+    "date": "2025-05-30",
+    "snippet": "As machine learning (ML) continues to advance, its intersection with physical sciences has given rise to Physics-Informed Neural Networks…",
+    "cover": "https://cdn-images-1.medium.com/max/800/0*yccI-BlPodSiIcGO.jpg",
+    "category": "Machine Learning / AI"
+  },
+  {
+    "slug": "wind-power-forecasting-challenges-and-solutions",
+    "file": "2025-05-30_wind-power-forecasting-challenges-and-solutions.html",
+    "title": "Wind Power Forecasting: Challenges and Solutions",
+    "date": "2025-05-30",
+    "snippet": "The transition to renewable energy is a global priority, and wind energy stands as one of the most promising sources. However, its…",
+    "cover": "https://cdn-images-1.medium.com/max/800/0*t9V5nWt_JtTQntEi.jpg",
+    "category": "Machine Learning / AI"
+  },
+  {
+    "slug": "this-is-a-great-initiative-and-a-proud-moment-for-pakistan",
+    "file": "2025-05-27_this-is-a-great-initiative-and-a-proud-moment-for-pakistan.html",
+    "title": "This is a great initiative and a proud moment for Pakistan!",
+    "date": "2025-05-27",
+    "snippet": "Establishing the National Centre of Quantum Computing (NCQC) is a significant step towards embracing future technologies. Congratulations…",
+    "cover": "",
+    "category": "Quantum Computing"
+  },
+  {
+    "slug": "reconstructing-a-binary-tree-from-traversals-preorder-inorder-postorder-inorder",
+    "file": "2025-05-03_reconstructing-a-binary-tree-from-traversals-preorder-inorder-postorder-inorder.html",
+    "title": "🌳 Reconstructing a Binary Tree from Traversals: Preorder + Inorder, Postorder + Inorder",
+    "date": "2025-05-03",
+    "snippet": "Have you ever wondered how a binary tree can be rebuilt just from how it’s traversed? It might sound like magic, but with the right pair of…",
+    "cover": "https://cdn-images-1.medium.com/max/800/1*scEPdg3voaJxTiJYgmlcxw.png",
+    "category": "Data Structures & Algorithms"
+  },
+  {
+    "slug": "binary-search-tree-bst-a-complete-guide",
+    "file": "2025-05-03_binary-search-tree-bst-a-complete-guide.html",
+    "title": "🌳Binary Search Tree (BST): A Complete Guide",
+    "date": "2025-05-03",
+    "snippet": "📘 Introduction",
+    "cover": "https://cdn-images-1.medium.com/max/800/1*2SyA5TjtBe0h2vvGJ-eCVA.png",
+    "category": "Data Structures & Algorithms"
+  },
+  {
+    "slug": "hashing-in-data-structures-and-algorithms-dsa",
+    "file": "2025-04-28_hashing-in-data-structures-and-algorithms-dsa.html",
+    "title": "Hashing in Data Structures and Algorithms (DSA)",
+    "date": "2025-04-28",
+    "snippet": "Hashing is a very important concept in Data Structures and Algorithms (DSA). It helps us store and retrieve data quickly — in nearly…",
+    "cover": "https://cdn-images-1.medium.com/max/800/1*1PW96mKjYfRqrilVki6e5g.png",
+    "category": "Data Structures & Algorithms"
+  },
+  {
+    "slug": "understanding-weight-decay-why-it-matters-in-training-large-language-models",
+    "file": "2025-04-16_understanding-weight-decay-why-it-matters-in-training-large-language-models.html",
+    "title": "Understanding Weight Decay: Why It Matters in Training Large Language Models",
+    "date": "2025-04-16",
+    "snippet": "When training large language models (LLMs) like GPT, BERT, or LLaMA, the term weight decay comes up a lot, especially when trying to tune…",
+    "cover": "https://cdn-images-1.medium.com/max/800/1*Z0-y-7zJ_Y3vmnUlzmQUeA.png",
+    "category": "NLP"
+  },
+  {
+    "slug": "building-a-next-js-ai-app-with-hugging-face-inference-api",
+    "file": "2025-03-13_building-a-next-js-ai-app-with-hugging-face-inference-api.html",
+    "title": "Building a Next.js AI App with Hugging Face Inference API",
+    "date": "2025-03-13",
+    "snippet": "Artificial Intelligence (AI) is revolutionizing the way we build applications, making them smarter and more interactive. In this guide, we…",
+    "cover": "https://cdn-images-1.medium.com/max/800/1*i_SIvKNZyZVDlWBnUTxA8w.png",
+    "category": "Machine Learning / AI"
+  },
+  {
+    "slug": "building-an-ai-chatbot-with-next-js-groq-and-llama",
+    "file": "2025-03-13_building-an-ai-chatbot-with-next-js-groq-and-llama.html",
+    "title": "Building an AI Chatbot with Next.js, Groq, and Llama",
+    "date": "2025-03-13",
+    "snippet": "Introduction",
+    "cover": "https://cdn-images-1.medium.com/max/800/1*f2LfkkHVZ2VvajYwr34dwg.png",
+    "category": "NLP"
+  },
+  {
+    "slug": "why-you-should-use-hugging-face-s-datasets-library-for-nlp-and-machine-learning",
+    "file": "2025-03-04_why-you-should-use-hugging-face-s-datasets-library-for-nlp-and-machine-learning.html",
+    "title": "Why You Should Use Hugging Face’s datasets Library for NLP and Machine Learning",
+    "date": "2025-03-04",
+    "snippet": "The Hugging Face datasets library has become a game-changer for working with large-scale machine learning datasets. While Pandas is…",
+    "cover": "https://cdn-images-1.medium.com/max/800/1*_veyWglqJgo_07LVwyNlOQ.png",
+    "category": "NLP"
+  },
+  {
+    "slug": "introduction-to-graph-databases-a-paradigm-shift-in-data-storage",
+    "file": "2025-02-28_introduction-to-graph-databases-a-paradigm-shift-in-data-storage.html",
+    "title": "Introduction to Graph Databases: A Paradigm Shift in Data Storage",
+    "date": "2025-02-28",
+    "snippet": "What is a Graph Database?",
+    "cover": "https://cdn-images-1.medium.com/max/800/1*iYlZBgcOXqX858_TXvaltA.png",
+    "category": "Machine Learning / AI"
+  },
+  {
+    "slug": "in-context-learning-icl-in-llms-how-models-learn-without-training",
+    "file": "2025-02-20_in-context-learning-icl-in-llms-how-models-learn-without-training.html",
+    "title": "In-Context Learning (ICL) in LLMs: How Models Learn Without Training",
+    "date": "2025-02-20",
+    "snippet": "Large Language Models (LLMs) have transformed natural language processing (NLP), enabling powerful applications like chatbots, content…",
+    "cover": "https://cdn-images-1.medium.com/max/800/1*ImWeAqtNoUF7qYfDa_T_VA.png",
+    "category": "NLP"
+  },
+  {
+    "slug": "understanding-context-length-in-large-language-models-llms",
+    "file": "2025-02-20_understanding-context-length-in-large-language-models-llms.html",
+    "title": "Understanding Context Length in Large Language Models (LLMs)",
+    "date": "2025-02-20",
+    "snippet": "Large Language Models (LLMs) like GPT-4, Claude, and LLaMA have revolutionized natural language processing. One of the key aspects that…",
+    "cover": "https://cdn-images-1.medium.com/max/800/1*LsLq2nQEELMfb7Z1AR2cTQ.png",
+    "category": "NLP"
+  },
+  {
+    "slug": "understanding-arrays-a-beginner-s-guide",
+    "file": "2025-01-27_understanding-arrays-a-beginner-s-guide.html",
+    "title": "Understanding Arrays: A Beginner’s Guide",
+    "date": "2025-01-27",
+    "snippet": "Arrays are one of the fundamental data structures in programming. They are simple, efficient, and often the first choice for storing…",
+    "cover": "https://cdn-images-1.medium.com/max/800/1*vuxTl4Ypqlzx7upgsaTBsQ.png",
+    "category": "Data Structures & Algorithms"
+  },
+  {
+    "slug": "understanding-bubble-sort-a-beginner-friendly-sorting-algorithm",
+    "file": "2025-01-23_understanding-bubble-sort-a-beginner-friendly-sorting-algorithm.html",
+    "title": "Understanding Bubble Sort: A Beginner-Friendly Sorting Algorithm",
+    "date": "2025-01-23",
+    "snippet": "Sorting algorithms are fundamental to computer science and programming. Among them, Bubble Sort is one of the simplest and most intuitive…",
+    "cover": "https://cdn-images-1.medium.com/max/800/1*6PMy3rKupXNHX7Nc7QUdEQ.png",
+    "category": "Data Structures & Algorithms"
+  },
+  {
+    "slug": "introduction-to-dsa-the-key-to-efficient-problem-solving",
+    "file": "2025-01-20_introduction-to-dsa-the-key-to-efficient-problem-solving.html",
+    "title": "Introduction to DSA: The Key to Efficient Problem Solving",
+    "date": "2025-01-20",
+    "snippet": "In the ever-evolving world of technology, the ability to solve problems efficiently is crucial for developers and engineers. Data…",
+    "cover": "https://cdn-images-1.medium.com/max/800/1*sry4hlaNn4c3JUFNu4uSBQ.png",
+    "category": "Data Structures & Algorithms"
+  },
+  {
+    "slug": "time-complexity-a-guide-to-understanding-and-calculating-algorithm-efficiency",
+    "file": "2025-01-20_time-complexity-a-guide-to-understanding-and-calculating-algorithm-efficiency.html",
+    "title": "Time Complexity: A Guide to Understanding and Calculating Algorithm Efficiency",
+    "date": "2025-01-20",
+    "snippet": "Introduction",
+    "cover": "https://cdn-images-1.medium.com/max/800/1*qGAXYCL4celNs-D_neQTvw.png",
+    "category": "Data Structures & Algorithms"
+  },
+  {
+    "slug": "understanding-space-complexity-and-how-to-analyze-it",
+    "file": "2025-01-20_understanding-space-complexity-and-how-to-analyze-it.html",
+    "title": "Understanding Space Complexity and How to Analyze It",
+    "date": "2025-01-20",
+    "snippet": "When designing algorithms, one of the key considerations, alongside time complexity, is space complexity. Space complexity refers to the…",
+    "cover": "https://cdn-images-1.medium.com/max/800/1*5Rb-G7ocCtV4v13V397sTg.png",
+    "category": "Data Structures & Algorithms"
+  },
+  {
+    "slug": "understanding-lora-low-rank-adaptation-and-its-impact-on-model-precision",
+    "file": "2024-12-16_understanding-lora-low-rank-adaptation-and-its-impact-on-model-precision.html",
+    "title": "Understanding LoRA (Low-Rank Adaptation) and Its Impact on Model Precision",
+    "date": "2024-12-16",
+    "snippet": "Low-Rank Adaptation (LoRA) is a method that allows for more efficient and effective model fine-tuning by breaking down the weight updates…",
+    "cover": "https://cdn-images-1.medium.com/max/800/1*mKHlepkhTFwlw6ygT5-fzw.png",
+    "category": "Machine Learning / AI"
+  },
+  {
+    "slug": "understanding-qlora-quantized-low-rank-adaptation",
+    "file": "2024-12-16_understanding-qlora-quantized-low-rank-adaptation.html",
+    "title": "Understanding QLoRA (Quantized Low-Rank Adaptation)",
+    "date": "2024-12-16",
+    "snippet": "QLoRA (Quantized Low-Rank Adaptation) is an extension of the LoRA framework that introduces quantization techniques to make the process of…",
+    "cover": "https://cdn-images-1.medium.com/max/800/1*3WTK0jnfP81f_4AJ4ummRA.png",
+    "category": "Miscellaneous"
+  },
+  {
+    "slug": "langgraph-streamlining-workflow-design-with-graph-based-ai-applications",
+    "file": "2024-12-14_langgraph-streamlining-workflow-design-with-graph-based-ai-applications.html",
+    "title": "LangGraph: Streamlining Workflow Design with Graph-Based AI Applications",
+    "date": "2024-12-14",
+    "snippet": "Introduction",
+    "cover": "https://cdn-images-1.medium.com/max/800/1*kPbG1priBhAvDfv5hTTk5A.png",
+    "category": "Machine Learning / AI"
+  },
+  {
+    "slug": "yeah-it-is-a-fantastic-tool-for-making-langchain-more-accessible-especially-for-those-who-aren-t",
+    "file": "2024-12-14_yeah-it-is-a-fantastic-tool-for-making-langchain-more-accessible-especially-for-those-who-aren-t.html",
+    "title": "Yeah! it is a fantastic tool for making LangChain more accessible, especially for those who aren't…",
+    "date": "2024-12-14",
+    "snippet": "Yeah! it is a fantastic tool for making LangChain more accessible, especially for those who aren't into coding. I'll surely cover that in my upcoming articles. So, stay tuned!",
+    "cover": "",
+    "category": "Miscellaneous"
+  },
+  {
+    "slug": "supercharging-knowledge-retrieval-with-langchain-a-step-by-step-guide",
+    "file": "2024-12-03_supercharging-knowledge-retrieval-with-langchain-a-step-by-step-guide.html",
+    "title": "Supercharging Knowledge Retrieval with LangChain: A Step-by-Step Guide",
+    "date": "2024-12-03",
+    "snippet": "LangChain is an innovative framework for working with Large Language Models (LLMs), enabling seamless data ingestion, embedding, and…",
+    "cover": "https://cdn-images-1.medium.com/max/800/1*t3jtGKxvuP3JO2t0EWHx_Q.png",
+    "category": "NLP"
+  },
+  {
+    "slug": "mastering-llm-fine-tuning-a-comprehensive-guide-to-training-setup",
+    "file": "2024-11-30_mastering-llm-fine-tuning-a-comprehensive-guide-to-training-setup.html",
+    "title": "Mastering LLM Fine-Tuning: A Comprehensive Guide to Training Setup",
+    "date": "2024-11-30",
+    "snippet": "Fine-tuning a Large Language Model (LLM) is a challenging yet rewarding endeavor that demands careful preparation and configuration. From…",
+    "cover": "https://cdn-images-1.medium.com/max/800/1*YjvsKSNq-mRISsauBfU9Bg.png",
+    "category": "NLP"
+  },
+  {
+    "slug": "evolution-from-traditional-nlp-models-to-state-of-the-art-llms",
+    "file": "2024-11-29_evolution-from-traditional-nlp-models-to-state-of-the-art-llms.html",
+    "title": "Evolution from Traditional NLP Models to State-of-the-Art LLMs",
+    "date": "2024-11-29",
+    "snippet": "The field of Natural Language Processing (NLP) has seen a remarkable transformation over the past three decades, progressing from…",
+    "cover": "https://cdn-images-1.medium.com/max/800/1*sulFUXyezOZnLKii4g2aSg.png",
+    "category": "NLP"
+  },
+  {
+    "slug": "mastering-llm-fine-tuning-a-comprehensive-guide-to-data-preparation",
+    "file": "2024-11-29_mastering-llm-fine-tuning-a-comprehensive-guide-to-data-preparation.html",
+    "title": "Mastering LLM Fine-Tuning: A Comprehensive Guide to Data Preparation",
+    "date": "2024-11-29",
+    "snippet": "Data preparation is the cornerstone of building high-performance machine learning models, especially when fine-tuning large language models…",
+    "cover": "https://cdn-images-1.medium.com/max/800/1*aK49qtWTiVCE3_ftEVSkpA.png",
+    "category": "NLP"
+  },
+  {
+    "slug": "mastering-llm-fine-tuning-a-comprehensive-guide-to-model-llm-initialization",
+    "file": "2024-11-29_mastering-llm-fine-tuning-a-comprehensive-guide-to-model-llm-initialization.html",
+    "title": "Mastering LLM Fine-Tuning: A Comprehensive Guide to Model (LLM) Initialization",
+    "date": "2024-11-29",
+    "snippet": "Model Initialization",
+    "cover": "https://cdn-images-1.medium.com/max/800/1*fpOfe4F6aaYMK4RydXtHRA.png",
+    "category": "Machine Learning / AI"
+  },
+  {
+    "slug": "seven-stage-fine-tuning-pipeline-for-llm",
+    "file": "2024-11-29_seven-stage-fine-tuning-pipeline-for-llm.html",
+    "title": "Seven Stage Fine-Tuning Pipeline for LLM",
+    "date": "2024-11-29",
+    "snippet": "Fine-tuning large language models (LLMs) involves a structured, multi-stage process that ensures high-quality performance while adapting…",
+    "cover": "https://cdn-images-1.medium.com/max/800/1*xVlfiKblKtvU0pgbWWrrig.png",
+    "category": "NLP"
+  },
+  {
+    "slug": "the-building-blocks-of-large-language-models-llms",
+    "file": "2024-11-29_the-building-blocks-of-large-language-models-llms.html",
+    "title": "The Building Blocks of Large Language Models (LLMs)",
+    "date": "2024-11-29",
+    "snippet": "Large Language Models (LLMs) have rapidly evolved, influencing various industries and applications. The diagram outlines the comprehensive…",
+    "cover": "https://cdn-images-1.medium.com/max/800/1*wcYS7yWTTODwqubxlndRGQ.png",
+    "category": "NLP"
+  },
+  {
+    "slug": "understanding-the-key-files-in-a-large-language-model-llm",
+    "file": "2024-11-29_understanding-the-key-files-in-a-large-language-model-llm.html",
+    "title": "Understanding the Key Files in a Large Language Model (LLM)",
+    "date": "2024-11-29",
+    "snippet": "Large Language Models (LLMs) are powerful neural networks trained to generate human-like text. At their core, LLMs represent a probability…",
+    "cover": "https://cdn-images-1.medium.com/max/800/1*R9gjYQlIt5XkaHl_fHXCwA.png",
+    "category": "NLP"
+  },
+  {
+    "slug": "understanding-random-forest-a-beginner-friendly-guide",
+    "file": "2024-11-23_understanding-random-forest-a-beginner-friendly-guide.html",
+    "title": "Understanding Random Forest: A Beginner-Friendly Guide",
+    "date": "2024-11-23",
+    "snippet": "Why Random?",
+    "cover": "https://cdn-images-1.medium.com/max/800/1*rHglH7dhDbSbdZYkmfQD_w.png",
+    "category": "Miscellaneous"
+  },
+  {
+    "slug": "understanding-decision-trees-a-complete-guide",
+    "file": "2024-11-17_understanding-decision-trees-a-complete-guide.html",
+    "title": "Understanding Decision Trees: A Complete Guide",
+    "date": "2024-11-17",
+    "snippet": "Decision Trees are one of the most widely used and interpretable machine learning algorithms. They are powerful tools for both…",
+    "cover": "https://cdn-images-1.medium.com/max/800/1*H88VcqMoJAFoEmuQBsPlZQ.jpeg",
+    "category": "Data Structures & Algorithms"
+  },
+  {
+    "slug": "transformer-decoder-a-closer-look-at-its-key-components",
+    "file": "2024-10-20_transformer-decoder-a-closer-look-at-its-key-components.html",
+    "title": "Transformer Decoder: A Closer Look at its Key Components",
+    "date": "2024-10-20",
+    "snippet": "The Transformer decoder plays a crucial role in generating sequences, whether it’s translating a sentence from one language to another or…",
+    "cover": "https://cdn-images-1.medium.com/max/800/1*fLiFVHkMiCkGnLPWhfOyVQ.png",
+    "category": "NLP"
+  },
+  {
+    "slug": "transformer-encoder-a-closer-look-at-its-key-components",
+    "file": "2024-10-20_transformer-encoder-a-closer-look-at-its-key-components.html",
+    "title": "Transformer Encoder: A Closer Look at its Key Components",
+    "date": "2024-10-20",
+    "snippet": "Transformers have become the foundation for many breakthroughs in Natural Language Processing (NLP), enabling models like BERT, GPT, and T5…",
+    "cover": "https://cdn-images-1.medium.com/max/800/1*0fssWotopQAN8hipAD_9EA.png",
+    "category": "NLP"
+  },
+  {
+    "slug": "understanding-data-leakage-risks-and-remedies-in-machine-learning",
+    "file": "2024-08-11_understanding-data-leakage-risks-and-remedies-in-machine-learning.html",
+    "title": "Understanding Data Leakage: Risks and Remedies in Machine Learning",
+    "date": "2024-08-11",
+    "snippet": "Data leakage refers to the unintentional or accidental exposure of data during the process of training a machine learning model. This…",
+    "cover": "https://cdn-images-1.medium.com/max/800/1*0EdHHJ56AihxcedhLL6LIQ.png",
+    "category": "Machine Learning / AI"
+  },
+  {
+    "slug": "the-perceptron-trick-a-simple-guide-to-training-a-perceptron",
+    "file": "2024-07-24_the-perceptron-trick-a-simple-guide-to-training-a-perceptron.html",
+    "title": "The Perceptron Trick: A Simple Guide to Training a Perceptron",
+    "date": "2024-07-24",
+    "snippet": "The Perceptron is a fundamental building block in machine learning and neural networks. It is a type of linear classifier that makes its…",
+    "cover": "https://cdn-images-1.medium.com/max/800/1*oiZGlPhnUE5UE-pTWhnwYA.png",
+    "category": "Machine Learning / AI"
+  },
+  {
+    "slug": "understanding-perceptron-loss-function-hinge-loss-binary-cross-entropy-and-the-sigmoid-function",
+    "file": "2024-07-24_understanding-perceptron-loss-function-hinge-loss-binary-cross-entropy-and-the-sigmoid-function.html",
+    "title": "Understanding Perceptron Loss Function, Hinge Loss, Binary Cross Entropy, and the Sigmoid Function",
+    "date": "2024-07-24",
+    "snippet": "The realm of machine learning and neural networks is vast, and understanding foundational concepts is crucial for building robust models…",
+    "cover": "https://cdn-images-1.medium.com/max/800/1*_rN8ivAhMNQ_Khr9De_K2w.png",
+    "category": "Machine Learning / AI"
+  },
+  {
+    "slug": "introduction-to-deep-learning",
+    "file": "2024-07-23_introduction-to-deep-learning.html",
+    "title": "Introduction to Deep Learning",
+    "date": "2024-07-23",
+    "snippet": "Deep learning is a subset of machine learning that focuses on using neural networks with multiple layers (deep neural networks) to model…",
+    "cover": "https://cdn-images-1.medium.com/max/800/1*KMTxVrxSb0TUuGU07h9qnw.png",
+    "category": "Machine Learning / AI"
+  },
+  {
+    "slug": "understanding-the-perceptron-in-neural-networks",
+    "file": "2024-07-23_understanding-the-perceptron-in-neural-networks.html",
+    "title": "Understanding the Perceptron in Neural Networks",
+    "date": "2024-07-23",
+    "snippet": "Introduction",
+    "cover": "https://cdn-images-1.medium.com/max/800/1*0zy0bpjQ9dmsSutSMxDVfQ.png",
+    "category": "Machine Learning / AI"
+  },
+  {
+    "slug": "understanding-correlation-a-comprehensive-guide",
+    "file": "2024-07-07_understanding-correlation-a-comprehensive-guide.html",
+    "title": "Understanding Correlation: A Comprehensive Guide",
+    "date": "2024-07-07",
+    "snippet": "Introduction",
+    "cover": "https://cdn-images-1.medium.com/max/800/1*y-Y1uf5L_iZiZjunXbcv-A.jpeg",
+    "category": "Programming / Python"
+  },
+  {
+    "slug": "understanding-covariance-relationship-between-two-variables",
+    "file": "2024-07-07_understanding-covariance-relationship-between-two-variables.html",
+    "title": "Understanding Covariance: Relationship Between Two Variables",
+    "date": "2024-07-07",
+    "snippet": "Covariance is a fundamental statistical concept used to measure the relationship between two variables. It tells us whether the variables…",
+    "cover": "https://cdn-images-1.medium.com/max/800/1*y-Y1uf5L_iZiZjunXbcv-A.jpeg",
+    "category": "Data Science"
+  },
+  {
+    "slug": "understanding-probability-distribution-definition-advantages-and-parameters",
+    "file": "2024-07-07_understanding-probability-distribution-definition-advantages-and-parameters.html",
+    "title": "Understanding Probability Distribution: Definition, Advantages, and Parameters",
+    "date": "2024-07-07",
+    "snippet": "Introduction to Probability Distribution",
+    "cover": "https://cdn-images-1.medium.com/max/800/1*y-Y1uf5L_iZiZjunXbcv-A.jpeg",
+    "category": "Miscellaneous"
+  },
+  {
+    "slug": "understanding-measures-of-dispersion-range-variance-standard-deviation-and-coefficient-of",
+    "file": "2024-07-06_understanding-measures-of-dispersion-range-variance-standard-deviation-and-coefficient-of.html",
+    "title": "Understanding Measures of Dispersion: Range, Variance, Standard Deviation, and Coefficient of…",
+    "date": "2024-07-06",
+    "snippet": "In statistics, measures of dispersion quantify how spread out or dispersed a set of data points are around their central tendency. They…",
+    "cover": "https://cdn-images-1.medium.com/max/800/1*y-Y1uf5L_iZiZjunXbcv-A.jpeg",
+    "category": "Data Science"
+  },
+  {
+    "slug": "measures-of-central-tendency-mean-median-mode-weighted-mean-and-trimmed-mean",
+    "file": "2024-07-04_measures-of-central-tendency-mean-median-mode-weighted-mean-and-trimmed-mean.html",
+    "title": "Measures of Central Tendency: Mean, Median, Mode, Weighted Mean, and Trimmed Mean",
+    "date": "2024-07-04",
+    "snippet": "Measures of central tendency are statistical metrics that describe the center point or typical value of a dataset. They provide a summary…",
+    "cover": "https://cdn-images-1.medium.com/max/800/1*y-Y1uf5L_iZiZjunXbcv-A.jpeg",
+    "category": "Data Science"
+  },
+  {
+    "slug": "statistics-for-machine-learning-types-of-statistics-population-vs-sample-and-types-of-data",
+    "file": "2024-07-04_statistics-for-machine-learning-types-of-statistics-population-vs-sample-and-types-of-data.html",
+    "title": "Statistics for Machine Learning: Types of Statistics, Population vs. Sample, and Types of Data",
+    "date": "2024-07-04",
+    "snippet": "Statistics is a crucial element of machine learning (ML) as it provides the tools and methods needed to collect, analyze, interpret, and…",
+    "cover": "https://cdn-images-1.medium.com/max/800/1*y-Y1uf5L_iZiZjunXbcv-A.jpeg",
+    "category": "Machine Learning / AI"
+  },
+  {
+    "slug": "outliers-detection-and-removal-using-iqr-method",
+    "file": "2024-07-03_outliers-detection-and-removal-using-iqr-method.html",
+    "title": "Outliers detection and removal using IQR Method",
+    "date": "2024-07-03",
+    "snippet": "Outliers can significantly skew the results of data analysis and machine learning models. Identifying and handling outliers is crucial for…",
+    "cover": "https://cdn-images-1.medium.com/max/800/1*ZJE4J2SD5zgivQCYRG8iRA.jpeg",
+    "category": "Machine Learning / AI"
+  },
+  {
+    "slug": "understanding-tensors-in-machine-learning-from-0d-to-5d",
+    "file": "2024-07-03_understanding-tensors-in-machine-learning-from-0d-to-5d.html",
+    "title": "Understanding Tensors in Machine Learning: From 0D to 5D",
+    "date": "2024-07-03",
+    "snippet": "Tensors are a fundamental concept in machine learning, used to represent data and perform computations. This article explains 0 to…",
+    "cover": "https://cdn-images-1.medium.com/max/800/1*xCu2gtukzHNMIZL7nlIWOg.jpeg",
+    "category": "Machine Learning / AI"
+  },
+  {
+    "slug": "algorithms-sensitive-to-outliers-and-how-to-handle-them",
+    "file": "2024-07-02_algorithms-sensitive-to-outliers-and-how-to-handle-them.html",
+    "title": "Algorithms Sensitive to Outliers and How to Handle Them",
+    "date": "2024-07-02",
+    "snippet": "Outliers are data points that deviate significantly from other observations. They can skew and distort the results of various machine…",
+    "cover": "https://cdn-images-1.medium.com/max/800/1*poac4-8AEjMD0PaJ_xAeRQ.jpeg",
+    "category": "Data Structures & Algorithms"
+  },
+  {
+    "slug": "outlier-detection-and-removal-using-z-score-method",
+    "file": "2024-07-02_outlier-detection-and-removal-using-z-score-method.html",
+    "title": "Outlier Detection and Removal Using Z-score Method",
+    "date": "2024-07-02",
+    "snippet": "Outliers can significantly affect the performance of machine learning models. Detecting and treating outliers is crucial to ensure the…",
+    "cover": "https://cdn-images-1.medium.com/max/800/1*umpyE2XdatNsSWmktnOXDA.png",
+    "category": "Machine Learning / AI"
+  },
+  {
+    "slug": "arbitrary-value-imputation-with-pandas-and-sklearn",
+    "file": "2024-07-01_arbitrary-value-imputation-with-pandas-and-sklearn.html",
+    "title": "Arbitrary Value Imputation with pandas and sklearn",
+    "date": "2024-07-01",
+    "snippet": "Handling missing data is a crucial step in any data preprocessing pipeline. One common technique is arbitrary value imputation, where…",
+    "cover": "https://cdn-images-1.medium.com/max/800/1*xCu2gtukzHNMIZL7nlIWOg.jpeg",
+    "category": "DevOps & Engineering"
+  },
+  {
+    "slug": "handling-missing-categorical-data-in-pandas-and-sklearn",
+    "file": "2024-07-01_handling-missing-categorical-data-in-pandas-and-sklearn.html",
+    "title": "Handling Missing Categorical Data in Pandas and sklearn",
+    "date": "2024-07-01",
+    "snippet": "Missing data is a common issue in datasets and can significantly impact the performance of machine learning models. In this article, we…",
+    "cover": "https://cdn-images-1.medium.com/max/800/1*tNay2UeHhuZNuSrL-92gSA.jpeg",
+    "category": "Machine Learning / AI"
+  },
+  {
+    "slug": "mean-and-median-imputation-in-sklearn-a-practical-guide",
+    "file": "2024-06-30_mean-and-median-imputation-in-sklearn-a-practical-guide.html",
+    "title": "Mean and Median imputation in sklearn: A Practical Guide",
+    "date": "2024-06-30",
+    "snippet": "In the realm of machine learning, handling missing data is a crucial preprocessing step that can significantly impact the performance and…",
+    "cover": "https://cdn-images-1.medium.com/max/800/1*xCu2gtukzHNMIZL7nlIWOg.jpeg",
+    "category": "Machine Learning / AI"
+  },
+  {
+    "slug": "handling-missing-values-using-complete-case-analysis-cca",
+    "file": "2024-06-29_handling-missing-values-using-complete-case-analysis-cca.html",
+    "title": "Handling Missing Values Using Complete Case Analysis (CCA)",
+    "date": "2024-06-29",
+    "snippet": "Missing values in datasets can significantly affect the performance of machine learning models. One common method to handle missing data is…",
+    "cover": "https://cdn-images-1.medium.com/max/800/1*XPqnAyVIBM4dSQR3lQC0NA.jpeg",
+    "category": "Machine Learning / AI"
+  },
+  {
+    "slug": "handling-missing-values-in-data-techniques-and-implementations",
+    "file": "2024-06-29_handling-missing-values-in-data-techniques-and-implementations.html",
+    "title": "Handling Missing Values in Data: Techniques and Implementations",
+    "date": "2024-06-29",
+    "snippet": "Missing values in datasets are a common issue that can significantly impact the performance of machine learning models. There are two…",
+    "cover": "https://cdn-images-1.medium.com/max/800/1*A6oSURHyFVE8D5VLupbPfw.jpeg",
+    "category": "Machine Learning / AI"
+  },
+  {
+    "slug": "mean-and-median-imputation-in-pandas-a-practical-guide",
+    "file": "2024-06-29_mean-and-median-imputation-in-pandas-a-practical-guide.html",
+    "title": "Mean and Median Imputation in Pandas: A Practical Guide",
+    "date": "2024-06-29",
+    "snippet": "Handling missing data is a critical step in any data analysis or machine learning pipeline. One common approach to dealing with missing…",
+    "cover": "https://cdn-images-1.medium.com/max/800/1*tAyE3-s0xdxbkKblxkQR9w.jpeg",
+    "category": "DevOps & Engineering"
+  },
+  {
+    "slug": "demystifying-feature-engineering-transforming-your-data-for-better-models",
+    "file": "2024-06-28_demystifying-feature-engineering-transforming-your-data-for-better-models.html",
+    "title": "Demystifying Feature Engineering: Transforming Your Data for Better Models",
+    "date": "2024-06-28",
+    "snippet": "Feature engineering plays a pivotal role in machine learning, enabling data scientists to extract valuable insights and enhance model…",
+    "cover": "https://cdn-images-1.medium.com/max/800/1*gPV1k8idFN5fawAfBjrZ1A.jpeg",
+    "category": "Machine Learning / AI"
+  },
+  {
+    "slug": "detailed-guide-to-loc-and-iloc-in-pandas",
+    "file": "2024-06-28_detailed-guide-to-loc-and-iloc-in-pandas.html",
+    "title": "Detailed Guide to loc and iloc in Pandas",
+    "date": "2024-06-28",
+    "snippet": "Pandas, a powerful data manipulation library in Python, provides several methods to select and filter data from DataFrames. Two of the most…",
+    "cover": "https://cdn-images-1.medium.com/max/800/1*pJnfAWcDbz7qnQr7at3jkw.png",
+    "category": "Data Science"
+  },
+  {
+    "slug": "discretization-binning-in-machine-learning",
+    "file": "2024-06-28_discretization-binning-in-machine-learning.html",
+    "title": "Discretization (Binning) in Machine Learning",
+    "date": "2024-06-28",
+    "snippet": "Discretization, also known as binning, is a data preprocessing technique used in machine learning to transform continuous features into…",
+    "cover": "https://cdn-images-1.medium.com/max/800/1*A-1aUGki-boKqwuwliWwMg.jpeg",
+    "category": "Machine Learning / AI"
+  },
+  {
+    "slug": "handling-mixed-data-in-machine-learning",
+    "file": "2024-06-28_handling-mixed-data-in-machine-learning.html",
+    "title": "Handling Mixed Data in Machine Learning",
+    "date": "2024-06-28",
+    "snippet": "Introduction",
+    "cover": "https://cdn-images-1.medium.com/max/800/1*OwOk9pYU9HquZbIK2AJqPA.jpeg",
+    "category": "Machine Learning / AI"
+  },
+  {
+    "slug": "the-machine-learning-development-life-cycle-a-comprehensive-guide",
+    "file": "2024-06-28_the-machine-learning-development-life-cycle-a-comprehensive-guide.html",
+    "title": "The Machine Learning Development Life Cycle: A Comprehensive Guide",
+    "date": "2024-06-28",
+    "snippet": "Introduction",
+    "cover": "https://cdn-images-1.medium.com/max/800/1*Nv4vbq6RiTooXPWubvMrXA.png",
+    "category": "Machine Learning / AI"
+  },
+  {
+    "slug": "understanding-binarization-in-data-preprocessing",
+    "file": "2024-06-28_understanding-binarization-in-data-preprocessing.html",
+    "title": "Understanding Binarization in Data Preprocessing",
+    "date": "2024-06-28",
+    "snippet": "Binarization is a data preprocessing technique used to transform numerical variables into binary values (0s and 1s) based on a threshold…",
+    "cover": "https://cdn-images-1.medium.com/max/800/1*4p0bdenFMEfJY7DJWS_R2Q.jpeg",
+    "category": "Miscellaneous"
+  },
+  {
+    "slug": "understanding-np-log-and-np-log1p-in-numpy",
+    "file": "2024-06-28_understanding-np-log-and-np-log1p-in-numpy.html",
+    "title": "Understanding np.log and np.log1p in NumPy",
+    "date": "2024-06-28",
+    "snippet": "When working with numerical data and calculations, understanding logarithmic functions is crucial, especially when dealing with skewed data…",
+    "cover": "https://cdn-images-1.medium.com/max/800/1*t0JxgBWGxnl5k8-4wcyvrw.jpeg",
+    "category": "Miscellaneous"
+  },
+  {
+    "slug": "understanding-set-index-and-reset-index-in-pandas",
+    "file": "2024-06-28_understanding-set-index-and-reset-index-in-pandas.html",
+    "title": "Understanding set_index() and reset_index() in Pandas",
+    "date": "2024-06-28",
+    "snippet": "Pandas provides powerful tools for data manipulation and analysis. Two essential functions for managing DataFrame indices are set_index()…",
+    "cover": "https://cdn-images-1.medium.com/max/800/1*srizkDmYYqiTIIROUNbjCQ.jpeg",
+    "category": "Data Science"
+  },
+  {
+    "slug": "understanding-the-box-cox-power-transformer",
+    "file": "2024-06-28_understanding-the-box-cox-power-transformer.html",
+    "title": "Understanding the Box-Cox Power Transformer",
+    "date": "2024-06-28",
+    "snippet": "In the realm of data science and machine learning, data transformation is a crucial step to ensure that the assumptions of various…",
+    "cover": "https://cdn-images-1.medium.com/max/800/1*K2uM1TvXYrcEtub6-sC8ww.jpeg",
+    "category": "NLP"
+  },
+  {
+    "slug": "working-with-dates-and-times-in-pandas-a-comprehensive-guide",
+    "file": "2024-06-28_working-with-dates-and-times-in-pandas-a-comprehensive-guide.html",
+    "title": "Working with Dates and Times in Pandas: A Comprehensive Guide",
+    "date": "2024-06-28",
+    "snippet": "Handling dates and times is a common task in data analysis and can be efficiently managed using the pandas library in Python. This article…",
+    "cover": "https://cdn-images-1.medium.com/max/800/1*cQpf-p4fQi1uXH4fNYtHaw.jpeg",
+    "category": "Data Science"
+  },
+  {
+    "slug": "an-introduction-to-pipelines-in-machine-learning",
+    "file": "2024-06-27_an-introduction-to-pipelines-in-machine-learning.html",
+    "title": "An Introduction to Pipelines in Machine Learning",
+    "date": "2024-06-27",
+    "snippet": "Machine learning (ML) has revolutionized many industries by providing powerful tools to analyze data and make predictions. However, the…",
+    "cover": "https://cdn-images-1.medium.com/max/800/1*OARHyLRlDzn9xysN3DSCwA.png",
+    "category": "DevOps & Engineering"
+  },
+  {
+    "slug": "building-and-deploying-machine-learning-pipelines-with-scikit-learn",
+    "file": "2024-06-27_building-and-deploying-machine-learning-pipelines-with-scikit-learn.html",
+    "title": "Building and Deploying Machine Learning Pipelines with scikit-learn",
+    "date": "2024-06-27",
+    "snippet": "In this article, we will walk through the process of building and deploying machine learning pipelines using the Pipeline class from…",
+    "cover": "https://cdn-images-1.medium.com/max/800/1*K1XRIC_wxQOk4UutZmYtkw.png",
+    "category": "DevOps & Engineering"
+  },
+  {
+    "slug": "one-hot-encoding-a-comprehensive-guide",
+    "file": "2024-06-27_one-hot-encoding-a-comprehensive-guide.html",
+    "title": "One-Hot Encoding: A Comprehensive Guide",
+    "date": "2024-06-27",
+    "snippet": "Introduction",
+    "cover": "https://cdn-images-1.medium.com/max/800/1*6sGItzhJDr0nRlKxkkg8Sg.jpeg",
+    "category": "Programming / Python"
+  },
+  {
+    "slug": "the-magic-of-column-transformer-in-machine-learning",
+    "file": "2024-06-27_the-magic-of-column-transformer-in-machine-learning.html",
+    "title": "The Magic of Column Transformer in Machine Learning",
+    "date": "2024-06-27",
+    "snippet": "In the realm of machine learning, preprocessing data efficiently and effectively is crucial for building robust models. One of the most…",
+    "cover": "https://cdn-images-1.medium.com/max/800/1*ckcmcUm9CcJh9LNQMo3alA.png",
+    "category": "NLP"
+  },
+  {
+    "slug": "a-comprehensive-guide-to-normalization-in-machine-learning",
+    "file": "2024-06-26_a-comprehensive-guide-to-normalization-in-machine-learning.html",
+    "title": "A Comprehensive Guide to Normalization in Machine Learning",
+    "date": "2024-06-26",
+    "snippet": "Feature scaling is a crucial step in the preprocessing pipeline for many machine learning algorithms. It ensures that all features…",
+    "cover": "https://cdn-images-1.medium.com/max/800/1*uUgBxG0bWjdOti9KUrLoVg.jpeg",
+    "category": "DevOps & Engineering"
+  },
+  {
+    "slug": "understanding-standardization-in-data-preprocessing",
+    "file": "2024-06-26_understanding-standardization-in-data-preprocessing.html",
+    "title": "Understanding Standardization in Data Preprocessing",
+    "date": "2024-06-26",
+    "snippet": "Data preprocessing is a crucial step in any machine learning pipeline, and standardization, also known as z-score normalization, is one of…",
+    "cover": "https://cdn-images-1.medium.com/max/800/1*n-gRnV4SGjb4dlV4d91uWg.jpeg",
+    "category": "DevOps & Engineering"
+  },
+  {
+    "slug": "asking-the-right-questions-for-data-analysis",
+    "file": "2024-06-25_asking-the-right-questions-for-data-analysis.html",
+    "title": "Asking the Right Questions for Data Analysis",
+    "date": "2024-06-25",
+    "snippet": "In data analysis, asking the right questions is crucial for effective decision-making and insights extraction. These questions guide the…",
+    "cover": "https://cdn-images-1.medium.com/max/800/1*8w86it6YRB54YU5eL7Qo_w.jpeg",
+    "category": "Data Science"
+  },
+  {
+    "slug": "assessing-data-a-comprehensive-guide",
+    "file": "2024-06-25_assessing-data-a-comprehensive-guide.html",
+    "title": "Assessing Data: A Comprehensive Guide",
+    "date": "2024-06-25",
+    "snippet": "In the realm of data science, data is the cornerstone of analysis and decision-making. However, raw data is often unclean and disorganized…",
+    "cover": "https://cdn-images-1.medium.com/max/800/1*htbi7n-T7Wt_BXoWKlV84A.jpeg",
+    "category": "Data Science"
+  },
+  {
+    "slug": "exploratory-data-analysis-step-by-step-guide",
+    "file": "2024-06-25_exploratory-data-analysis-step-by-step-guide.html",
+    "title": "Exploratory Data Analysis: Step by Step Guide",
+    "date": "2024-06-25",
+    "snippet": "Exploratory Data Analysis: Step by Step Guide",
+    "cover": "https://cdn-images-1.medium.com/max/800/1*ZyEBL1ePFdacKxrEipK4LA.png",
+    "category": "Data Science"
+  },
+  {
+    "slug": "multivariate-analysis-exploring-relationships-between-variables",
+    "file": "2024-06-25_multivariate-analysis-exploring-relationships-between-variables.html",
+    "title": "Multivariate Analysis: Exploring Relationships Between Variables",
+    "date": "2024-06-25",
+    "snippet": "Multivariate analysis is an essential technique in data science and statistics, allowing us to understand relationships between multiple…",
+    "cover": "https://cdn-images-1.medium.com/max/800/1*ZZGfdLFloLnNNNjrKjMCeA.jpeg",
+    "category": "Data Science"
+  },
+  {
+    "slug": "univariate-analysis-in-data-science-exploring-data-one-variable-at-a-time",
+    "file": "2024-06-25_univariate-analysis-in-data-science-exploring-data-one-variable-at-a-time.html",
+    "title": "Univariate Analysis in Data Science: Exploring Data One Variable at a Time",
+    "date": "2024-06-25",
+    "snippet": "In data science, univariate analysis serves as a fundamental step to understand the distribution and characteristics of individual…",
+    "cover": "https://cdn-images-1.medium.com/max/800/1*gM2LY_hObTpzUXe9Ncxd3w.jpeg",
+    "category": "Data Science"
+  },
+  {
+    "slug": "unlocking-the-power-of-feature-engineering-in-machine-learning",
+    "file": "2024-06-25_unlocking-the-power-of-feature-engineering-in-machine-learning.html",
+    "title": "Unlocking the Power of Feature Engineering in Machine Learning",
+    "date": "2024-06-25",
+    "snippet": "Feature engineering is a crucial step in the machine learning pipeline that can significantly enhance the performance of models. It…",
+    "cover": "https://cdn-images-1.medium.com/max/800/1*MqcC4dY9FhN9Gwa_75rOkA.jpeg",
+    "category": "DevOps & Engineering"
+  },
+  {
+    "slug": "creating-a-dataset-from-a-database-for-data-science",
+    "file": "2024-06-24_creating-a-dataset-from-a-database-for-data-science.html",
+    "title": "Creating a Dataset from a Database for Data Science",
+    "date": "2024-06-24",
+    "snippet": "In the era of big data, data scientists often encounter data stored in various formats and locations. One common scenario is retrieving…",
+    "cover": "https://cdn-images-1.medium.com/max/800/1*TEkWq9Mf6YoiUDrsimtHHw.jpeg",
+    "category": "Data Science"
+  },
+  {
+    "slug": "fetching-data-through-apis-with-python-a-comprehensive-guide",
+    "file": "2024-06-24_fetching-data-through-apis-with-python-a-comprehensive-guide.html",
+    "title": "Fetching Data Through APIs with Python: A Comprehensive Guide",
+    "date": "2024-06-24",
+    "snippet": "APIs (Application Programming Interfaces) are essential tools in modern software development, enabling applications to communicate and…",
+    "cover": "https://cdn-images-1.medium.com/max/800/1*bGfv1TK7XOtTRgh6bms_iQ.jpeg",
+    "category": "Programming / Python"
+  },
+  {
+    "slug": "scraping-tabular-data-from-a-website-using-beautifulsoup",
+    "file": "2024-06-24_scraping-tabular-data-from-a-website-using-beautifulsoup.html",
+    "title": "Scraping Tabular Data from a Website Using BeautifulSoup",
+    "date": "2024-06-24",
+    "snippet": "Web scraping is a powerful technique for extracting data from websites. In this article, we’ll walk through a practical example of how to…",
+    "cover": "https://cdn-images-1.medium.com/max/800/1*M6g5hyAx_6yd1M8LO17Y0w.jpeg",
+    "category": "Programming / Python"
+  },
+  {
+    "slug": "a-comprehensive-guide-to-data-analysis-from-asking-questions-to-communicating-results",
+    "file": "2024-06-23_a-comprehensive-guide-to-data-analysis-from-asking-questions-to-communicating-results.html",
+    "title": "A Comprehensive Guide to Data Analysis: From Asking Questions to Communicating Results",
+    "date": "2024-06-23",
+    "snippet": "Data analysis is a multifaceted process that involves asking the right questions, wrangling data, exploring it, drawing conclusions, and…",
+    "cover": "https://cdn-images-1.medium.com/max/800/1*M9DhT_opPU7Q-qRwW9NGsA.jpeg",
+    "category": "Data Science"
+  },
+  {
+    "slug": "librosa-a-comprehensive-guide-to-audio-analysis-in-python",
+    "file": "2024-06-03_librosa-a-comprehensive-guide-to-audio-analysis-in-python.html",
+    "title": "LibROSA: A Comprehensive Guide to Audio Analysis in Python",
+    "date": "2024-06-03",
+    "snippet": "Audio analysis is a fascinating field that involves extracting meaningful information from audio signals, enabling a wide range of…",
+    "cover": "https://cdn-images-1.medium.com/max/800/1*NP1e-SPxHILfBDSueWGxNQ.png",
+    "category": "Programming / Python"
+  },
+  {
+    "slug": "unlocking-the-potential-of-named-entity-recognition-ner",
+    "file": "2024-05-29_unlocking-the-potential-of-named-entity-recognition-ner.html",
+    "title": "Unlocking the Potential of Named Entity Recognition (NER)",
+    "date": "2024-05-29",
+    "snippet": "Have you ever wondered at how computers understand the words we write? Named Entity Recognition (NER) is the enchanting magic behind this…",
+    "cover": "https://cdn-images-1.medium.com/max/800/1*zjSsKy7wQsiNyZVTIbhfVg.png",
+    "category": "NLP"
+  },
+  {
+    "slug": "draft-advanced-metrics-lead-time-cycle-time-and-flow-efficiency-f0af9d3c0c03",
+    "file": "draft-advanced-metrics-lead-time-cycle-time-and-flow-efficiency-f0af9d3c0c03.html",
+    "title": "Advanced Metrics: Lead Time, Cycle Time, and Flow Efficiency",
+    "date": "",
+    "snippet": "Introduction",
+    "cover": "",
+    "category": "Miscellaneous"
+  },
+  {
+    "slug": "draft-encourage-calculated-risk-taking-2dacad4e145b",
+    "file": "draft-encourage-calculated-risk-taking-2dacad4e145b.html",
+    "title": "Encourage calculated risk-taking",
+    "date": "",
+    "snippet": "Problem 4: “Constant Mid-Sprint Interruptions”",
+    "cover": "https://cdn-images-1.medium.com/max/800/0*A2YKYT5YoWOzIFh5.png",
+    "category": "Agile & Project Management"
+  },
+  {
+    "slug": "draft-handling-mixed-data-in-machine-learning-2579d6710e80",
+    "file": "draft-handling-mixed-data-in-machine-learning-2579d6710e80.html",
+    "title": "Handling Mixed Data in Machine Learning",
+    "date": "",
+    "snippet": "Introduction",
+    "cover": "",
+    "category": "Machine Learning / AI"
+  },
+  {
+    "slug": "draft-handling-mixed-data-in-machine-learning-e62b95c00887",
+    "file": "draft-handling-mixed-data-in-machine-learning-e62b95c00887.html",
+    "title": "Handling Mixed Data in Machine Learning",
+    "date": "",
+    "snippet": "ntroduction",
+    "cover": "",
+    "category": "Machine Learning / AI"
+  },
+  {
+    "slug": "draft-managing-multiple-github-accounts-on-a-single-laptop-using-ssh-94126b2958e0",
+    "file": "draft-managing-multiple-github-accounts-on-a-single-laptop-using-ssh-94126b2958e0.html",
+    "title": "Managing Multiple GitHub Accounts on a Single Laptop Using SSH",
+    "date": "",
+    "snippet": "Working with multiple GitHub accounts on the same machine can be tricky, especially when each account has its own repositories. SSH keys…",
+    "cover": "https://cdn-images-1.medium.com/max/800/0*ItomOebighNDmGjv",
+    "category": "Miscellaneous"
+  },
+  {
+    "slug": "draft-removing-impediments-the-scrum-master-s-superpower-9c79c8abc22b",
+    "file": "draft-removing-impediments-the-scrum-master-s-superpower-9c79c8abc22b.html",
+    "title": "Removing Impediments: The Scrum Master’s Superpower",
+    "date": "",
+    "snippet": "Introduction",
+    "cover": "https://cdn-images-1.medium.com/max/800/0*YQOX340Gnkj7iQ8M.png",
+    "category": "Agile & Project Management"
+  },
+  {
+    "slug": "draft-sprint-backlog-transparency-in-sprint-work-86c2c0c37923",
+    "file": "draft-sprint-backlog-transparency-in-sprint-work-86c2c0c37923.html",
+    "title": "Sprint Backlog: Transparency in Sprint Work",
+    "date": "",
+    "snippet": "Introduction",
+    "cover": "",
+    "category": "Agile & Project Management"
+  },
+  {
+    "slug": "draft-understanding-graph-neural-networks-gnns-and-their-applications-ed66970e6bd5",
+    "file": "draft-understanding-graph-neural-networks-gnns-and-their-applications-ed66970e6bd5.html",
+    "title": "Understanding Graph Neural Networks (GNNs) and Their Applications",
+    "date": "",
+    "snippet": "A Graph Neural Network (GNN) is a type of deep learning model designed to work directly with graph-structured data. Graphs are data…",
+    "cover": "https://cdn-images-1.medium.com/max/800/1*vVcPq4e3PFm8OacOOya12w.png",
+    "category": "Machine Learning / AI"
+  },
+  {
+    "slug": "draft-understanding-the-key-files-in-a-large-language-model-llm-fb57d07c44e6",
+    "file": "draft-understanding-the-key-files-in-a-large-language-model-llm-fb57d07c44e6.html",
+    "title": "Understanding the Key Files in a Large Language Model (LLM)",
+    "date": "",
+    "snippet": "Large Language Models (LLMs) are powerful neural networks trained to generate human-like text. At their core, LLMs represent a probability…",
+    "cover": "",
+    "category": "NLP"
+  },
+  {
+    "slug": "draft-asdui-1bafac16bcb0",
+    "file": "draft-asdui-1bafac16bcb0.html",
+    "title": "asdui",
+    "date": "",
+    "snippet": "",
+    "cover": "",
+    "category": "Miscellaneous"
+  },
+  {
+    "slug": "draft-post-1697ba2a69da",
+    "file": "draft-post-1697ba2a69da.html",
+    "title": "draft_post-1697ba2a69da",
+    "date": "",
+    "snippet": "",
+    "cover": "",
+    "category": "Miscellaneous"
+  }
+]
