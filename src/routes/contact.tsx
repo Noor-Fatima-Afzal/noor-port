@@ -202,7 +202,7 @@ export function ContactPage() {
 
           <div className="flex gap-2 pt-2">
             <a
-              href="https://www.linkedin.com/"
+              href="https://www.linkedin.com/in/noor-fatima-afzal/"
               target="_blank"
               rel="noreferrer"
               aria-label="LinkedIn"
@@ -211,7 +211,7 @@ export function ContactPage() {
               <LinkedinIcon className="h-4 w-4" />
             </a>
             <a
-              href="https://github.com/"
+              href="https://github.com/Noor-Fatima-Afzal/"
               target="_blank"
               rel="noreferrer"
               aria-label="GitHub"
@@ -220,7 +220,7 @@ export function ContactPage() {
               <GithubIcon className="h-4 w-4" />
             </a>
             <a
-              href="https://scholar.google.com/"
+              href="https://scholar.google.com/citations?user=WRKxdKYAAAAJ&hl=en"
               target="_blank"
               rel="noreferrer"
               aria-label="Google Scholar"
